@@ -230,7 +230,7 @@ if (! $CACHEMOD); then
     IMG=/cache/magisk.img
     ui_print " "
     ui_print "***********************************"
-    ui_print "*      !! Data unavalible !!      *"
+    ui_print "*     !! Data unavailable !!      *"
     ui_print "* Magisk detection is impossible  *"
     ui_print "* Installation will still proceed *"
     ui_print "*  But please make sure you have  *"
