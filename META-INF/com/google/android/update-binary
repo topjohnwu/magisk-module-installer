@@ -159,7 +159,7 @@ fi
 
 mkdir -p $TMPDIR 2>/dev/null
 cd $TMPDIR
-unzip -o $ZIP config.sh
+unzip -o "$ZIP" config.sh
 
 if [ ! -f "config.sh" ]; then
   ui_print "! Failed: Unable to extract zip file!"
@@ -177,7 +177,7 @@ MODPATH=$MOUNTPATH/$MODID
 
 mkdir -p $INSTALLER
 cd $INSTALLER
-unzip -o $ZIP common/* module.prop
+unzip -o "$ZIP" common/* module.prop
 
 ##########################################################################################
 # Main
@@ -268,7 +268,7 @@ mkdir -p $MODPATH
 
 # Copy files
 ui_print "- Copying files"
-unzip -o $ZIP system/* -d $MODPATH
+unzip -o "$ZIP" system/* -d $MODPATH
 
 # Handle replace folders
 for TARGET in $REPLACE; do
