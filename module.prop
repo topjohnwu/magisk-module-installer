@@ -1,9 +1,9 @@
-id=EnableEISforN5X
-name=Enable EIS for Nexus 5X
+id=template
+name=Template Module
 version=v1
 versionCode=1
-author=grimsandwich
-description=Enable EIS for Nexus 5X by editing the build.prop file. Once you confirm the EIS shows up in camera settings, it is safe to remove this mod.
-support=
-donate=
-cacheModule=true
+author=topjohnwu
+description=A short description
+support=http://forum.xda-developers.com/showthread.php?t=3432382
+donate=http://topjohnwu.github.io/donate
+cacheModule=false
