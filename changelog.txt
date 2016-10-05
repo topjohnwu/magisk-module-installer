@@ -1,6 +1,2 @@
 v1
-    - New feature 1
-    - New feature 2
-    - Fix 1
-    - Fix 2
-    - Goodies
+    - Initial version

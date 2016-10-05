@@ -1,6 +1,6 @@
 ##########################################################################################
 #
-# Magisk
+# Magisk - Enable EIS for Nexus 5X
 # by topjohnwu
 # 
 # This is a template zip for developers
@@ -32,18 +32,18 @@
 # NOTE: This part has to be adjusted to fit your own needs
 
 # Is this a cache mod?
-CACHEMOD=false
+CACHEMOD=true
 
 # This will be the folder name under /magisk or /cache/magisk
 # This should also be the same as the id in your module.prop to prevent confusion
-MODID=template
+MODID=EnableEISforN5X
 
 # Set to true if you need automount
 # Most mods would like it to be enabled
 AUTOMOUNT=true
 
 # Set to true if you need post-fs script (Only available in cache mods)
-POSTFS=false
+POSTFS=true
 
 # Set to true if you need post-fs-data script (Only available in non-cache mods)
 POSTFSDATA=false
@@ -59,7 +59,7 @@ LATESTARTSERVICE=false
 
 print_modname() {
   ui_print "*******************************"
-  ui_print "     Magisk Module Template    "
+  ui_print "    Enable EIS for Nexus 5X    "
   ui_print "*******************************"
 }
 
