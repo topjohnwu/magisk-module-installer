@@ -230,7 +230,7 @@ if (! $CACHEMOD); then
     IMG=/cache/magisk.img
     ui_print " "
     ui_print "***********************************"
-    ui_print "*      !! Data unavalible !!      *"
+    ui_print "*      !! Data unavailible !!     *"
     ui_print "* Magisk detection is impossible  *"
     ui_print "* Installation will still proceed *"
     ui_print "*  But please make sure you have  *"
@@ -290,7 +290,7 @@ fi
 
 # post-fs mode scripts
 if ($CACHEMOD) && ($POSTFS); then
-  cp -af $INSTALLER/common/post-fs.sh $MODPATH/post-fs-data.sh
+  cp -af $INSTALLER/common/post-fs.sh $MODPATH/post-fs.sh
 fi
 
 # post-fs-data mode scripts
