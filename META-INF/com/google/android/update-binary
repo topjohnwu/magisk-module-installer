@@ -308,6 +308,11 @@ if (! $CACHEMOD) && ($LATESTARTSERVICE); then
   cp -af $INSTALLER/common/service.sh $MODPATH/service.sh
 fi
 
+# extra files
+if ($EXTRAS); then
+  unzip -o "$ZIP" extras/* -d $MODPATH
+fi
+
 ui_print "- Setting permissions"
 set_permissions
 

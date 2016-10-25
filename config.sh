@@ -51,6 +51,9 @@ POSTFSDATA=false
 # Set to true if you need late_start service script (Only available in non-cache mods)
 LATESTARTSERVICE=false
 
+# Set to true if you need to include files from extras folder
+EXTRAS=false
+
 ##########################################################################################
 # Installation Message
 ##########################################################################################
