@@ -284,13 +284,8 @@ fi
 cp -af $INSTALLER/module.prop $MODPATH/module.prop
 if ($BOOTMODE); then
   # Update info for Magisk Manager
-  if ($CACHEMOD); then
-    mktouch /cache/magisk/$MODID/update
-    cp -af $INSTALLER/module.prop /cache/magisk/$MODID/module.prop
-  else
-    mktouch /magisk/$MODID/update
-    cp -af $INSTALLER/module.prop /magisk/$MODID/module.prop
-  fi
+  mktouch /magisk/$MODID/update
+  cp -af $INSTALLER/module.prop /magisk/$MODID/module.prop
 fi
 
 # post-fs mode scripts

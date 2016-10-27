@@ -1,9 +1,9 @@
-id=template
-name=Template Module
+id=IOS-10-Emoji
+name=IOS 10 Emoji
 version=v1
 versionCode=1
-author=topjohnwu
-description=A short description
-support=http://forum.xda-developers.com/showthread.php?t=3432382
-donate=http://topjohnwu.github.io/donate
+author=Blake
+description=Systemlessly replaces emoji font with IOS 10 Emoji.
+support=
+donate=
 cacheModule=false
