@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<profiledata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <format_version>4</format_version>
+  <tool_version>3</tool_version>
+  <preset id="ieq_open">
+    <data>iebt=[117, 133, 188, 176, 141, 149, 175, 185, 185, 200, 236, 242, 228, 213, 182, 132, 110, 68, -27, -240]</data>
+  </preset>
+  <preset id="ieq_rich">
+    <data>iebt=[67, 95, 172, 163, 168, 201, 189, 242, 196, 221, 192, 186, 168, 139, 102, 57, 35, 9, -55, -235]</data>
+  </preset>
+  <preset id="ieq_focused">
+    <data>iebt=[-419, -112, 75, 116, 113, 160, 165, 80, 61, 79, 98, 121, 64, 70, 44, -71, -33, -100, -238, -411]</data>
+  </preset>
+  <!--PROPERTY OF ZEROINFINITY, DO NOT STEAL. IF FOUND IN OTHER SOUNDMODS, PLEASE REPORT ASAP!-->
+  <!--Earphones: AcoustiX HiFi -->
+  <profile id="movie" name="Speaker">
+    <data>aoon=[2] dea=[10] ded=[0] deon=[1] dhrg=[0] dhsb=[0] dssb=[255] dssf=[200] dvla=[0] dvle=[1] dvme=[0] gebg=[0, 0, 0, 0, 0, 0, -16, -64, -112, -160, -192, -160, -112, -64, -16, 16, 64, 112, 160, 192] geon=[0] iea=[10] ieon=[1] ngon=[1] plb=[0] plmd=[4] vdhe=[0] vmb=[0] vmon=[1] vspe=[1]</data>
+    <include preset="ieq_open" />
+  </profile>
+  <!--PROPERTY OF ZEROINFINITY, DO NOT STEAL. IF FOUND IN OTHER SOUNDMODS, PLEASE REPORT ASAP!-->
+  <!--Earphones: AcoustiX Pro -->
+  <profile id="music" name="Earbuds">
+    <data>aoon=[1] dea=[10] ded=[0] deon=[1] dhrg=[255] dhsb=[0] dssb=[255] dssf=[200] dvla=[0] dvle=[0] dvme=[0] gebg=[0, 0, -140, -140, -140, -140, -140, -140, -150, -150, -150, -200, -255, -255, -255, -200, -150, 0, 50, 100] geon=[1] iea=[10] ieon=[0] ngon=[1] plb=[0] plmd=[3] vdhe=[1] vmb=[0] vmon=[0] vspe=[0]</data>
+	<include preset="ieq_rich" />
+  </profile>
+  <!--PROPERTY OF ZEROINFINITY, DO NOT STEAL. IF FOUND IN OTHER SOUNDMODS, PLEASE REPORT ASAP!-->
+  <!--Earphones: AcoustiX Lite -->
+  <profile id="game" name="In_Ear">
+    <data>aoon=[2] dea=[7] ded=[0] deon=[1] dhrg=[255] dhsb=[255] dssb=[64] dssf=[200] dvla=[5] dvle=[0] dvme=[0] gebg=[-50, -50, -50, -100, -150, -150, -150, -150, -150, -160, -200, -255, -255, -200, -150, -100, -50, 0, 0, 0] geon=[1] iea=[10] ieon=[1] ngon=[1] plb=[0] plmd=[3] vdhe=[1] vmb=[0] vmon=[0] vspe=[0]</data>
+    <include preset="ieq_open" />
+  </profile>
+  <!--PROPERTY OF ZEROINFINITY, DO NOT STEAL. IF FOUND IN OTHER SOUNDMODS, PLEASE REPORT ASAP!-->
+  <!--Headphones: AcoustiX+ -->
+  <profile id="voice" name="Hi_Res">
+    <data>aoon=[1] dea=[5] ded=[0] deon=[1] dhrg=[255] dhsb=[255] dssb=[255] dssf=[200] dvla=[0] dvle=[0] dvme=[0] gebg=[200, 200, 0, 0, 0, -50, -111, -150, -160, -180, -200, -255, -255, -255, -200, -150, -100, 0, 0, 0] geon=[1] iea=[10] ieon=[1] ngon=[1] plb=[0] plmd=[3] vdhe=[1] vmb=[0] vmon=[0] vspe=[0]</data>
+    <include preset="ieq_open" />
+  </profile>
+  <!--PROPERTY OF ZEROINFINITY, DO NOT STEAL. IF FOUND IN OTHER SOUNDMODS, PLEASE REPORT ASAP!-->
+  <!--Headphones: AcoustiX Cinematic -->
+  <profile id="user1" name="Others">
+    <data>aoon=[2] dea=[5] ded=[0] deon=[1] dhrg=[255] dhsb=[255] dssb=[255] dssf=[200] dvla=[0] dvle=[0] dvme=[0] gebg=[0, 0, 0, -8, -16, -32, -48, -80, -128, -176, -192, -192, -255, -255, -192, -128, -64, -24, 0, 0] geon=[1] iea=[10] ieon=[1] ngon=[1] plb=[0] plmd=[3] vdhe=[1] vmb=[0] vmon=[0] vspe=[0]</data>
+    <include preset="ieq_open" />
+  </profile>
+  <profile id="user2" name="Reserved">
+    <data>aoon=[2] dea=[10] ded=[0] deon=[1] dhrg=[0] dhsb=[0] dssb=[255] dssf=[200] dvla=[0] dvle=[0] dvme=[0] gebg=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] geon=[0] iea=[10] ieon=[0] ngon=[1] plb=[0] plmd=[4] vdhe=[0] vmb=[144] vmon=[0] vspe=[1]</data>
+    <include preset="ieq_rich" />
+  </profile>
+  <profile id="off" name="Off">
+    <data>aoon=[0] dea=[0] ded=[0] deon=[0] dhrg=[0] dhsb=[0] dssb=[0] dssf=[200] dvla=[0] dvle=[0] dvme=[0] gebg=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] geon=[0] iea=[0] ieon=[0] ngon=[0] plb=[0] plmd=[1] vdhe=[0] vmb=[0] vmon=[0] vspe=[0]</data>
+    <include preset="ieq_open" />
+  </profile>
+  <!--NOTE: <tuning> with endpoint other than SPEAKER do not use the band gain, UNLESS aoon is set 1 (from 2) and plmd is set to 2 (not 4).-->
+  <tuning id="tune0" name="DEFAULT ENDPOINT" endpoint="SPEAKER" tuned_rate="48000">
+    <data>aobf=[46, 140, 234, 328, 468, 656, 843, 1031, 1312, 1687, 2250, 3000, 3750, 4687, 5812, 7125, 9000, 11250, 13875, 19687] aobg=[2, -480, 0, 32, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 40, 40, 40, 40, 40, 40, 40, 3, -480, 0, 32, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 40, 40, 40, 40, 40, 40, 40] arbf=[47, 141, 234, 328, 469, 656, 844, 1031, 1313, 1688, 2250, 3000, 3750, 4688, 5813, 7125, 9000, 11250, 13875, 19688] arbh=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] arbl=[-192, -192, -192, -192, -192, -192, -192, -192, -192, -192, -192, -192, -192, -192, -192, -192, -192, -192, -192, -192] arbi=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] arod=[0] artp=[8] dssa=[15]</data>
+  </tuning>
+  <constant>
+    <data>aocc=[2] aonb=[20] arnb=[20] dvli=[-320] dvlo=[-320] dvmc=[0] gebf=[43, 129, 215, 301, 431, 603, 775, 947, 1206, 1550, 2067, 2756, 3618, 4651, 5685, 7063, 8958, 11025, 13781, 18777] genb=[20] iebf=[65, 136, 223, 332, 467, 634, 841, 1098, 1416, 1812, 2302, 2909, 3663, 4598, 5756, 7194, 8976, 11186, 13927, 17326] ienb=[20]</data>
+  </constant>
+  <authorized_technologies sku_name="Dolby Custom SKU" device="android" bundle="dapv1">
+    <audio_optimizer>true</audio_optimizer>
+    <audio_regulator>true</audio_regulator>
+    <volume_leveler>true</volume_leveler>
+    <volume_maximizer>true</volume_maximizer>
+    <graphic_equalizer>true</graphic_equalizer>
+    <intelligent_equalizer>true</intelligent_equalizer>
+    <dialog_enhancer>true</dialog_enhancer>
+    <surround_virtualizer_headphone>true</surround_virtualizer_headphone>
+    <surround_virtualizer_speaker>true</surround_virtualizer_speaker>
+  </authorized_technologies>
+</profiledata>
