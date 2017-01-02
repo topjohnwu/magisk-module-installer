@@ -1,0 +1,321 @@
+#!/sbin/sh
+
+##########################################################################################
+# Functions
+##########################################################################################
+
+ui_print() {
+  if ($BOOTMODE); then
+    echo "$1"
+  else 
+    echo -n -e "ui_print $1\n" >> /proc/self/fd/$OUTFD
+    echo -n -e "ui_print\n" >> /proc/self/fd/$OUTFD
+  fi
+}
+
+grep_prop() {
+  REGEX="s/^$1=//p"
+  shift
+  FILES=$@
+  if [ -z "$FILES" ]; then
+    FILES='/system/build.prop'
+  fi
+  cat $FILES 2>/dev/null | sed -n $REGEX | head -n 1
+}
+
+is_mounted() {
+  if [ ! -z "$2" ]; then
+    cat /proc/mounts | grep $1 | grep $2, >/dev/null
+  else
+    cat /proc/mounts | grep $1 >/dev/null
+  fi
+  return $?
+}
+
+mount_image() {
+  if [ ! -d "$2" ]; then
+    mkdir -p $2 2>/dev/null
+    chmod 755 $2
+    [ ! -d "$2" ] && return 1
+  fi
+  if (! is_mounted $2); then
+    LOOPDEVICE=
+    for LOOP in 0 1 2 3 4 5 6 7; do
+      if (! is_mounted $2); then
+        LOOPDEVICE=/dev/block/loop$LOOP
+        if [ ! -f "$LOOPDEVICE" ]; then
+          mknod $LOOPDEVICE b 7 $LOOP
+        fi
+        losetup $LOOPDEVICE $1
+        if [ "$?" -eq "0" ]; then
+          mount -t ext4 -o loop $LOOPDEVICE $2
+          if (! is_mounted $2); then
+            /system/bin/toolbox mount -t ext4 -o loop $LOOPDEVICE $2
+          fi
+          if (! is_mounted $2); then
+            /system/bin/toybox mount -t ext4 -o loop $LOOPDEVICE $2
+          fi
+        fi
+        if (is_mounted $2); then
+          ui_print "- Mounting $1 to $2"
+          break;
+        fi
+      fi
+    done
+  fi
+}
+
+set_perm() {
+  chown $2:$3 $1 || exit 1
+  chmod $4 $1 || exit 1
+  if [ "$5" ]; then
+    chcon $5 $1 2>/dev/null
+  else
+    chcon 'u:object_r:system_file:s0' $1 2>/dev/null
+  fi
+}
+
+set_perm_recursive() {
+  find $1 -type d 2>/dev/null | while read dir; do
+    set_perm $dir $2 $3 $4 $6
+  done
+  find $1 -type f 2>/dev/null | while read file; do
+    set_perm $file $2 $3 $5 $6
+  done
+}
+
+mktouch() {
+  mkdir -p ${1%/*}
+  if [ -z "$2" ]; then
+    touch $1
+  else
+    echo $2 > $1
+  fi
+  chmod 644 $1
+}
+
+payload_size_check() {
+  reqSizeM=0;
+  for entry in $(unzip -l "$@" 2>/dev/null | tail -n +4 | awk '{ print $1 }'); do
+    test $entry != "--------" && reqSizeM=$((reqSizeM + entry)) || break;
+  done;
+  test $reqSizeM -lt 1048576 && reqSizeM=1 || reqSizeM=$((reqSizeM / 1048576));
+}
+
+target_size_check() {
+  e2fsck -p -f $1
+  curBlocks=`e2fsck -n $1 2>/dev/null | cut -d, -f3 | cut -d\  -f2`;
+  curUsedM=$((`echo "$curBlocks" | cut -d/ -f1` * 4 / 1024));
+  curSizeM=$((`echo "$curBlocks" | cut -d/ -f2` * 4 / 1024));
+  curFreeM=$((curSizeM - curUsedM));
+}
+
+##########################################################################################
+# Flashable update-binary preparation
+##########################################################################################
+
+OUTFD=$2
+ZIP=$3
+
+readlink /proc/$$/fd/$OUTFD 2>/dev/null | grep /tmp >/dev/null
+if [ "$?" -eq "0" ]; then
+  OUTFD=0
+
+  for FD in `ls /proc/$$/fd`; do
+    readlink /proc/$$/fd/$FD 2>/dev/null | grep pipe >/dev/null
+    if [ "$?" -eq "0" ]; then
+      ps | grep " 3 $FD " | grep -v grep >/dev/null
+      if [ "$?" -eq "0" ]; then
+        OUTFD=$FD
+        break
+      fi
+    fi
+  done
+fi
+
+if [ -z "$BOOTMODE" ]; then
+  BOOTMODE=false
+fi
+
+if ($BOOTMODE) && (! is_mounted /magisk); then
+  ui_print "! Magisk is not activated!... abort"
+  exit 1
+fi
+
+# Fix SuperSU.....
+($BOOTMODE) && /data/magisk/sepolicy-inject -s fsck --live
+
+TMPDIR=/tmp
+MOUNTPATH=/magisk
+IMGNAME=magisk.img
+
+if ($BOOTMODE); then
+  TMPDIR=/dev/tmp
+  MOUNTPATH=/dev/magisk_merge
+  IMGNAME=magisk_merge.img
+fi
+
+mkdir -p $TMPDIR 2>/dev/null
+cd $TMPDIR
+unzip -o "$ZIP" config.sh
+
+if [ ! -f "config.sh" ]; then
+  ui_print "! Failed: Unable to extract zip file!"
+  exit 1
+fi
+
+source config.sh
+
+INSTALLER=$TMPDIR/$MODID
+MODPATH=$MOUNTPATH/$MODID
+
+mkdir -p $INSTALLER
+cd $INSTALLER
+unzip -o "$ZIP" "common/*" module.prop
+
+##########################################################################################
+# Main
+##########################################################################################
+
+# Print mod name
+print_modname
+
+# Please leave this message in your flashable zip for credits :)
+ui_print "******************************"
+ui_print "Powered by Magisk (@topjohnwu)"
+ui_print "******************************"
+
+ui_print "- Mounting /system(ro), /vendor(ro), /data, /cache"
+mount -o ro /system 2>/dev/null
+mount -o ro /vendor 2>/dev/null
+mount /data 2>/dev/null
+mount /cache 2>/dev/null
+
+if [ ! -f '/system/build.prop' ]; then
+  ui_print "! Failed: /system could not be mounted!"
+  exit 1
+fi
+
+API=$(grep_prop ro.build.version.sdk)
+ABI=$(grep_prop ro.product.cpu.abi | cut -c-3)
+ABI2=$(grep_prop ro.product.cpu.abi2 | cut -c-3)
+ABILONG=$(grep_prop ro.product.cpu.abi)
+
+ARCH=arm
+IS64BIT=false
+if [ "$ABI" = "x86" ]; then ARCH=x86; fi;
+if [ "$ABI2" = "x86" ]; then ARCH=x86; fi;
+if [ "$ABILONG" = "arm64-v8a" ]; then ARCH=arm64; IS64BIT=true; fi;
+if [ "$ABILONG" = "x86_64" ]; then ARCH=x64; IS64BIT=true; fi;
+
+# You can get the Android API version from $API, the CPU architecture from $ARCH
+# Useful if you are creating Android version / platform dependent mods
+
+IMG=
+if (is_mounted /data); then
+  IMG=/data/$IMGNAME
+  if [ ! -f "/data/magisk.img" ]; then
+    ui_print "! Magisk is not installed!"
+    ui_print "! Magisk is required for this mod!"
+    exit 1
+  fi
+else
+  IMG=/cache/magisk.img
+  ui_print " "
+  ui_print "***********************************"
+  ui_print "*      !! Data unavailible !!     *"
+  ui_print "* Magisk detection is impossible  *"
+  ui_print "* Installation will still proceed *"
+  ui_print "*  But please make sure you have  *"
+  ui_print "*        Magisk installed!!       *"
+  ui_print "***********************************"
+  ui_print " "
+fi
+
+payload_size_check "$ZIP" "*"
+
+if [ -f "$IMG" ]; then
+  ui_print "- $IMG detected!"
+  target_size_check $IMG
+  if [ "$reqSizeM" -gt "$curFreeM" ]; then
+    SIZE=$((((reqSizeM + curUsedM) / 32 + 2) * 32))
+    ui_print "- Resizing $IMG to ${SIZE}M..."
+    resize2fs $IMG ${SIZE}M
+  fi
+else
+  SIZE=$(((reqSizeM / 32 + 2) * 32));
+  ui_print "- Creating $IMG with size ${SIZE}M"
+  make_ext4fs -l ${SIZE}M -a /magisk -S $INSTALLER/common/file_contexts_image $IMG
+fi
+
+mount_image $IMG $MOUNTPATH
+if (! is_mounted $MOUNTPATH); then
+  ui_print "! $IMG mount failed... abort"
+  exit 1
+fi
+
+# Create mod paths
+rm -rf $MODPATH 2>/dev/null
+mkdir -p $MODPATH
+
+# Copy files
+ui_print "- Copying files"
+unzip -o "$ZIP" "system/*" -d $MODPATH
+
+# Handle replace folders
+for TARGET in $REPLACE; do
+  mktouch $MODPATH$TARGET/.replace
+done
+
+# Auto Mount
+if ($AUTOMOUNT); then
+  mktouch $MODPATH/auto_mount
+fi
+
+# prop files
+if ($PROPFILE); then
+  cp -af $INSTALLER/common/system.prop $MODPATH/system.prop
+fi
+
+# Module info
+cp -af $INSTALLER/module.prop $MODPATH/module.prop
+if ($BOOTMODE); then
+  # Update info for Magisk Manager
+  mktouch /magisk/$MODID/update
+  cp -af $INSTALLER/module.prop /magisk/$MODID/module.prop
+fi
+
+# post-fs-data mode scripts
+if ($POSTFSDATA); then
+  cp -af $INSTALLER/common/post-fs-data.sh $MODPATH/post-fs-data.sh
+fi
+
+# service mode scripts
+if ($LATESTARTSERVICE); then
+  cp -af $INSTALLER/common/service.sh $MODPATH/service.sh
+fi
+
+ui_print "- Setting permissions"
+set_permissions
+
+ui_print "- Unmounting partitions"
+
+umount $MOUNTPATH
+losetup -d $LOOPDEVICE
+rmdir $MOUNTPATH
+
+# Shrink the image if possible
+target_size_check $IMG
+NEWDATASIZE=$(((curUsedM / 32 + 2) * 32))
+if [ "$curSizeM" -gt "$NEWDATASIZE" ]; then
+  ui_print "- Shrinking $IMG to ${NEWDATASIZE}M..."
+  resize2fs $IMG ${NEWDATASIZE}M
+fi
+
+if (! $BOOTMODE); then
+  umount /system
+  umount /vendor 2>/dev/null
+fi
+
+ui_print "- Done"
+exit 0
