@@ -1,6 +1,6 @@
-*********************************
-OP 3 WiFi Channel Bonding Enabler
-*********************************
+***********************************
+OP3/3T WiFi Channel Bonding Enabler
+***********************************
 OnePlus 3(T) devices do ship with
 channel bonding enabled for 5GHz
 band only. This mod will adjust a
