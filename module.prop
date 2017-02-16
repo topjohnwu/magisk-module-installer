@@ -1,7 +1,7 @@
 id=op3wfcb
-name=OnePlus 3 WiFi Channel Bonding
-version=v0.2
-versionCode=2
+name=OnePlus 3/3T WiFi Channel Bonding
+version=v0.3
+versionCode=3
 author=mr.vince
 description=Use full bandwidth (40MHz) for 2.4GHz connections
 support=http://forum.xda-developers.com/apps/magisk/magisk-oneplus-3t-wifi-channel-bonding-t3520885
