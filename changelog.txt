@@ -3,3 +3,6 @@ v0.1
 	
 v0.2
     - Initial repo release
+    
+v0.3
+    - Revised description for OP3 and OP3T
