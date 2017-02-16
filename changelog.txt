@@ -1,6 +1,8 @@
-v1
-    - New feature 1
-    - New feature 2
-    - Fix 1
-    - Fix 2
-    - Goodies
+v0.1
+    - Initial release
+	
+v0.2
+    - Initial repo release
+    
+v0.3
+    - Revised description for OP3 and OP3T
