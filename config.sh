@@ -52,9 +52,9 @@ LATESTARTSERVICE=false
 # Set what you want to show when installing your mod
 
 print_modname() {
-  ui_print "*********************************"
-  ui_print "OP 3 WiFi Channel Bonding Enabler"
-  ui_print "*********************************"
+  ui_print "***********************************"
+  ui_print "OP3/3T WiFi Channel Bonding Enabler"
+  ui_print "***********************************"
   ui_print "OnePlus 3(T) devices do ship with"
   ui_print "channel bonding enabled for 5GHz"
   ui_print "band only. This mod will adjust a"
