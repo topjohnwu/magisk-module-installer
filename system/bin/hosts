@@ -1,10 +1,8 @@
 while [ 1 ]
 do
-	wget --no-check-certificate https://raw.githubusercontent.com/Zackptg5/Host-Files-For-Unified-Hosts-Adblock/master/update-info.txt
-	cat update-info.txt
-	rm update-info
 	echo "OPTIONS"
 	echo "You can use any combination of the letters below"
+	echo "For example: inputting 'fps' would yield master+fakenews+social"
 	echo "--------------------------------"
 	echo "'master' for adware+malware"
 	echo "'f' for master+fakenews"
@@ -14,21 +12,61 @@ do
 	echo "'d' for disable"
 	echo -n "'q' to quit: "
 	read input
-	if [ "$input" = "master" -o "$input" = "f" -o "$input" = "fg" -o "$input" = "fgp" -o "$input" = "fgps" -o "$input" = "fgs" -o "$input" = "fp" -o "$input" = "fps" -o "$input" = "fs" -o "$input" = "g" -o "$input" = "gp" -o "$input" = "gps" -o "$input" = "gs" -o "$input" = "p" -o "$input" = "ps" -o "$input" = "s" ]
-  then
-  cd ..
-  cd ..
-  cd ..
-  cd /magisk/.core
-  wget --no-check-certificate https://raw.githubusercontent.com/Zackptg5/Host-Files-For-Unified-Hosts-Adblock/master/hosts-$input.txt
-  cat hosts-$input.txt > hosts
-  rm hosts-$input.txt
-  elif [ "$input" = "d" ]
-  then
-  unmount /system/etc/hosts
-  elif [ "$input" = "q" ]
-  then
-  break
-  fi
+	if [ "$input" = "master" ]
+		then
+		cd ..
+		cd ..
+		cd ..
+		cd /magisk/.core
+		wget --no-check-certificate https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+	elif [ "$input" = "f" -o "$input" = "fg" -o "$input" = "fgp" -o "$input" = "fgps" -o "$input" = "fgs" -o "$input" = "fp" -o "$input" = "fps" -o "$input" = "fs" -o "$input" = "g" -o "$input" = "gp" -o "$input" = "gps" -o "$input" = "gs" -o "$input" = "p" -o "$input" = "ps" -o "$input" = "s" ]
+		then
+		cd ..
+		cd ..
+		cd ..
+		cd /magisk/.core
+		case "$input" in
+			f) DIR="fakenews"
+			;;
+			fg) DIR="fakenews-gambling"
+			;;
+			fgp) DIR="fakenews-gambling-porn"
+			;;
+			fgps) DIR="fakenews-gambling-porn-social"
+			;;
+			fgs) DIR="fakenews-gambling-social"
+			;;
+			fp) DIR="fakenews-porn"
+			;;
+			fps) DIR="fakenews-porn-social"
+			;;
+			fs) DIR="fakenews-social"
+			;;
+			g) DIR="gambling"
+			;;
+			gp) DIR="gambling-porn"
+			;;
+			gps) DIR="gambling-porn-social"
+			;;
+			gs) DIR="gambling-social"
+			;;
+			p) DIR="porn"
+			;;
+			ps) DIR="porn-social"
+			;;
+			s) DIR="social"
+			;;
+		esac
+		wget --no-check-certificate https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/$DIR/hosts
+	elif [ "$input" = "d" ]
+		then
+		unmount /system/etc/hosts
+	elif [ "$input" = "q" ]
+		then
+		break
+	elif
+		then
+		echo "Invalid input. Don't use any spaces between letters"
+	fi
 done
-  echo "Done!"
+cho "Done!"
