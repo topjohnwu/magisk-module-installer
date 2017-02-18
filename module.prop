@@ -1,8 +1,8 @@
 id=template
-name=Template Module
+name=ZAdblock
 version=v1
 versionCode=1
-author=topjohnwu
-description=A short description
+author=Zackptg5
+description=A small hosts-modifying adblock magisk module
 support=http://forum.xda-developers.com/showthread.php?t=3432382
-donate=http://topjohnwu.github.io/donate
+donate=
