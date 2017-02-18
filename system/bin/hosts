@@ -1,5 +1,7 @@
 while [ 1 ]
 do
+	wget --no-check-certificate https://github.com/Zackptg5/Host-Files-For-Unified-Hosts-Adblock/update-info.txt
+	cat update-info.txt
 	echo "OPTIONS"
 	echo "You can use any combination of the letters below"
 	echo "--------------------------------"
