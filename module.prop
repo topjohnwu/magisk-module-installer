@@ -4,5 +4,5 @@ version=v1
 versionCode=1
 author=Zackptg5
 description=Small adblock magisk module using host files from Steven Black (https://github.com/StevenBlack/hosts)
-support=
+support=https://forum.xda-developers.com/apps/magisk/magisk-unified-hosts-adblocker-t3559019
 donate=
