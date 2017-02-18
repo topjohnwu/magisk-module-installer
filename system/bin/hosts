@@ -1,6 +1,6 @@
 while [ 1 ]
 do
-	wget --no-check-certificate https://github.com/Zackptg5/Host-Files-For-Unified-Hosts-Adblock/update-info.txt
+	wget --no-check-certificate https://raw.githubusercontent.com/Zackptg5/Host-Files-For-Unified-Hosts-Adblock/master/update-info.txt
 	cat update-info.txt
 	echo "OPTIONS"
 	echo "You can use any combination of the letters below"
@@ -19,7 +19,7 @@ do
   cd ..
   cd ..
   cd /magisk/.core
-  wget --no-check-certificate https://github.com/Zackptg5/Host-Files-For-Unified-Hosts-Adblock/hosts-$input.txt
+  wget --no-check-certificate https://raw.githubusercontent.com/Zackptg5/Host-Files-For-Unified-Hosts-Adblock/master/hosts-$input.txt
   cat hosts-$input.txt > hosts
   rm hosts-$input.txt
   elif [ "$input" = "d" ]
