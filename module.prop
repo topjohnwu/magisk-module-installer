@@ -1,8 +1,8 @@
-id=template
-name=ZAdblock
+id=unifiedhostsadblock
+name=Unified Hosts Adblock
 version=v1
 versionCode=1
 author=Zackptg5
-description=A small hosts-modifying adblock magisk module
-support=http://forum.xda-developers.com/showthread.php?t=3432382
+description=Small adblock magisk module using host files from Steven Black (https://github.com/StevenBlack/hosts)
+support=
 donate=
