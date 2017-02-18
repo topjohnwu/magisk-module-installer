@@ -1,0 +1,33 @@
+while [ 1 ]
+do
+	wget --no-check-certificate https://raw.githubusercontent.com/Zackptg5/Host-Files-For-Unified-Hosts-Adblock/master/update-info.txt
+	cat update-info.txt
+	echo "OPTIONS"
+	echo "You can use any combination of the letters below"
+	echo "--------------------------------"
+	echo "'master' for adware+malware"
+	echo "'f' for master+fakenews"
+	echo "'g' for master+gambling"
+	echo "'p' for master+porn"
+	echo "'s' for master+social"
+	echo "'d' for disable"
+	echo -n "'q' to quit: "
+	read input
+	if [ "$input" = "master" -o "$input" = "f" -o "$input" = "fg" -o "$input" = "fgp" -o "$input" = "fgps" -o "$input" = "fgs" -o "$input" = "fp" -o "$input" = "fps" -o "$input" = "fs" -o "$input" = "g" -o "$input" = "gp" -o "$input" = "gps" -o "$input" = "gs" -o "$input" = "p" -o "$input" = "ps" -o "$input" = "s" ]
+  then
+  cd ..
+  cd ..
+  cd ..
+  cd /magisk/.core
+  wget --no-check-certificate https://raw.githubusercontent.com/Zackptg5/Host-Files-For-Unified-Hosts-Adblock/master/hosts-$input.txt
+  cat hosts-$input.txt > hosts
+  rm hosts-$input.txt
+  elif [ "$input" = "d" ]
+  then
+  unmount /system/etc/hosts
+  elif [ "$input" = "q" ]
+  then
+  break
+  fi
+done
+  echo "Done!"
