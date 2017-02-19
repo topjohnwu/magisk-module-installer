@@ -18,7 +18,7 @@ do
 		cd ..
 		cd ..
 		cd /magisk/.core
-		curl -O https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+		wget -O hosts --no-check-certificate https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
 	elif [ "$input" = "f" -o "$input" = "fg" -o "$input" = "fgp" -o "$input" = "fgps" -o "$input" = "fgs" -o "$input" = "fp" -o "$input" = "fps" -o "$input" = "fs" -o "$input" = "g" -o "$input" = "gp" -o "$input" = "gps" -o "$input" = "gs" -o "$input" = "p" -o "$input" = "ps" -o "$input" = "s" ]
 		then
 		cd ..
@@ -57,7 +57,7 @@ do
 			s) DIR="social"
 			;;
 		esac
-		curl -O https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/$DIR/hosts
+		wget -O hosts --no-check-certificate https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/$DIR/hosts
 	elif [ "$input" = "d" ]
 		then
 		unmount /system/etc/hosts
