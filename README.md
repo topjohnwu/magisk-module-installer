@@ -7,5 +7,6 @@ Usage: Open terminal, type 'su', then type 'hosts' and follow the prompts to ins
 # Changelog
 v1.0
  - Initial release
+
 v1.1 
  - Changed from using curl to wget and built in wget (not all roms have curl apparently)
