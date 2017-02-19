@@ -1,2 +1,3 @@
 v1.0
  - Initial release
+v1.1 - Changed from using curl to wget and built in wget (not all roms have curl apparently)
