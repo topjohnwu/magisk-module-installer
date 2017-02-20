@@ -9,7 +9,7 @@ do
 	echo "'g' for master+gambling"
 	echo "'p' for master+porn"
 	echo "'s' for master+social"
-	echo "'d' for disable"
+	echo "To disable, just toggle the enable systemless hosts in magisk manager"
 	echo -n "'q' to quit: "
 	read input
 	if [ "$input" = "master" ]
@@ -58,9 +58,6 @@ do
 			;;
 		esac
 		wget -O hosts --no-check-certificate https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/$DIR/hosts
-	elif [ "$input" = "d" ]
-		then
-		unmount /system/etc/hosts
 	elif [ "$input" = "q" ]
 		then
 		break
