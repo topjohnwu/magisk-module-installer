@@ -1,7 +1,7 @@
 # Unified Hosts Adblock
 Small adblock magisk module using unified host files from Steven Black [(Check out his github for more information)](https://github.com/StevenBlack/hosts)  
-###Enable Systemless Hosts in Magisk Manager
-###Usage: 
+##Usage: 
+#### First Enable Systemless Hosts in Magisk Manager
  - Open terminal then type:  
  `su`  
  `hosts`
