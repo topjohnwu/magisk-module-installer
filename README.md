@@ -18,3 +18,6 @@ v1.1
 
 v1.2
  - Made minor changes to Readme, removed support and donate links from module.prop, and removed changelog to meet standards of magisk manager 4.2 update
+
+v1.3
+ - Removed broken disable option and added directions for disabling hosts mod
