@@ -14,16 +14,10 @@ do
 	read input
 	if [ "$input" = "master" ]
 		then
-		cd ..
-		cd ..
-		cd ..
 		cd /magisk/.core
 		wget -O hosts --no-check-certificate https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
 	elif [ "$input" = "f" -o "$input" = "fg" -o "$input" = "fgp" -o "$input" = "fgps" -o "$input" = "fgs" -o "$input" = "fp" -o "$input" = "fps" -o "$input" = "fs" -o "$input" = "g" -o "$input" = "gp" -o "$input" = "gps" -o "$input" = "gs" -o "$input" = "p" -o "$input" = "ps" -o "$input" = "s" ]
 		then
-		cd ..
-		cd ..
-		cd ..
 		cd /magisk/.core
 		case "$input" in
 			f) DIR="fakenews"
