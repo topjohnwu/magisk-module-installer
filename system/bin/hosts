@@ -1,6 +1,6 @@
 while [ 1 ]
 do
-	echo "OPTIONS"
+	echo "Unified Hosts Adblocker"
 	echo "You can use any combination of the letters below"
 	echo "For example: inputting 'fps' would yield master+fakenews+social"
 	echo "--------------------------------"
