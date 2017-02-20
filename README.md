@@ -5,6 +5,8 @@ Note: Enable Systemless Hosts in Magisk Manager
 
 Usage: Open terminal, type 'su', then type 'hosts' and follow the prompts to install host file of choice
 
+# Support Link
+https://forum.xda-developers.com/apps/magisk/magisk-unified-hosts-adblocker-t3559019
 
 # Changelog
 v1.0
