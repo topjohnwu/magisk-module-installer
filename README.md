@@ -12,3 +12,6 @@ v1.0
 
 v1.1 
  - Changed from using curl to wget and built in wget (not all roms have curl apparently)
+
+v1.2
+ - Made minor changes to Readme, removed support and donate links from module.prop, and removed changelog to meet standards of magisk manager 4.2 update
