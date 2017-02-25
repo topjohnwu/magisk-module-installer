@@ -1,6 +1,7 @@
 ## Galaxy S6 Deep Sleep Fix
-You can edit your `README.md` within Github's online editor, it also has an preview button!  
-Check the [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for markdown syntaxes, it's super easy!  
+Sometimes the Galaxy S6 (Edge) won't go into deep sleep after unroot, e.g. moving from SuperSU to MagiskSU.
+Support thread for the problem: https://forum.xda-developers.com/galaxy-s6-edge/help/deep-sleep-t3079705
+Solution implemented by this module: https://forum.xda-developers.com/galaxy-s6-edge/help/deep-sleep-t3079705/post60382100#post60382100
 
 ## Change Log
 1.0 - Initial release.
