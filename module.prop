@@ -1,6 +1,6 @@
-id=template
-name=Template Module
+id=s6deepsleppfix
+name=Galaxy S6 Deep Sleep Fix
 version=v1
 versionCode=1
-author=topjohnwu
-description=A short description
+author=maclarsson
+description=Sometimes the Galaxy S6 (Edge) won't go into deep sleep after unRoot. This module fixes this.
