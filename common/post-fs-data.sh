@@ -5,3 +5,5 @@ MODDIR=${0%/*}
 
 # This script will be executed in post-fs-data mode
 # More info in the main Magisk thread
+echo 'temporary none' > /sys/class/scsi_disk/0:0:0:1/cache_type
+echo 'temporary none' > /sys/class/scsi_disk/0:0:0:2/cache_type
