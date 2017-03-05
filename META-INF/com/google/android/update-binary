@@ -261,6 +261,7 @@ mkdir -p $MODPATH
 # Copy files
 ui_print "- Copying files"
 unzip -o "$ZIP" "system/*" -d $MODPATH
+cp -f $INSTALLER/whitelist.txt $MODPATH/whitelist.txt
 
 # Handle replace folders
 for TARGET in $REPLACE; do
