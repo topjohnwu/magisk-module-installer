@@ -1,6 +1,10 @@
 while [ 1 ]
 do
 	echo "Unified Hosts Adblocker"
+	cd /sdcard
+	wget -q -O treadme --no-check-certificate https://raw.githubusercontent.com/StevenBlack/hosts/master/readme.md
+	sed '7q;d' treadme
+	rm -f treadme
 	echo "You can use any combination of the letters below"
 	echo "For example: inputting 'fps' would yield master+fakenews+porn+social"
 	echo "--------------------------------"
