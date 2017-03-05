@@ -1,22 +1,24 @@
+echo "Unified Hosts Adblocker"
+cd /sdcard
+wget -q -O treadme --no-check-certificate https://raw.githubusercontent.com/StevenBlack/hosts/master/readme.md
+sed '7q;d' treadme
+rm -f treadme
+echo "You can use any combination of the letters below"
+echo "For example: inputting 'fps' would yield master+fakenews+porn+social"
 while [ 1 ]
 do
-	echo "Unified Hosts Adblocker"
-	cd /sdcard
-	wget -q -O treadme --no-check-certificate https://raw.githubusercontent.com/StevenBlack/hosts/master/readme.md
-	sed '7q;d' treadme
-	rm -f treadme
-	echo "You can use any combination of the letters below"
-	echo "For example: inputting 'fps' would yield master+fakenews+porn+social"
+	echo "Select an option below:"
 	echo "--------------------------------"
-	echo "'master' for adware+malware"
+	echo "'m' for adware+malware"
 	echo "'f' for master+fakenews"
 	echo "'g' for master+gambling"
 	echo "'p' for master+porn"
 	echo "'s' for master+social"
 	echo "To disable, just toggle the enable systemless hosts in magisk manager"
+	echo "'w' to add whitelist"
 	echo -n "'q' to quit: "
 	read input
-	if [ "$input" = "master" ]
+	if [ "$input" = "m" ]
 		then
 		cd /magisk/.core
 		wget -O hosts --no-check-certificate https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
@@ -56,6 +58,19 @@ do
 			;;
 		esac
 		wget -O hosts --no-check-certificate https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/$DIR/hosts
+	elif [ "$input" = "w" ]
+		then
+		if [ ! -e "/sdcard/whitelist.txt" ]
+			then
+			echo "*No Whitelist detected*"
+			echo "Copy your whilelist.txt to /sdcard"
+		else
+			echo "Applying Whitelist"
+			cd /magisk/.core
+			mv hosts temp
+			grep -vFf /sdcard/whitelist.txt temp > hosts
+			rm -f temp
+		fi
 	elif [ "$input" = "q" ]
 		then
 		break
