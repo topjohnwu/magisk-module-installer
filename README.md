@@ -34,3 +34,9 @@ v1.4
  - Added date hosts were last updated (so you can determine if yours need updated)
  - Added whitelist feature
  - Minor restructuring of hosts script header
+
+v1.5
+ - Updated to magisk 11.5 (template v2)
+ 
+v1.6
+ - Updated to magisk 11.6 (template v3)
