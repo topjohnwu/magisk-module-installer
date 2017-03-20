@@ -4,3 +4,4 @@ version=v1.4
 versionCode=1.4
 author=Zackptg5
 description=Small adblock magisk module using host files from Steven Black (https://github.com/StevenBlack/hosts)
+template=2
