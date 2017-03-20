@@ -108,7 +108,7 @@ request_size_check() {
 
 image_size_check() {
   e2fsck -yf $1
-  curBlocks=`e2fsck -n $1 2>/dev/null | cut -d, -f3 | cut -d\  -f2`;
+  curBlocks=`e2fsck -n $1 2>/dev/null | grep $1 | cut -d, -f3 | cut -d\  -f2`;
   curUsedM=`echo "$curBlocks" | cut -d/ -f1`
   curSizeM=`echo "$curBlocks" | cut -d/ -f1`
   curFreeM=$(((curSizeM - curUsedM) * 4 / 1024))
