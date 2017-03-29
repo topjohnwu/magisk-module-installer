@@ -15,7 +15,7 @@ Small adblock magisk module using unified host files from Steven Black [(Check o
 #### To Remove Whitelist:
  - Just run hosts script and reinstall host file of choice
 
-##[Support](https://forum.xda-developers.com/apps/magisk/magisk-unified-hosts-adblocker-t3559019)
+## [Support](https://forum.xda-developers.com/apps/magisk/magisk-unified-hosts-adblocker-t3559019)
 
 ## Changelog
 v1.0
