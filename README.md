@@ -40,3 +40,6 @@ v1.5
  
 v1.6
  - Updated to magisk 11.6 (template v3)
+ 
+v1.7
+ - Added pixel support

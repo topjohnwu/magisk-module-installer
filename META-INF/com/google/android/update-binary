@@ -10,6 +10,31 @@ umask 022
 # Functions
 ##########################################################################################
 
+safe_mount() {
+  IS_MOUNT=$(cat /proc/mounts | grep "$1")
+  if [ "$IS_MOUNT" ]; then
+    mount -o rw,remount $1
+  else
+    mount $1
+  fi
+}
+
+safe_mount /system
+
+SLOT=$(getprop ro.boot.slot_suffix 2>/tmp/null)
+if [ "$SLOT" ]; then
+  SYSTEM=/system/system
+else
+  SYSTEM=/system
+fi
+
+if [ ! -d "$SYSTEM/vendor" ] || [ -L "$SYSTEM/vendor" ]; then
+  safe_mount /vendor
+  VENDOR=/vendor
+elif [ -d "$SYSTEM/vendor" ] || [ -L "/vendor" ]; then
+  VENDOR=$SYSTEM/vendor
+fi
+
 ui_print() {
   if $BOOTMODE; then
     echo "$1"
@@ -24,7 +49,7 @@ grep_prop() {
   shift
   FILES=$@
   if [ -z "$FILES" ]; then
-    FILES='/system/build.prop'
+    FILES="$SYSTEM/build.prop"
   fi
   cat $FILES 2>/dev/null | sed -n "$REGEX" | head -n 1
 }
@@ -57,10 +82,10 @@ mount_image() {
         if [ "$?" -eq "0" ]; then
           mount -t ext4 -o loop $LOOPDEVICE $2
           if (! is_mounted $2); then
-            /system/bin/toolbox mount -t ext4 -o loop $LOOPDEVICE $2
+            $SYSTEM/bin/toolbox mount -t ext4 -o loop $LOOPDEVICE $2
           fi
           if (! is_mounted $2); then
-            /system/bin/toybox mount -t ext4 -o loop $LOOPDEVICE $2
+            $SYSTEM/bin/toybox mount -t ext4 -o loop $LOOPDEVICE $2
           fi
         fi
         if (is_mounted $2); then
@@ -188,14 +213,12 @@ ui_print "******************************"
 ui_print "Powered by Magisk (@topjohnwu)"
 ui_print "******************************"
 
-ui_print "- Mounting /system(ro), /vendor(ro), /data, /cache"
-mount -o ro /system 2>/dev/null
-mount -o ro /vendor 2>/dev/null
+ui_print "- Mounting /data, /cache"
 mount /data 2>/dev/null
 mount /cache 2>/dev/null
 
-if [ ! -f '/system/build.prop' ]; then
-  ui_print "! Failed: /system could not be mounted!"
+if [ ! -f "$SYSTEM/build.prop" ]; then
+  ui_print "! Failed: $SYSTEM could not be mounted!"
   exit 1
 fi
 
@@ -316,7 +339,7 @@ fi
 
 if ! $BOOTMODE; then
   umount /system
-  umount /vendor 2>/dev/null
+  umount $VENDOR 2>/dev/null
 fi
 
 ui_print "- Done"
