@@ -285,7 +285,12 @@ mkdir -p $MODPATH
 
 # Copy files
 ui_print "- Copying files"
-unzip -o "$ZIP" "system/*" -d $MODPATH
+if [ $SYSTEM == /system/system ]; then
+	mkdir $MODPATH/system
+	unzip -o "$ZIP" "system/*" -d $MODPATH/system
+else
+	unzip -o "$ZIP" "system/*" -d $MODPATH
+fi
 
 # Handle replace folders
 for TARGET in $REPLACE; do
