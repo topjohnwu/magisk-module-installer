@@ -8,7 +8,7 @@ Small adblock magisk module using unified host files from Steven Black [(Check o
  - Then follow the prompts to install host file of choice
 
 #### Whitelist Instructions:
- - Create a text file on sdcard card "whitelist.txt"
+ - Create a text file on sdcard card "whitelist"
  - Add whatever you want whitelisted to it
  - Run hosts script and choose whitelist option
  
@@ -43,3 +43,9 @@ v1.6
  
 v1.7
  - Added pixel support
+ 
+v1.8
+ - Added all possible letter combinations (order no longer matters)
+ - Fixed up pixel support - still WIP (thanks to @ahrion at xda-developers)
+ - Fixed Last Updated date change
+ - Added update check notification at beginning of script

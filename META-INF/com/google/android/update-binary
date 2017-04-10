@@ -10,29 +10,16 @@ umask 022
 # Functions
 ##########################################################################################
 
-safe_mount() {
-  IS_MOUNT=$(cat /proc/mounts | grep "$1")
-  if [ "$IS_MOUNT" ]; then
-    mount -o rw,remount $1
-  else
-    mount $1
-  fi
-}
-
-safe_mount /system
-
-SLOT=$(getprop ro.boot.slot_suffix 2>/tmp/null)
-if [ "$SLOT" ]; then
+# DETERMINE IF PIXEL (A/B OTA) DEVICE
+ABDeviceCheck=$(cat /proc/cmdline | grep slot_suffix | wc -l)
+if [ "$ABDeviceCheck" -gt 0 ]; then
+  isABDevice=true
   SYSTEM=/system/system
-else
-  SYSTEM=/system
-fi
-
-if [ ! -d "$SYSTEM/vendor" ] || [ -L "$SYSTEM/vendor" ]; then
-  safe_mount /vendor
   VENDOR=/vendor
-elif [ -d "$SYSTEM/vendor" ] || [ -L "/vendor" ]; then
-  VENDOR=$SYSTEM/vendor
+else
+  isABDevice=false
+  SYSTEM=/system
+  VENDOR=/system/vendor
 fi
 
 ui_print() {
@@ -213,12 +200,28 @@ ui_print "******************************"
 ui_print "Powered by Magisk (@topjohnwu)"
 ui_print "******************************"
 
-ui_print "- Mounting /data, /cache"
+ui_print "- Mounting /data and /cache"
 mount /data 2>/dev/null
 mount /cache 2>/dev/null
 
+SPACE=" "
+if [ $isABDevice == true ]; then
+  ui_print "   ! A/B OTA device detected!"
+  WRITE=rw
+  SPACE="  "
+elif [ -f /data/magisk.img ] || [ -d /magisk ]; then
+  WRITE=ro
+elif [ ! -f /data/magisk.img ] || [ ! -d /magisk ]; then
+  WRITE=rw
+fi
+
+ui_print "$SPACE  Mounting /system($WRITE)..."
+mount -o $WRITE /system 2>/dev/null
+ui_print "$SPACE  Mounting /vendor($WRITE)..."
+mount -o $WRITE /vendor 2>/dev/null
+		 
 if [ ! -f "$SYSTEM/build.prop" ]; then
-  ui_print "! Failed: $SYSTEM could not be mounted!"
+  ui_print "! Failed: /system could not be mounted!"
   exit 1
 fi
 
@@ -285,12 +288,7 @@ mkdir -p $MODPATH
 
 # Copy files
 ui_print "- Copying files"
-if [ $SYSTEM == /system/system ]; then
-	mkdir $MODPATH/system
-	unzip -o "$ZIP" "system/*" -d $MODPATH/system
-else
-	unzip -o "$ZIP" "system/*" -d $MODPATH
-fi
+unzip -o "$ZIP" "system/*" -d $MODPATH
 
 # Handle replace folders
 for TARGET in $REPLACE; do
@@ -342,9 +340,17 @@ if [ "$curSizeM" -gt "$NEWDATASIZE" ]; then
   resize2fs $IMG ${NEWDATASIZE}M
 fi
 
+umount /cache 2>/dev/null
+umount /data 2>/dev/null
+
 if ! $BOOTMODE; then
   umount /system
-  umount $VENDOR 2>/dev/null
+  umount /vendor 2>/dev/null
+fi
+
+if [ $isABDevice == true ]; then
+  mount -o ro /system 2>/dev/null
+  mount -o ro /vendor 2>/dev/null
 fi
 
 ui_print "- Done"

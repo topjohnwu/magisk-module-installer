@@ -1,11 +1,27 @@
 echo "Unified Hosts Adblocker"
-cd /sdcard
-wget -q -O treadme --no-check-certificate https://raw.githubusercontent.com/StevenBlack/hosts/master/readme.md
-sed '7q;d' treadme
-rm -f treadme
+HOST=/magisk/.core/hosts
+TREADME=/cache/treadme
+FILTER=/magisk/unifiedhostsadblock/filter
+WHITELIST=/sdcard/whitelist
+wget -q -O $TREADME --no-check-certificate https://raw.githubusercontent.com/StevenBlack/hosts/master/readme.md
+grep "Last updated:" $TREADME
+if [ -f $FILTER ]; then
+	CURRENT=$(grep "Last updated:" $TREADME)
+	LAST_UPDATED=$(sed '1q;d' $FILTER)
+	if [ "$LAST_UPDATED" != "$CURRENT" ]; then
+		echo "Updates are available"
+	else
+		echo "No updates available"
+	fi
+else
+	touch $FILTER
+	echo "No hosts file yet applied"
+fi
+grep "Last updated:" $TREADME > $FILTER
+rm -f $TREADME
 echo "You can use any combination of the letters below"
 echo "For example: inputting 'fps' would yield master+fakenews+porn+social"
-while [ 1 ]
+while true
 do
 	echo "Select an option below:"
 	echo "--------------------------------"
@@ -17,66 +33,69 @@ do
 	echo "To disable, just toggle the enable systemless hosts in magisk manager"
 	echo "'w' to add whitelist"
 	echo -n "'q' to quit: "
-	read input
-	if [ "$input" = "m" ]
-		then
-		cd /magisk/.core
-		wget -O hosts --no-check-certificate https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
-	elif [ "$input" = "f" -o "$input" = "fg" -o "$input" = "fgp" -o "$input" = "fgps" -o "$input" = "fgs" -o "$input" = "fp" -o "$input" = "fps" -o "$input" = "fs" -o "$input" = "g" -o "$input" = "gp" -o "$input" = "gps" -o "$input" = "gs" -o "$input" = "p" -o "$input" = "ps" -o "$input" = "s" ]
-		then
-		cd /magisk/.core
-		case "$input" in
-			f) DIR="fakenews"
-			;;
-			fg) DIR="fakenews-gambling"
-			;;
-			fgp) DIR="fakenews-gambling-porn"
-			;;
-			fgps) DIR="fakenews-gambling-porn-social"
-			;;
-			fgs) DIR="fakenews-gambling-social"
-			;;
-			fp) DIR="fakenews-porn"
-			;;
-			fps) DIR="fakenews-porn-social"
-			;;
-			fs) DIR="fakenews-social"
-			;;
-			g) DIR="gambling"
-			;;
-			gp) DIR="gambling-porn"
-			;;
-			gps) DIR="gambling-porn-social"
-			;;
-			gs) DIR="gambling-social"
-			;;
-			p) DIR="porn"
-			;;
-			ps) DIR="porn-social"
-			;;
-			s) DIR="social"
-			;;
-		esac
-		wget -O hosts --no-check-certificate https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/$DIR/hosts
-	elif [ "$input" = "w" ]
-		then
-		if [ ! -e "/sdcard/whitelist.txt" ]
-			then
-			echo "*No Whitelist detected*"
-			echo "Copy your whilelist.txt to /sdcard"
-		else
-			echo "Applying Whitelist"
-			cd /magisk/.core
-			mv hosts temp
-			grep -vFf /sdcard/whitelist.txt temp > hosts
-			rm -f temp
-		fi
-	elif [ "$input" = "q" ]
-		then
-		break
-	elif
-		then
-		echo "Invalid input. Don't use any spaces between letters"
+	read -r INPUT
+	DIR=""
+	case "$INPUT" in
+		m) DIR="master/hosts"
+		;;
+		f) DIR="master/alternates/fakenews/hosts"
+		;;
+		fg|gf) DIR="master/alternates/fakenews-gambling/hosts"
+		;;
+		fgp|fpg|gfp|gpf|pfg|pgf) DIR="master/alternates/fakenews-gambling-porn/hosts"
+		;;
+		fgps|fgsp|fpgs|fpsg|fspg|fsgp|gfps|gfsp|gpfs|gpsf|gsfp|gspf|pfgs|pfsg|pgfs|pgsf|psfg|psgf|sfgp|sfpg|sgfp|sgpf|spfg|spgf) DIR="master/alternates/fakenews-gambling-porn-social/hosts"
+		;;
+		fgs|fsg|gfs|gsf|sfg|sgf) DIR="master/alternates/fakenews-gambling-social/hosts"
+		;;
+		fp|pf) DIR="master/alternates/fakenews-porn/hosts"
+		;;
+		fps|fsp|pfs|psf|sfp|spf) DIR="master/alternates/fakenews-porn-social/hosts"
+		;;
+		fs|sf) DIR="master/alternates/fakenews-social/hosts"
+		;;
+		g) DIR="master/alternates/gambling/hosts"
+		;;
+		gp|pg) DIR="master/alternates/gambling-porn/hosts"
+		;;
+		gps|gsp|pgs|psg|sgp|spg) DIR="master/alternates/gambling-porn-social/hosts"
+		;;
+		gs|sg) DIR="master/alternates/gambling-social/hosts"
+		;;
+		p) DIR="master/alternates/porn/hosts"
+		;;
+		ps|sp) DIR="master/alternates/porn-social/hosts"
+		;;
+		s) DIR="master/alternates/social/hosts"
+		;;
+		w)  if [ ! -f $WHITELIST ]; then
+				echo ""
+				echo "*No Whitelist detected*"
+				echo "Copy your whilelist to /sdcard"
+				echo ""
+		    else
+				if [ -f "$HOST" ]; then
+					echo "Applying Whitelist"
+					mv $HOST temp
+					grep -vFf $WHITELIST temp > $HOST
+					rm -f temp
+				else
+					echo ""
+					echo "No hosts file detected"
+					echo "Apply a hosts file first"
+					echo ""
+				fi
+		    fi
+		;;
+		q) break
+		;;
+		*)  echo ""
+			echo "Invalid input. Don't use any spaces between letters"
+			echo ""
+		;;
+	esac
+	if [ $DIR ]; then
+		wget -O $HOST --no-check-certificate https://raw.githubusercontent.com/StevenBlack/hosts/$DIR
 	fi
 done
 echo "Done!"
