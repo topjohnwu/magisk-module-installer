@@ -1,5 +1,6 @@
 #!/sbin/sh
 
+
 # Detect whether in boot mode
 ps | grep zygote | grep -v grep >/dev/null && BOOTMODE=true || BOOTMODE=false
 
@@ -172,6 +173,14 @@ source config.sh
 INSTALLER=$TMPDIR/$MODID
 MODPATH=$MOUNTPATH/$MODID
 
+
+# Define the original /system path for module to get original files
+SYSTEM=/system
+if ($BOOTMODE); then
+  SYSTEM=/dev/magisk/mirror/system
+fi
+
+
 mkdir -p $INSTALLER
 cd $INSTALLER
 unzip -o "$ZIP" "common/*" module.prop
@@ -198,6 +207,7 @@ if [ ! -f '/system/build.prop' ]; then
   ui_print "! Failed: /system could not be mounted!"
   exit 1
 fi
+
 
 API=`grep_prop ro.build.version.sdk`
 ABI=`grep_prop ro.product.cpu.abi | cut -c-3`
