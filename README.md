@@ -1,3 +1,8 @@
+
+## !! Please update this README.md file for online Repo submission !!
+You can edit your `README.md` within Github's online editor, it also has an preview button!  
+Check the [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for markdown syntaxes, it's super easy!  
+
 ## How to Create a Magisk Module
 1. Clone / download this repo
 2. Open `config.sh`, follow the instructions written at the beginning of the file. You should at least change `config.sh` and `module.prop`
@@ -6,7 +11,7 @@
 
 ## How to Request a New Repo
 1. Fork [this repo](https://github.com/topjohnwu/magisk-module-template)
-2. Create you own Magisk Module as stated above
+2. Create your own Magisk Module as stated above
 3. Push your changes to Github
 4. Change the description of the Github repo to **the id of your module. This is important! Never change it to anything else!**
 5. Open an issue in [topjohnwu/Magisk_Repo_Central](https://github.com/topjohnwu/Magisk_Repo_Central/issues/new)  
@@ -23,5 +28,4 @@
 1. Open a new branch, and start update your files on the new branch
 2. Test if everything works fine
 3. Bump up the `versionCode` in `module.prop`, or Magisk Manager won't know that your module is updated!
-4. List all changes into `changelog.txt`, this will let users have a brief idea of your update
-3. Merge the changes back to master, all users shall now receive the update in Magisk Manager
+4. Merge the changes back to master, all users shall now receive the update in Magisk Manager
