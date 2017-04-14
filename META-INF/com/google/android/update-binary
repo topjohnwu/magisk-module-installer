@@ -169,6 +169,12 @@ source config.sh
 INSTALLER=$TMPDIR/$MODID
 MODPATH=$MOUNTPATH/$MODID
 
+# Define the original /system path for module to get original files
+SYSTEM=/system
+if ($BOOTMODE); then
+  SYSTEM=/dev/magisk/mirror/system
+fi
+
 mkdir -p $INSTALLER
 cd $INSTALLER
 unzip -o "$ZIP" "common/*" module.prop
