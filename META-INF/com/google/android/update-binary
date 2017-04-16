@@ -152,10 +152,12 @@ TMPDIR=/dev/tmp
 
 MOUNTPATH=/magisk
 IMGNAME=magisk.img
+SYSTEM=/system
 
 if $BOOTMODE; then
   MOUNTPATH=/dev/magisk_merge
   IMGNAME=magisk_merge.img
+  SYSTEM=/dev/magisk/mirror/system
 fi
 
 mkdir -p $TMPDIR 2>/dev/null
