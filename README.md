@@ -49,3 +49,7 @@ v1.8
  - Fixed up pixel support - still WIP (thanks to @ahrion at xda-developers)
  - Fixed Last Updated date change
  - Added update check notification at beginning of script
+
+v1.9
+ - Fixed last updated date change
+ - Fixed whitelist option

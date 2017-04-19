@@ -3,6 +3,7 @@ HOST=/magisk/.core/hosts
 TREADME=/cache/treadme
 FILTER=/magisk/unifiedhostsadblock/filter
 WHITELIST=/sdcard/whitelist
+TEMP=/sdcard/temp
 wget -q -O $TREADME --no-check-certificate https://raw.githubusercontent.com/StevenBlack/hosts/master/readme.md
 grep "Last updated:" $TREADME
 if [ -f $FILTER ]; then
@@ -17,8 +18,6 @@ else
 	touch $FILTER
 	echo "No hosts file yet applied"
 fi
-grep "Last updated:" $TREADME > $FILTER
-rm -f $TREADME
 echo "You can use any combination of the letters below"
 echo "For example: inputting 'fps' would yield master+fakenews+porn+social"
 while true
@@ -76,9 +75,9 @@ do
 		    else
 				if [ -f "$HOST" ]; then
 					echo "Applying Whitelist"
-					mv $HOST temp
-					grep -vFf $WHITELIST temp > $HOST
-					rm -f temp
+					mv $HOST $TEMP
+					grep -vFf $WHITELIST $TEMP > $HOST
+					rm -f $TEMP
 				else
 					echo ""
 					echo "No hosts file detected"
@@ -96,6 +95,8 @@ do
 	esac
 	if [ $DIR ]; then
 		wget -O $HOST --no-check-certificate https://raw.githubusercontent.com/StevenBlack/hosts/$DIR
+		grep "Last updated:" $TREADME > $FILTER
 	fi
+rm -f $TREADME
 done
 echo "Done!"
