@@ -9,8 +9,8 @@ Small adblock magisk module using unified host files from Steven Black [(Check o
 
 #### Whitelist Instructions:
  - Create a text file on sdcard card "whitelist"
- - Add whatever you want whitelisted to it
- - Run hosts script and choose whitelist option
+ - Either add exact lines you want remove to it -> Run hosts script and choose whitelist option
+ - Or add regex for lines you want removed -> Run hosts script and choose whitelist regex option
  
 #### To Remove Whitelist:
  - Just run hosts script and reinstall host file of choice
