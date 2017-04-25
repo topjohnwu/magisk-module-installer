@@ -1,7 +1,7 @@
 id=unifiedhostsadblock
 name=Unified Hosts Adblock
-version=v1.9
-versionCode=1.9
+version=v2.0
+versionCode=2.0
 author=Zackptg5
 description=Small adblock magisk module using host files from Steven Black (https://github.com/StevenBlack/hosts)
 template=3

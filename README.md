@@ -53,3 +53,7 @@ v1.8
 v1.9
  - Fixed last updated date change
  - Fixed whitelist option
+ 
+v2.0
+ - Moved included wget to out of system completely, hosts script is only file that will use it (prevents potential conflicts). Thanks to @rignfool and @veez21
+ - Added wildcard support to whitelist

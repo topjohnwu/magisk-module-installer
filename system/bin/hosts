@@ -1,4 +1,5 @@
 echo "Unified Hosts Adblocker"
+alias wget="/magisk/unifiedhostsadblock/wget"
 HOST=/magisk/.core/hosts
 TREADME=/cache/treadme
 FILTER=/magisk/unifiedhostsadblock/filter
@@ -30,7 +31,8 @@ do
 	echo "'p' for master+porn"
 	echo "'s' for master+social"
 	echo "To disable, just toggle the enable systemless hosts in magisk manager"
-	echo "'w' to add whitelist"
+	echo "'w' to add whitelist (search for exact strings)"
+	echo "'wr' to add whitelist (use regex - needed for wildcards)"
 	echo -n "'q' to quit: "
 	read -r INPUT
 	DIR=""
@@ -75,9 +77,26 @@ do
 		    else
 				if [ -f "$HOST" ]; then
 					echo "Applying Whitelist"
-					mv $HOST $TEMP
-					grep -vFf $WHITELIST $TEMP > $HOST
-					rm -f $TEMP
+					grep -Fvxf $WHITELIST $HOST > $TEMP
+					mv $TEMP $HOST
+				else
+					echo ""
+					echo "No hosts file detected"
+					echo "Apply a hosts file first"
+					echo ""
+				fi
+		    fi
+		;;
+		wr)  if [ ! -f $WHITELIST ]; then
+				echo ""
+				echo "*No Whitelist detected*"
+				echo "Copy your whilelist to /sdcard"
+				echo ""
+		    else
+				if [ -f "$HOST" ]; then
+					echo "Applying Whitelist (regex)"
+					grep -vxf $WHITELIST $HOST > $TEMP
+					mv $TEMP $HOST
 				else
 					echo ""
 					echo "No hosts file detected"
