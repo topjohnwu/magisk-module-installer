@@ -9,7 +9,7 @@ Check the [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Ma
 4. Please check **Notes** for precautions
 
 ## How to Request a New Repo
-1. Fork [this repo](https://github.com/topjohnwu/magisk-module-template)
+1. Fork [this repo](https://github.com/topjohnwu/magisk-module-template/fork)
 2. Create your own Magisk Module as stated above
 3. Push your changes to Github
 4. Change the description of the Github repo to **the id of your module. This is important! Never change it to anything else!**
