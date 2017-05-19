@@ -27,7 +27,7 @@
 
 # This will be the folder name under /magisk
 # This should also be the same as the id in your module.prop to prevent confusion
-MODID=template
+MODID=AndroidO-systemless
 
 # Set to true if you need to enable Magic Mount
 # Most mods would like it to be enabled
@@ -70,6 +70,7 @@ REPLACE="
 # Construct your own list here, it will overwrite the example
 # !DO NOT! remove this if you don't need to replace anything, leave it empty as it is now
 REPLACE="
+/system/fonts/NotoColorEmoji.ttf
 "
 
 ##########################################################################################
