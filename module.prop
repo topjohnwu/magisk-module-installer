@@ -1,7 +1,7 @@
-id=template
-name=Template Module
-version=v1
+id=AndroidO-systemless
+name=Android O emojis
+version=v1.0
 versionCode=1
-author=topjohnwu
-description=A short description
+author=Alex193a
+description=Systemlessly replaces emoji font with Android O.
 template=3
