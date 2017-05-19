@@ -9,4 +9,4 @@ Systemlessly replaces emoji font with Android O.
 * Restart your phone
 * Enojoy
 
-![example](http://i.imgur.com/Ztm5mWT.jpg)
+<img src="http://i.imgur.com/Ztm5mWT.jpg" width="450px">
