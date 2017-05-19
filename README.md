@@ -8,3 +8,5 @@ Systemlessly replaces emoji font with Android O.
 * Go to Module, tap on + and select the module
 * Restart your phone
 * Enojoy
+
+![example](http://i.imgur.com/Ztm5mWT.jpg)
