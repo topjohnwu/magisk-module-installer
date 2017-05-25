@@ -1,7 +1,7 @@
-id=template
-name=Template Module
-version=v1
-versionCode=1
-author=topjohnwu
-description=A short description
+id=MagiskMiracast
+name=Magisk Miracast & Thetering Enabler 
+version=v2017.05.24
+versionCode=20170524
+author=VR25
+description=Enable Wireless Display & Thetering.
 template=3

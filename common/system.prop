@@ -1,3 +1,9 @@
 # This file will be read by resetprop
 # Example: Change dpi
 # ro.sf.lcd_density=320
+
+net.tethering.noprovisioning=true
+RO.HDMI.ENABLE=TRUE
+RO.HDMI.MIRROR.ENABLE=TRUE
+persist.debug.wfd.enable=1
+persist.adb.notify=0
