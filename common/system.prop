@@ -3,7 +3,7 @@
 # ro.sf.lcd_density=320
 
 net.tethering.noprovisioning=true
-RO.HDMI.ENABLE=TRUE
-RO.HDMI.MIRROR.ENABLE=TRUE
+ro.hdmi.enable=true
+ro.hdmi.mirror.enable=true
 persist.debug.wfd.enable=1
 persist.adb.notify=0
