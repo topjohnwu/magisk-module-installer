@@ -3,5 +3,5 @@ name=Magisk Miracast & Thetering Enabler
 version=v2017.5.24
 versionCode=2017524
 author=VR25
-description=Enable Wireless Display & Thetering.
+description=After installing and rebooting, go to Settings > Display > Cast > Click the 3 dots > Enable Wireless Display > Done.
 template=3
