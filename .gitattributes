@@ -3,6 +3,8 @@ META-INF/** text eol=lf
 common/** text eol=lf
 module.prop text eol=lf
 changelog.txt text eol=lf
+config.sh text eol=lf
+README.md text eol=lf
 
 # Denote all files that are truly binary and should not be modified.
 system/** binary
