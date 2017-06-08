@@ -49,9 +49,9 @@ LATESTARTSERVICE=false
 # Set what you want to show when installing your mod
 
 print_modname() {
-  ui_print "***********************************"
-  ui_print "Magisk Miracast & Thetering Enabler"
-  ui_print "***********************************"
+  ui_print "*******************************************"
+  ui_print "Magisk Miracast & Thetering Enabler by VR25"
+  ui_print "*******************************************"
 }
 
 ##########################################################################################
