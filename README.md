@@ -1,5 +1,5 @@
 ## Systemless Substratum (Legacy/Layers Mode)
- A Magisk module which allows installation of Substratum modules in legacy/root mode
+ A Magisk module which allows installation of Substratum themes in legacy/root mode
 systemlessly.
 
  The new Substratum OVM mode works systemlessly but requires support for it in the ROM.
