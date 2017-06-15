@@ -1,7 +1,7 @@
-id=template
-name=Template Module
+id=systemless-substratum-legacy
+name=Systemless Substratum Legacy
 version=v1
 versionCode=1
-author=topjohnwu
-description=A short description
+author=Nodens
+description=A Magisk module which allows installation of Substratum modules in legacy/root mode systemlessly.
 template=3

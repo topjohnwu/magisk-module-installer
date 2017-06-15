@@ -27,7 +27,7 @@
 
 # This will be the folder name under /magisk
 # This should also be the same as the id in your module.prop to prevent confusion
-MODID=template
+MODID=systemless-substratum-legacy
 
 # Set to true if you need to enable Magic Mount
 # Most mods would like it to be enabled
@@ -49,9 +49,9 @@ LATESTARTSERVICE=false
 # Set what you want to show when installing your mod
 
 print_modname() {
-  ui_print "*******************************"
-  ui_print "     Magisk Module Template    "
-  ui_print "*******************************"
+  ui_print "********************************"
+  ui_print "  Systemless Substratum Legacy  "
+  ui_print "********************************"
 }
 
 ##########################################################################################
@@ -74,6 +74,7 @@ REPLACE="
 # Construct your own list here, it will overwrite the example
 # !DO NOT! remove this if you don't need to replace anything, leave it empty as it is now
 REPLACE="
+/system/vendor/overlay
 "
 
 ##########################################################################################
