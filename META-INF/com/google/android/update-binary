@@ -116,6 +116,14 @@ image_size_check() {
   curSizeM=$((curSizeM * 4 / 1024))
 }
 
+install_app() {
+  cd ./data/app
+  for apk in **/*.apk ; do
+      pm install "$apk"
+  done
+  cd $INSTALLER
+}
+
 ##########################################################################################
 # Flashable update-binary preparation
 ##########################################################################################
@@ -299,9 +307,12 @@ if $LATESTARTSERVICE; then
 fi
 
 # Install App
-if $DATAAPP; then
+if $DATAAPP && ! $BOOTMODE; then
   set_perm_recursive  $INSTALLER/data/app  1000  1000  0755  0644
   cp -afR $INSTALLER/data/app/* $DATAPATH
+fi
+if $DATAAPP && $BOOTMODE; then
+  install_app
 fi
 
 ui_print "- Setting permissions"
