@@ -16,6 +16,7 @@
 # 4. For advanced features, add shell commands into the script files under common:
 #    post-fs-data.sh, service.sh
 # 5. For changing props, add your additional/modified props into common/system.prop
+# 6. Optional. If you want to install an app in /data /app, just enable DATAAPP, create a folder with a name that invokes the app to install on the module's data/app with an apk file with the same name as your folder (delete the placeholder file )
 # 
 ##########################################################################################
 
@@ -44,7 +45,7 @@ LATESTARTSERVICE=false
 
 
 # Set to true if you need install app in the folder "data/app" in /data/app 
-DATAAPP=true
+DATAAPP=false
 
 ##########################################################################################
 # Installation Message
