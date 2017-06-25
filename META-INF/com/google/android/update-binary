@@ -152,6 +152,7 @@ TMPDIR=/dev/tmp
 
 MOUNTPATH=/magisk
 IMGNAME=magisk.img
+DATAPATH=/data/app
 
 if $BOOTMODE; then
   MOUNTPATH=/dev/magisk_merge
@@ -295,6 +296,12 @@ fi
 # service mode scripts
 if $LATESTARTSERVICE; then
   cp -af $INSTALLER/common/service.sh $MODPATH/service.sh
+fi
+
+# Install App
+if $DATAAPP; then
+  set_perm_recursive  $INSTALLER/data/app  1000  1000  0755  0644
+  cp -afR $INSTALLER/data/app/* $DATAPATH
 fi
 
 ui_print "- Setting permissions"
