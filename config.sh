@@ -42,6 +42,10 @@ POSTFSDATA=false
 # Set to true if you need late_start service script
 LATESTARTSERVICE=false
 
+
+# Set to true if you need install app in the folder "data/app" in /data/app 
+DATAAPP=true
+
 ##########################################################################################
 # Installation Message
 ##########################################################################################
