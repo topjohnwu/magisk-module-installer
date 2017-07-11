@@ -1,6 +1,6 @@
 ##########################################################################################
 #
-# Magisk
+# Magisk Module Template Config Script
 # by topjohnwu
 # 
 # This is a template zip for developers

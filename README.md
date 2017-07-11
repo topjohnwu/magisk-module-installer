@@ -57,3 +57,6 @@ v1.9
 v2.0
  - Moved included wget to out of system completely, hosts script is only file that will use it (prevents potential conflicts). Thanks to @rignfool and @veez21
  - Added wildcard support to whitelist
+ 
+v2.1
+ - Update for magisk 13.1 (NOTE: previous versions of magisk are no longer compatible)
