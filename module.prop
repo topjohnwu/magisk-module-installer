@@ -4,4 +4,8 @@ version=v1
 versionCode=1
 author=topjohnwu
 description=A short description
+<<<<<<< HEAD
 template=3
+=======
+template=4
+>>>>>>> refs/remotes/topjohnwu/master

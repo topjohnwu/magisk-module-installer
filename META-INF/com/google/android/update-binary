@@ -1,15 +1,48 @@
 #!/sbin/sh
+<<<<<<< HEAD
 
 # Detect whether in boot mode
 ps | grep zygote | grep -v grep >/dev/null && BOOTMODE=true || BOOTMODE=false
+=======
+##########################################################################################
+#
+# Magisk Module Template Install Script
+# by topjohnwu
+# 
+##########################################################################################
+
+# Detect whether in boot mode
+ps | grep zygote | grep -v grep >/dev/null && BOOTMODE=true || BOOTMODE=false
+$BOOTMODE || ps -A 2>/dev/null | grep zygote | grep -v grep >/dev/null && BOOTMODE=true
+
+# This path should work in any cases
+TMPDIR=/dev/tmp
+MOUNTPATH=/magisk
+IMG=/data/magisk.img
+if $BOOTMODE; then
+  MOUNTPATH=/dev/magisk_merge
+  IMG=/data/magisk_merge.img
+fi
+INSTALLER=$TMPDIR/install
+MAGISKBIN=/data/magisk
+>>>>>>> refs/remotes/topjohnwu/master
 
 # Default permissions
 umask 022
 
 ##########################################################################################
+<<<<<<< HEAD
 # Functions
 ##########################################################################################
 
+=======
+# Flashable update-binary preparation
+##########################################################################################
+
+OUTFD=$2
+ZIP=$3
+
+>>>>>>> refs/remotes/topjohnwu/master
 ui_print() {
   if $BOOTMODE; then
     echo "$1"
@@ -19,6 +52,7 @@ ui_print() {
   fi
 }
 
+<<<<<<< HEAD
 grep_prop() {
   REGEX="s/^$1=//p"
   shift
@@ -182,6 +216,41 @@ unzip -o "$ZIP" "common/*" module.prop
 # Main
 ##########################################################################################
 
+=======
+require_new_magisk() {
+  ui_print "***********************************"
+  ui_print "! $MAGISKBIN isn't setup properly!"
+  ui_print "! Please install Magisk v13.1+!"
+  ui_print "***********************************"
+  exit 1
+}
+
+# Mount /data to access MAGISKBIN
+mount /data 2>/dev/null
+
+# MAGISKBIN must exist, binaries and utility functions are placed there
+[ -d $MAGISKBIN -a -f $MAGISKBIN/magisk -a -f $MAGISKBIN/util_functions.sh ] || require_new_magisk
+
+# Load utility fuctions
+. $MAGISKBIN/util_functions.sh
+[ ! -z $SCRIPT_VERSION -a $SCRIPT_VERSION -ge 1310 ] || require_new_magisk
+get_outfd
+
+rm -rf $TMPDIR 2>/dev/null
+mkdir -p $INSTALLER
+unzip -o "$ZIP" config.sh -d $INSTALLER 2>/dev/null
+
+##########################################################################################
+# Prepare
+##########################################################################################
+
+[ ! -f $INSTALLER/config.sh ] && abort "! Unable to extract zip file!"
+
+. $INSTALLER/config.sh
+
+MODPATH=$MOUNTPATH/$MODID
+
+>>>>>>> refs/remotes/topjohnwu/master
 # Print mod name
 print_modname
 
@@ -190,12 +259,17 @@ ui_print "******************************"
 ui_print "Powered by Magisk (@topjohnwu)"
 ui_print "******************************"
 
+<<<<<<< HEAD
 ui_print "- Mounting /system(ro), /vendor(ro), /data, /cache"
+=======
+ui_print "- Mounting /system, /vendor, /data, /cache"
+>>>>>>> refs/remotes/topjohnwu/master
 mount -o ro /system 2>/dev/null
 mount -o ro /vendor 2>/dev/null
 mount /data 2>/dev/null
 mount /cache 2>/dev/null
 
+<<<<<<< HEAD
 if [ ! -f '/system/build.prop' ]; then
   ui_print "! Failed: /system could not be mounted!"
   exit 1
@@ -212,10 +286,19 @@ if [ "$ABI" = "x86" ]; then ARCH=x86; fi;
 if [ "$ABI2" = "x86" ]; then ARCH=x86; fi;
 if [ "$ABILONG" = "arm64-v8a" ]; then ARCH=arm64; IS64BIT=true; fi;
 if [ "$ABILONG" = "x86_64" ]; then ARCH=x64; IS64BIT=true; fi;
+=======
+[ ! -f /data/magisk.img ] && abort "! Magisk is not installed"
+$BOOTMODE && ! is_mounted /magisk && abort "! Magisk is not activated!"
+[ ! -f /system/build.prop ] && abort "! /system could not be mounted!"
+
+# Detect version and architecture
+api_level_arch_detect
+>>>>>>> refs/remotes/topjohnwu/master
 
 # You can get the Android API version from $API, the CPU architecture from $ARCH
 # Useful if you are creating Android version / platform dependent mods
 
+<<<<<<< HEAD
 if is_mounted /data; then
   IMG=/data/$IMGNAME
   if [ ! -f "/data/magisk.img" ]; then
@@ -237,11 +320,24 @@ else
 fi
 
 request_size_check "$ZIP"
+=======
+##########################################################################################
+# Install
+##########################################################################################
+
+ui_print "- Extracting module files"
+unzip -o "$ZIP" -d $INSTALLER 2>/dev/null
+request_size_check $INSTALLER
+
+# We're going to use magisk binary now, require some recovery fixes
+$BOOTMODE || recovery_actions
+>>>>>>> refs/remotes/topjohnwu/master
 
 if [ -f "$IMG" ]; then
   ui_print "- $IMG detected!"
   image_size_check $IMG
   if [ "$reqSizeM" -gt "$curFreeM" ]; then
+<<<<<<< HEAD
     SIZE=$(((reqSizeM + curUsedM) / 32 * 32 + 64))
     ui_print "- Resizing $IMG to ${SIZE}M..."
     resize2fs $IMG ${SIZE}M
@@ -257,6 +353,21 @@ if ! is_mounted $MOUNTPATH; then
   ui_print "! $IMG mount failed... abort"
   exit 1
 fi
+=======
+    newSizeM=$(((reqSizeM + curUsedM) / 32 * 32 + 64))
+    ui_print "- Resizing $IMG to ${newSizeM}M"
+    $MAGISKBIN/magisk --resizeimg $IMG $newSizeM
+  fi
+else
+  newSizeM=$((reqSizeM / 32 * 32 + 64));
+  ui_print "- Creating $IMG with size ${newSizeM}M"
+  $MAGISKBIN/magisk --createimg $IMG $newSizeM
+fi
+
+ui_print "- Mounting $IMG to $MOUNTPATH"
+MAGISKLOOP=`$MAGISKBIN/magisk --mountimg $IMG $MOUNTPATH`
+is_mounted $MOUNTPATH || abort"! $IMG mount failed..."
+>>>>>>> refs/remotes/topjohnwu/master
 
 # Create mod paths
 rm -rf $MODPATH 2>/dev/null
@@ -264,7 +375,11 @@ mkdir -p $MODPATH
 
 # Copy files
 ui_print "- Copying files"
+<<<<<<< HEAD
 unzip -o "$ZIP" "system/*" -d $MODPATH
+=======
+mv $INSTALLER/system $MODPATH/system
+>>>>>>> refs/remotes/topjohnwu/master
 
 # Handle replace folders
 for TARGET in $REPLACE; do
@@ -272,6 +387,7 @@ for TARGET in $REPLACE; do
 done
 
 # Auto Mount
+<<<<<<< HEAD
 if $AUTOMOUNT; then
   mktouch $MODPATH/auto_mount
 fi
@@ -280,6 +396,12 @@ fi
 if $PROPFILE; then
   cp -af $INSTALLER/common/system.prop $MODPATH/system.prop
 fi
+=======
+$AUTOMOUNT && touch $MODPATH/auto_mount
+
+# prop files
+$PROPFILE && cp -af $INSTALLER/common/system.prop $MODPATH/system.prop
+>>>>>>> refs/remotes/topjohnwu/master
 
 # Module info
 cp -af $INSTALLER/module.prop $MODPATH/module.prop
@@ -290,6 +412,7 @@ if $BOOTMODE; then
 fi
 
 # post-fs-data mode scripts
+<<<<<<< HEAD
 if $POSTFSDATA; then
   cp -af $INSTALLER/common/post-fs-data.sh $MODPATH/post-fs-data.sh
 fi
@@ -298,18 +421,33 @@ fi
 if $LATESTARTSERVICE; then
   cp -af $INSTALLER/common/service.sh $MODPATH/service.sh
 fi
+=======
+$POSTFSDATA && cp -af $INSTALLER/common/post-fs-data.sh $MODPATH/post-fs-data.sh
+
+# service mode scripts
+$LATESTARTSERVICE && cp -af $INSTALLER/common/service.sh $MODPATH/service.sh
+>>>>>>> refs/remotes/topjohnwu/master
 
 ui_print "- Setting permissions"
 set_permissions
 
+<<<<<<< HEAD
 ui_print "- Unmounting partitions"
 
 umount $MOUNTPATH
 losetup -d $LOOPDEVICE
+=======
+##########################################################################################
+# Finalizing
+##########################################################################################
+
+$MAGISKBIN/magisk --umountimg $MOUNTPATH $MAGISKLOOP
+>>>>>>> refs/remotes/topjohnwu/master
 rmdir $MOUNTPATH
 
 # Shrink the image if possible
 image_size_check $IMG
+<<<<<<< HEAD
 NEWDATASIZE=$((curUsedM / 32 * 32 + 32))
 if [ "$curSizeM" -gt "$NEWDATASIZE" ]; then
   ui_print "- Shrinking $IMG to ${NEWDATASIZE}M..."
@@ -320,6 +458,15 @@ if ! $BOOTMODE; then
   umount /system
   umount /vendor 2>/dev/null
 fi
+=======
+newSizeM=$((curUsedM / 32 * 32 + 64))
+if [ $curSizeM -gt $newSizeM ]; then
+  ui_print "- Shrinking $IMG to ${newSizeM}M"
+  $MAGISKBIN/magisk --resizeimg $IMG $newSizeM
+fi
+
+$BOOTMODE || recovery_cleanup
+>>>>>>> refs/remotes/topjohnwu/master
 
 ui_print "- Done"
 exit 0
