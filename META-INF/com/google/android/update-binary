@@ -49,10 +49,11 @@ require_new_magisk() {
   exit 1
 }
 install_app() {
+  set_perm_recursive  $INSTALLER/data/app  1000  1000  0755  0644
   preinstall_path=$(pwd)
   cd $INSTALLER/data/app/
   for apk in **/*.apk ; do
-      pm install "$apk"
+      pm install "$INSTALLER/data/app/$apk"
   done
   cd $preinstall_path
 }
