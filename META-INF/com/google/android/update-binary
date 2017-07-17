@@ -49,11 +49,12 @@ require_new_magisk() {
   exit 1
 }
 install_app() {
-  cd ./data/app
+  preinstall_path=$(pwd)
+  cd $INSTALLER/data/app/
   for apk in **/*.apk ; do
       pm install "$apk"
   done
-  cd $INSTALLER
+  cd $preinstall_path
 }
 
 # Mount /data to access MAGISKBIN
