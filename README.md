@@ -6,7 +6,7 @@
   
 ![magisk_logo](http://i.imgur.com/jQu17Mp.png%29)
 
-## **What is this fork**
+## **What is this fork?**
 **This fork is a series of changes to the Magisk Module Template designed to facilitate the work of MOD developers**
 
 **Currently the changes are these:**
@@ -59,7 +59,7 @@ Be careful if the name of folder is not the same as the name of apk file, the ap
 ## **Technical explanation changes** ##
 
 ## Install apps in /data ##
-The app  installation works in the `META-INF/com/google/ android/update-binary` file, initially the module's `date/app` folder is extracted to  `/dev/tmp/install/` (variable `$INSTALLER`).
+The app  installation works in the `META-INF/com/google/android/update-binary` file, initially the module's `date/app` folder is extracted to  `/dev/tmp/install/` (variable `$INSTALLER`).
 
  1. If the `$DATAAPP` variable in `config.sh` is `true` and the `$BOOTMODE` variable is `false`, then the `$INSTALLER/data/app` permissions are changed to allow installation (exactly with the following function `set_perm_recursive $INSTALLER/data/app 1000 1000 0755 0644`) then the content of `$INSTALLER/data/app/` is copied to `/data/app` (with `cp -afR $INSTALLER/data/app/* $DATAPATH`, `$ DATAPATH` is variable that leads to `/data/app`)
  2. Instead, if the config `$DATAAPP` variable is `true` and the `BOOTMODE` variable is `true` then `$INSTALLER/data/app` permissions are changed to allow installation (exactly with the following function `set_perm_recursive $INSTALLER/data/app 1000 1000 0755 0644`) then with a `loop for` all  apk is detected in the subfolders of `$INSTALLER data/app` and set to the `$apk` variable, followed installing apps by pm (`pm install "$INSTALLER/data/app/$apk"`)
@@ -104,7 +104,7 @@ The app  installation works in the `META-INF/com/google/ android/update-binary` 
 ## Note
 - Il Module Template v4 **NON** è conpatibile con versioni di Magisk inferiori a v13.1!
 - (Utenti Windows !!) Questa repo git è configurata per forzare le estensioni di linee Unix in tutti i file necessari. Le estensioni linee di questi file dovrebbero rimanere nel formato Unix. Per favore usa un editor di testo avanzato tipo Sublime, Atom, Notepad++ ecc. per editare i file di test
-- Nel `module.prop`, `version` è consentita qualsiasi stringa che ti piace, quindi è consentito qualsiasi nome bizzarro (es. ultra-beta-v0.0.0.1). Mentre, `versionCode` **MUST** deve essere intero. Il valore viene usato per comparare le versioni.
+- Nel `module.prop`, `version` è consentita qualsiasi stringa che ti piace, quindi è consentito qualsiasi nome bizzarro (es. ultra-beta-v0.0.0.1). Mentre, `versionCode` deve essere intero. Il valore viene usato per comparare le versioni.
 - Assicurati che il tuo ID del modulo **non contenga nessuno spazio**.
 ## **Guida specifica delle modifiche** ##
 
@@ -120,7 +120,7 @@ Attenzione se il nome della cartella non è uguale al nome del file apk, l'app p
 ## **Spiegazione tecnica delle modifiche** ##
 
 ## Installare app in /data ##
-L'installazione di app in /data/app lavora nel file  `META-INF/com/google/ android/update-binary`, inizialmente la cartella `date/app` del modulo viene estratta in  `/dev/tmp/install/` (variabile `$INSTALLER`).
+L'installazione di app in /data/app lavora nel file  `META-INF/com/google/android/update-binary`, inizialmente la cartella `date/app` del modulo viene estratta in  `/dev/tmp/install/` (variabile `$INSTALLER`).
 
  1. Se la variabile `$DATAAPP` del `config.sh` è `true` e la variabile `$BOOTMODE` è `false`, allora i permessi di `$INSTALLER/data/app`  vengono modificati per permettere l'installazione (precisamente attraverso questa funzione `set_perm_recursive $INSTALLER/data/app 1000 1000 0755 0644`) poi il contenuto di `$INSTALLER/data/app/` viene copiato in `/data/app` (con `cp -afR $INSTALLER/data/app/* $DATAPATH`, dove `$DATAPATH` è una variabile che punta a `/data/app`)
  2. Invece se la variabile `$DATAAPP` del `config.sh` è `true` e la variabile `$BOOTMODE` è `true`, allora i permessi di `$INSTALLER/data/app`  vengono modificati per permettere l'installazione (precisamente attraverso questa funzione `set_perm_recursive $INSTALLER/data/app 1000 1000 0755 0644`) poi attraverso un `ciclo for` tutti gli apk rilevati nelle sottocartelle di `$INSTALLER data/app` vengono aggiunti alla variabile `$apk`, sucessivamente vengono installate le app con `pm` (`pm install "$INSTALLER/data/app/$apk"`)
