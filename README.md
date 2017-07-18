@@ -5,7 +5,7 @@
 
 **Currently the changes are these:**
 
- - Install app in `/date`
+ - Install app in `/data/app`
 
 **Scheduled changes:**
 
