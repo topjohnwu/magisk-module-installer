@@ -1,8 +1,9 @@
-##**Languages available**##
+##  **Languages ​​available**
 
  - **[English](#eng)**
  - **[Italiano](#it)**
   <a name="eng">
+  
 ![magisk_logo](http://i.imgur.com/jQu17Mp.png%29)
 
 ## **What is this fork**
@@ -64,6 +65,7 @@ The app  installation works in the `META-INF/com/google/ android/update-binary` 
  2. Instead, if the config `$DATAAPP` variable is `true` and the `BOOTMODE` variable is `true` then `$INSTALLER/data/app` permissions are changed to allow installation (exactly with the following function `set_perm_recursive $INSTALLER/data/app 1000 1000 0755 0644`) then with a `loop for` all  apk is detected in the subfolders of `$INSTALLER data/app` and set to the `$apk` variable, followed installing apps by pm (`pm install "$INSTALLER/data/app/$apk"`)
 </a>
 <a name="it">
+
 ![magisk_logo](http://i.imgur.com/jQu17Mp.png%29)
 
 ## **Traduzione completa in Italiano** ##
