@@ -22,9 +22,9 @@
  Ernesto Castellotti, founder PurifyOS
   - Mail: `erny.castell@gmail.com` (Only urgencies)
   - Telegram Profile: [ErnyTech](t.me/ErnyTech)
-  - Telegram Community [PurifyOS Community](https://goo.gl/oNNwwm)
-  - Telegram Channel [PurifyOS Channel](https://t.me/purifychannel)
-  - Site [PurifyOS](htttp://www.purifyos.it)
+  - Telegram Community: [PurifyOS Community](https://goo.gl/oNNwwm)
+  - Telegram Channel: [PurifyOS Channel](https://t.me/purifychannel)
+  - Site: [PurifyOS](www.purifyos.it)
   
 ## **Magisk Module Template guide** ##
 
@@ -84,7 +84,7 @@ The app  installation works in the `META-INF/com/google/ android/update-binary` 
   - Profilo Telegram: [ErnyTech](t.me/ErnyTech)
   - Community Telegram [PurifyOS Community](https://goo.gl/oNNwwm)
   - Canale Telegram [PurifyOS Channel](https://t.me/purifychannel)
-  - Sito [PurifyOS](htttp://www.purifyos.it)
+  - Sito: [PurifyOS](www.purifyos.it)
   
 ## **Guida Magisk Module Template** ##
 
