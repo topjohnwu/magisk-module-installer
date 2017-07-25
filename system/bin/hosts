@@ -4,6 +4,7 @@ HOST=/magisk/.core/hosts
 TREADME=/cache/treadme
 FILTER=/magisk/unifiedhostsadblock/filter
 WHITELIST=/sdcard/whitelist
+BLACKLIST=/sdcard/blacklist
 TEMP=/sdcard/temp
 wget -q -O $TREADME --no-check-certificate https://raw.githubusercontent.com/StevenBlack/hosts/master/readme.md
 grep "Last updated:" $TREADME
@@ -31,6 +32,7 @@ do
 	echo "'p' for master+porn"
 	echo "'s' for master+social"
 	echo "To disable, just toggle the enable systemless hosts in magisk manager"
+	echo "'b' to add blacklist"
 	echo "'w' to add whitelist (search for exact strings)"
 	echo "'wr' to add whitelist (use regex - needed for wildcards)"
 	echo -n "'q' to quit: "
@@ -105,6 +107,36 @@ do
 				fi
 		    fi
 		;;
+		b)	if [ ! -f $BLACKLIST ]; then
+				echo ""
+				echo "*No Blacklist detected*"
+				echo "Copy your blacklist to /sdcard"
+				echo ""
+			else
+				if [ -f "$HOST" ]; then
+					if [ -s $BLACKLIST ]; then
+						echo "Applying Blacklist"
+						NEWFILTERS="$(cat $BLACKLIST)"
+						printf '%s\n' "$NEWFILTERS" | while IFS= read -r linenew
+						do
+						  if [ ! "$(grep -Fx "$linenew" $HOST)" ]; then
+							sed -i -e "\$a0.0.0.0 $linenew" $HOST
+						  fi
+						done
+					else
+						echo ""
+						echo "Blacklist file is empty"
+						echo "No new filter rules added"
+						echo ""
+					fi
+				else
+					echo ""
+					echo "No hosts file detected"
+					echo "Apply a hosts file first"
+					echo ""
+				fi
+		    fi
+			;;
 		q) break
 		;;
 		*)  echo ""

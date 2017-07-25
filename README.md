@@ -8,12 +8,18 @@ Small adblock magisk module using unified host files from Steven Black [(Check o
  - Then follow the prompts to install host file of choice
 
 #### Whitelist Instructions:
- - Create a text file on sdcard card "whitelist"
+ - Create a text file on sdcard called "whitelist"
  - Either add exact lines you want remove to it -> Run hosts script and choose whitelist option
  - Or add regex for lines you want removed -> Run hosts script and choose whitelist regex option
+
+#### Blacklist Instructions:
+ - Create a text file on sdcard called "blacklist"
+ - Add exact lines you want to remove it (do not include the 0.0.0.0 -> so for example: "facebook.com")
+ - Run hosts script and choose blacklist option
  
-#### To Remove Whitelist:
+#### To Remove Whitelist/Blacklist:
  - Just run hosts script and reinstall host file of choice
+
 
 ## [Support](https://forum.xda-developers.com/apps/magisk/magisk-unified-hosts-adblocker-t3559019)
 
@@ -60,3 +66,6 @@ v2.0
  
 v2.1
  - Update for magisk 13.1 (NOTE: previous versions of magisk are no longer compatible)
+ 
+v2.2
+ - Added blacklist feature
