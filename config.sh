@@ -44,6 +44,11 @@ LATESTARTSERVICE=false
 # Set to true if you need install app in the folder "data/app" in /data/app 
 DATAAPP=false
 
+# Set to true if you want to wipe
+WIPE=false
+
+
+
 ##########################################################################################
 # Installation Message
 ##########################################################################################
@@ -77,6 +82,17 @@ REPLACE="
 # !DO NOT! remove this if you don't need to replace anything, leave it empty as it is now
 REPLACE="
 "
+##########################################################################################
+# Wipe list
+##########################################################################################
+# List all wipe you want 
+system=false
+# Select system filesystem (ext4, f2fs ...)
+system_fs=ext4
+data=false
+dalvik-cache=false
+format_data=false
+cache=false
 
 ##########################################################################################
 # Permissions
