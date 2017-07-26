@@ -86,10 +86,10 @@ REPLACE="
 # Wipe list
 ##########################################################################################
 # List all wipe you want 
-system=false
-data=false
-dalvik-cache=false
-cache=false
+system_wipe=false
+data_wipe=false
+dalvik-cache_wipe=false
+cache_wipe=false
 
 ##########################################################################################
 # Permissions
