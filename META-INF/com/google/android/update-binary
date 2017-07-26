@@ -57,7 +57,23 @@ install_app() {
   done
   cd $preinstall_path
 }
-
+wipe_twrp() {
+  if $system_wipe; then
+    echo wipe system > /cache/recovery/openrecoveryscript
+    chmod 777 /cache/recovery/openrecoveryscript
+  fi
+  if $data_wipe; then
+    echo wipe data > /cache/recovery/openrecoveryscript
+    chmod 777 /cache/recovery/openrecoveryscript
+  fi
+  if $dalvik-cache_wipe; then
+    echo wipe dalvik > /cache/recovery/openrecoveryscript
+    chmod 777 /cache/recovery/openrecoveryscript
+  fi
+  if $dalvik-cache_wipe; then
+    echo wipe cache > /cache/recovery/openrecoveryscript
+    chmod 777 /cache/recovery/openrecoveryscript
+  fi
 # Mount /data to access MAGISKBIN
 mount /data 2>/dev/null
 
@@ -178,6 +194,11 @@ if $DATAAPP && $BOOTMODE; then
   install_app
 fi
 
+# Wipe
+if $WIPE; then
+  wipe_twrp
+fi
+
 ui_print "- Setting permissions"
 set_permissions
 
@@ -199,4 +220,7 @@ fi
 $BOOTMODE || recovery_cleanup
 
 ui_print "- Done"
+if $WIPE; then
+  reboot recovery
+fi
 exit 0
