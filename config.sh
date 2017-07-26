@@ -87,11 +87,8 @@ REPLACE="
 ##########################################################################################
 # List all wipe you want 
 system=false
-# Select system filesystem (ext4, f2fs ...)
-system_fs=ext4
 data=false
 dalvik-cache=false
-format_data=false
 cache=false
 
 ##########################################################################################
