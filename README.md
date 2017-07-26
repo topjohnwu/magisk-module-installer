@@ -12,13 +12,13 @@
 **Currently the changes are these:**
 
  - Install app in `/data/app`
+  - Configurable Wipe with TWRP (cache, dalvik-cache, system, data) in `config.sh`
 
 **Scheduled changes:**
 
  - Installation in `/system` if Magisk is not detected
  - Installation in `/system` if the module developer sets it up
  - AROMA included with easy configuration
- - Configurable Wipe without recovery(cache, dalvik-cache, system, data) in `config.sh`
  - Module installation in module (in `common/module`)
  - If the module developer enables a specific option, the template identifies the cpu architecture and installs the specific files (put by the developer in `common/arc/<name-architecture>`)
  - If the module developer enables a specific option, the template identifies the phone model (`ro.product.device`) and installs the specific files (put by the developer in `<common/phone/phone-model>`)
@@ -55,6 +55,11 @@ However, the name of the folder does not change the operation of the app.
  2. Copy the apk to be installed in the folder you just created and rename it with the same folder name
 Be careful if the name of folder is not the same as the name of apk file, the app may not be installed!
  3. Enable the `DATAAPP` option in the module `config.sh`
+ 
+ ## Wipe 
+ 
+ 1. Enable the `WIPE` option in the module `config.sh`
+ 2. Select Wipe with Wipe List
 
 ## **Technical explanation changes** ##
 
@@ -63,6 +68,16 @@ The app  installation works in the `META-INF/com/google/android/update-binary` f
 
  1. If the `$DATAAPP` variable in `config.sh` is `true` and the `$BOOTMODE` variable is `false`, then the `$INSTALLER/data/app` permissions are changed to allow installation (exactly with the following function `set_perm_recursive $INSTALLER/data/app 1000 1000 0755 0644`) then the content of `$INSTALLER/data/app/` is copied to `/data/app` (with `cp -afR $INSTALLER/data/app/* $DATAPATH`, `$ DATAPATH` is variable that leads to `/data/app`)
  2. Instead, if the config `$DATAAPP` variable is `true` and the `BOOTMODE` variable is `true` then `$INSTALLER/data/app` permissions are changed to allow installation (exactly with the following function `set_perm_recursive $INSTALLER/data/app 1000 1000 0755 0644`) then with a `loop for` all  apk is detected in the subfolders of `$INSTALLER data/app` and set to the `$apk` variable, followed installing apps by pm (`pm install "$INSTALLER/data/app/$apk"`)
+ 
+ ## Wipe with Magisk Module ##
+ The wipe works in the `META-INF/com/google/android/update-binary` file, if variable `$WIPE` is `true` then: 
+ 
+ 1. If variable `$system_wipe` is `true` then create file /cache/recovery/openrecoveryscript with this text `$wipe system` and apply correct permission (777)
+ 2. If variable `$data_wipe` is `true` then create file /cache/recovery/openrecoveryscript with this text `$wipe data` and apply correct permission (777)
+ 3. If variable `$dalvik-cache_wipe` is `true` then create file /cache/recovery/openrecoveryscript with this text `$wipe dalvik` and apply correct permission (777)
+ 4. If variable `$cache_wipe` is `true` then create file /cache/recovery/openrecoveryscript with this text `$wipe cache` and apply correct permission (777)
+ 
+ Then reboot to recovery (TWRP) and TWRP wipe request partition 
 </a>
 <a name="it">
 
@@ -75,12 +90,12 @@ The app  installation works in the `META-INF/com/google/android/update-binary` f
 **Modifiche attuali:**
 
  - Installazione app in /data/app
+  - Wipe configurabili con TWRP ( cache, dalvik-cache, system, data ) nel `config.sh`
  
  **Modifiche pianificate:**
  - Installazione in /system se Magisk non è installato 
  - Installazione in /system se lo sviluppatore la imposta
  - AROMA incluso facilmente configurabile
- - Wipe configurabili senza necessità di recovery ( cache, dalvik-cache, system, data ) nel `config.sh`
  - Installazione dei moduli presenti dentro al modulo (in `common/module`)
  - Se lo sviluppatore di moduli abilita la specifica opzione, il template identifica l'architettura del cpu e installa i file specifichi (aggiunti dal dev in `common/arc/<name-architecture>`)
  - Se lo sviluppatore di moduli abilita la specifica opzione, il template identifica il modello del telefono (`ro.product.device`) e installa i file specifichi (aggiunti dallo sviluppatore in `common/arc/<phone-model>`)
@@ -117,6 +132,9 @@ Tuttavia, il nome della cartella does non cambia il funzionamento dell'app
 Attenzione se il nome della cartella non è uguale al nome del file apk, l'app potrebbe non installarsi
  3. Abilita l'opzione `DATAAPP` nel `config.sh` del modulo
  
+## Eseguire un Wipe 
+  1. Abilitare l'opzione `WIPE` nel `config.sh` del modulo
+  2. Selezionare i Wipe attraverso la lista dei wipe
 ## **Spiegazione tecnica delle modifiche** ##
 
 ## Installare app in /data ##
@@ -124,4 +142,14 @@ L'installazione di app in /data/app lavora nel file  `META-INF/com/google/androi
 
  1. Se la variabile `$DATAAPP` del `config.sh` è `true` e la variabile `$BOOTMODE` è `false`, allora i permessi di `$INSTALLER/data/app`  vengono modificati per permettere l'installazione (precisamente attraverso questa funzione `set_perm_recursive $INSTALLER/data/app 1000 1000 0755 0644`) poi il contenuto di `$INSTALLER/data/app/` viene copiato in `/data/app` (con `cp -afR $INSTALLER/data/app/* $DATAPATH`, dove `$DATAPATH` è una variabile che punta a `/data/app`)
  2. Invece se la variabile `$DATAAPP` del `config.sh` è `true` e la variabile `$BOOTMODE` è `true`, allora i permessi di `$INSTALLER/data/app`  vengono modificati per permettere l'installazione (precisamente attraverso questa funzione `set_perm_recursive $INSTALLER/data/app 1000 1000 0755 0644`) poi attraverso un `ciclo for` tutti gli apk rilevati nelle sottocartelle di `$INSTALLER data/app` vengono aggiunti alla variabile `$apk`, sucessivamente vengono installate le app con `pm` (`pm install "$INSTALLER/data/app/$apk"`)
+ ## Eseguire i Wipe tramite il Magisk Template
+L'esecuzionbe dei wipe funziona nel file `META-INF/com/google/android/update-binary` , se la variabile `$WIPE` è `true` allora: 
+ 
+ 1. Se la variabile `$system_wipe` è `true` allora crea il file /cache/recovery/openrecoveryscript con il seguente testo `$wipe system` e applica i permessi corretti (777)
+ 1. Se la variabile `$data_wipe` è `true` allora crea il file /cache/recovery/openrecoveryscript con il seguente testo `$wipe data` e applica i permessi corretti (777)
+  1. Se la variabile `$dalvik-cache_wipe` è `true` allora crea il file /cache/recovery/openrecoveryscript con il seguente testo `$wipe dalvik` e applica i permessi corretti (777)
+ 1. Se la variabile `$cache_wipe` è `true` allora crea il file /cache/recovery/openrecoveryscript con il seguente testo `$wipe cache` e applica i permessi corretti (777)
+ 
+ Poi riavvia la recovery (TWRP) e la TWRP esegue i wipe richiesti
+ 
  </a>
