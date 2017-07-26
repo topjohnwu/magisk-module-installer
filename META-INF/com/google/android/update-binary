@@ -70,10 +70,11 @@ wipe_twrp() {
     echo wipe dalvik > /cache/recovery/openrecoveryscript
     chmod 777 /cache/recovery/openrecoveryscript
   fi
-  if $dalvik-cache_wipe; then
+  if $cache_wipe; then
     echo wipe cache > /cache/recovery/openrecoveryscript
     chmod 777 /cache/recovery/openrecoveryscript
   fi
+  }
 # Mount /data to access MAGISKBIN
 mount /data 2>/dev/null
 
