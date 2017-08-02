@@ -69,3 +69,6 @@ v2.1
  
 v2.2
  - Added blacklist feature
+ 
+v2.3
+ - Bug fixes for pixels
