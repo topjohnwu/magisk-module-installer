@@ -1,77 +1,31 @@
-# Unified Hosts Adblock
-Small adblock magisk module using unified host files from Steven Black [(Check out his github for more information)](https://github.com/StevenBlack/hosts)  
-##Usage: 
-#### First Enable Systemless Hosts in Magisk Manager
- - Open terminal then type:  
- `su`  
- `hosts`
- - Then follow the prompts to install host file of choice
+## !! Please update this README.md file for online Repo submission !!
+You can edit your `README.md` within Github's online editor, it also has an preview button!  
+Check the [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for markdown syntaxes, it's super easy!  
 
-#### Whitelist Instructions:
- - Create a text file on sdcard called "whitelist"
- - Either add exact lines you want remove to it -> Run hosts script and choose whitelist option
- - Or add regex for lines you want removed -> Run hosts script and choose whitelist regex option
+## How to Create a Magisk Module
+1. Clone / download this repo
+2. Open `config.sh`, follow the instructions written at the beginning of the file. You should at least change `config.sh` and `module.prop`
+3. Zip your files, the zipped file is a flashable zip for both Magisk Manager and custom recoveries
+4. Please check **Notes** for precautions
 
-#### Blacklist Instructions:
- - Create a text file on sdcard called "blacklist"
- - Add exact lines you want to remove it (do not include the 0.0.0.0 -> so for example: "facebook.com")
- - Run hosts script and choose blacklist option
- 
-#### To Remove Whitelist/Blacklist:
- - Just run hosts script and reinstall host file of choice
+## How to Request a New Repo
+1. Fork [this repo](https://github.com/topjohnwu/magisk-module-template)
+2. Create your own Magisk Module as stated above
+3. Push your changes to Github
+4. Change the description of the Github repo to **the id of your module. This is important! Never change it to anything else!**
+5. Open an issue in [topjohnwu/Magisk_Repo_Central](https://github.com/topjohnwu/Magisk_Repo_Central/issues/new)  
+   Please include your repo link so I can check and clone it
+6. Your repo should be cloned into [Magisk-Modules-Repo](https://github.com/Magisk-Modules-Repo), and you should receive an email to become the collaborator of that repo so you can edit it in the future.
 
+## Notes
+- Module Template v4 is **NOT** backwards compatibile with any Magisk version lower than v13.1!
+- (Windows aware!!) This git repo is configured to force Unix endlines on all necessary files. The line endings on these files should remain the Unix format. Please use advanced text editors like Sublime, Atom, Notepad++ etc. to edit the text files
+- In `module.prop`, `version` is any string you like, so any fancy version name (e.g. ultra-beta-v0.0.0.1) is allowed. However, `versionCode` **MUST** be an integer. The value is used for version comparison.
+- Make sure your module ID **doesn't contain any spaces**.
+- (For repo developers) Magisk Manager monitors all repo's `master` branch. So any changes to the branch `master` will be reflected to all users immediately. If you are working on an update for a module, please work on another branch, make sure it works, and then merge the changes back to `master`.
 
-## [Support](https://forum.xda-developers.com/apps/magisk/magisk-unified-hosts-adblocker-t3559019)
-
-## Changelog
-v1.0
- - Initial release
-
-v1.1 
- - Changed from using curl to wget and built in wget (not all roms have curl apparently)
-
-v1.2
- - Made minor changes to Readme, removed support and donate links from module.prop, and removed changelog to meet standards of magisk manager 4.2 update
-
-v1.3
- - Removed broken disable option and added directions for disabling hosts mod
-
-v1.4
- - Added date hosts were last updated (so you can determine if yours need updated)
- - Added whitelist feature
- - Minor restructuring of hosts script header
-
-v1.5
- - Updated to magisk 11.5 (template v2)
- 
-v1.6
- - Updated to magisk 11.6 (template v3)
- 
-v1.7
- - Added pixel support
- 
-v1.8
- - Added all possible letter combinations (order no longer matters)
- - Fixed up pixel support - still WIP (thanks to @ahrion at xda-developers)
- - Fixed Last Updated date change
- - Added update check notification at beginning of script
-
-v1.9
- - Fixed last updated date change
- - Fixed whitelist option
- 
-v2.0
- - Moved included wget to out of system completely, hosts script is only file that will use it (prevents potential conflicts). Thanks to @rignfool and @veez21
- - Added wildcard support to whitelist
- 
-v2.1
- - Update for magisk 13.1 (NOTE: previous versions of magisk are no longer compatible)
- 
-v2.2
- - Added blacklist feature
- 
-v2.3
- - Bug fixes for pixels
- 
-v2.4
- - Added cache workaround (oddly absent from magisk module template v4). Thanks to @g40q90 at xda-developers for torubleshooting
+## Best Practice for Updating a Repo
+1. Open a new branch, and start update your files on the new branch
+2. Test if everything works fine
+3. Bump up the `versionCode` in `module.prop`, or Magisk Manager won't know that your module is updated!
+4. Merge the changes back to master, all users shall now receive the update in Magisk Manager
