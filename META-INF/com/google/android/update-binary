@@ -10,17 +10,6 @@
 ps | grep zygote | grep -v grep >/dev/null && BOOTMODE=true || BOOTMODE=false
 $BOOTMODE || ps -A 2>/dev/null | grep zygote | grep -v grep >/dev/null && BOOTMODE=true
 
-# This path should work in any cases
-TMPDIR=/dev/tmp
-MOUNTPATH=/magisk
-IMG=/data/magisk.img
-if $BOOTMODE; then
-  MOUNTPATH=/dev/magisk_merge
-  IMG=/data/magisk_merge.img
-fi
-INSTALLER=$TMPDIR/install
-MAGISKBIN=/data/magisk
-
 # Default permissions
 umask 022
 
@@ -50,6 +39,36 @@ ui_print() {
   fi
 }
 
+is_mounted() {
+  if [ ! -z "$2" ]; then
+    cat /proc/mounts | grep $1 | grep $2, >/dev/null
+  else
+    cat /proc/mounts | grep $1 >/dev/null
+  fi
+  return $?
+}
+
+# Mount /data and /cache to access MAGISKBIN
+mount /data 2>/dev/null
+mount /cache 2>/dev/null
+
+# This path should work in any cases
+TMPDIR=/dev/tmp
+MOUNTPATH=/magisk
+INSTALLER=$TMPDIR/install
+if is_mounted /data; then
+  IMG=/data/magisk.img
+  MAGISKBIN=/data/magisk
+  if $BOOTMODE; then
+    MOUNTPATH=/dev/magisk_merge
+    IMG=/data/magisk_merge.img
+  fi
+else
+  IMG=/cache/magisk.img
+  MAGISKBIN=/cache/data_bin
+  ui_print "- Data unavailable, using cache workaround"
+fi
+
 require_new_magisk() {
   ui_print "***********************************"
   ui_print "! $MAGISKBIN isn't setup properly!"
@@ -57,9 +76,6 @@ require_new_magisk() {
   ui_print "***********************************"
   exit 1
 }
-
-# Mount /data to access MAGISKBIN
-mount /data 2>/dev/null
 
 # MAGISKBIN must exist, binaries and utility functions are placed there
 [ -d $MAGISKBIN -a -f $MAGISKBIN/magisk -a -f $MAGISKBIN/util_functions.sh ] || require_new_magisk
@@ -91,17 +107,14 @@ ui_print "******************************"
 ui_print "Powered by Magisk (@topjohnwu)"
 ui_print "******************************"
 
-ui_print "- Mounting /cache"
-mount /cache 2>/dev/null
-
 SPACE=" "
 if [ $isABDevice == true ]; then
   ui_print "   ! A/B OTA device detected!"
   WRITE=rw
   SPACE="  "
-elif [ -f /data/magisk.img ] || [ -d /magisk ]; then
+elif [ -f /data/magisk.img ] || [ -f /cache/magisk.img ] || [ -d /magisk ]; then
   WRITE=ro
-elif [ ! -f /data/magisk.img ] || [ ! -d /magisk ]; then
+elif [ ! -f /data/magisk.img ] || [ ! -f /cache/magisk.img ] || [ ! -d /magisk ]; then
   WRITE=rw
 fi
 
@@ -116,7 +129,11 @@ else
   VENDOR=$SYSTEM/vendor
 fi
 
-[ ! -f /data/magisk.img ] && abort "! Magisk is not installed"
+if is_mounted /data; then
+	[ ! -f /data/magisk.img ] && abort "! Magisk is not installed"
+else
+	[ ! -f /cache/magisk.img ] && abort "! Magisk is not installed"
+fi
 $BOOTMODE && ! is_mounted /magisk && abort "! Magisk is not activated!"
 [ ! -f $SYSTEM/build.prop ] && abort "! $SYSTEM could not be mounted!"
 

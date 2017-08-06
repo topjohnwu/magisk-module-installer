@@ -72,3 +72,6 @@ v2.2
  
 v2.3
  - Bug fixes for pixels
+ 
+v2.4
+ - Added cache workaround (oddly absent from magisk module template v4). Thanks to @g40q90 at xda-developers for torubleshooting
