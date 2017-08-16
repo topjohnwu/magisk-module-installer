@@ -3,7 +3,7 @@
 #
 # Magisk Module Template Install Script
 # by topjohnwu
-# 
+#
 ##########################################################################################
 
 # Detect whether in boot mode
@@ -20,6 +20,7 @@ if $BOOTMODE; then
 fi
 INSTALLER=$TMPDIR/install
 MAGISKBIN=/data/magisk
+DATAPATH=/data/app
 
 # Default permissions
 umask 022
@@ -34,7 +35,7 @@ ZIP=$3
 ui_print() {
   if $BOOTMODE; then
     echo "$1"
-  else 
+  else
     echo -n -e "ui_print $1\n" >> /proc/self/fd/$OUTFD
     echo -n -e "ui_print\n" >> /proc/self/fd/$OUTFD
   fi
@@ -47,7 +48,33 @@ require_new_magisk() {
   ui_print "***********************************"
   exit 1
 }
-
+install_app() {
+  set_perm_recursive  $INSTALLER/data/app  1000  1000  0755  0644
+  preinstall_path=$(pwd)
+  cd $INSTALLER/data/app/
+  for apk in **/*.apk ; do
+      pm install "$INSTALLER/data/app/$apk"
+  done
+  cd $preinstall_path
+}
+wipe_twrp() {
+  if $system_wipe; then
+    echo wipe system > /cache/recovery/openrecoveryscript
+    chmod 777 /cache/recovery/openrecoveryscript
+  fi
+  if $data_wipe; then
+    echo wipe data > /cache/recovery/openrecoveryscript
+    chmod 777 /cache/recovery/openrecoveryscript
+  fi
+  if $dalvik-cache_wipe; then
+    echo wipe dalvik > /cache/recovery/openrecoveryscript
+    chmod 777 /cache/recovery/openrecoveryscript
+  fi
+  if $cache_wipe; then
+    echo wipe cache > /cache/recovery/openrecoveryscript
+    chmod 777 /cache/recovery/openrecoveryscript
+  fi
+  }
 # Mount /data to access MAGISKBIN
 mount /data 2>/dev/null
 
@@ -159,6 +186,20 @@ $POSTFSDATA && cp -af $INSTALLER/common/post-fs-data.sh $MODPATH/post-fs-data.sh
 # service mode scripts
 $LATESTARTSERVICE && cp -af $INSTALLER/common/service.sh $MODPATH/service.sh
 
+# Install App
+if $DATAAPP && ! $BOOTMODE; then
+  set_perm_recursive  $INSTALLER/data/app  1000  1000  0755  0644
+  cp -afR $INSTALLER/data/app/* $DATAPATH
+fi
+if $DATAAPP && $BOOTMODE; then
+  install_app
+fi
+
+# Wipe
+if $WIPE; then
+  wipe_twrp
+fi
+
 ui_print "- Setting permissions"
 set_permissions
 
@@ -180,4 +221,7 @@ fi
 $BOOTMODE || recovery_cleanup
 
 ui_print "- Done"
+if $WIPE; then
+  reboot recovery
+fi
 exit 0
