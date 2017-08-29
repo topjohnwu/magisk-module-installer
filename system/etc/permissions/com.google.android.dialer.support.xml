@@ -1,0 +1,4 @@
+<permissions>
+    <library name="com.google.android.dialer.support"
+            file="/system/framework/com.google.android.dialer.support.jar" />
+</permissions>
