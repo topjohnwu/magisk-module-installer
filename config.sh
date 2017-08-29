@@ -25,7 +25,7 @@
 
 # This will be the folder name under /magisk
 # This should also be the same as the id in your module.prop to prevent confusion
-MODID=template
+MODID=google-dialer-framework
 
 # Set to true if you need to enable Magic Mount
 # Most mods would like it to be enabled
@@ -48,7 +48,7 @@ LATESTARTSERVICE=false
 
 print_modname() {
   ui_print "*******************************"
-  ui_print "     Magisk Module Template    "
+  ui_print "    Google Dialer Framework    "
   ui_print "*******************************"
 }
 

@@ -1,7 +1,7 @@
-id=template
-name=Template Module
-version=v1
+id=google-dialer-framework
+name=Google Dialer Framework
+version=v1.0
 versionCode=1
-author=topjohnwu
-description=A short description
+author=P1N2O
+description=This Magisk Module injects the framework required by Google Dialer (Phone) to make it compatible with any android device.
 template=4
