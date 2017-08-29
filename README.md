@@ -12,7 +12,7 @@ The Google Dialer is supported only on Pixel, Nexus, Android One and Google Play
 ### Instructions
 1. Install Module
 2. Reboot Device
-3. Install Google Dialer (from [Play Store](https://play.google.com/store/apps/details?id=com.google.android.dialer&hl=en) or [APK Mirror](https://www.apkmirror.com/apk/google-inc/google-phone/) )
+3. Install Google Dialer (from [Play Store](https://play.google.com/store/apps/details?id=com.google.android.dialer&hl=en) or [APK Mirror](https://www.apkmirror.com/apk/google-inc/google-phone/))
 4. Grant All Permissions
 5. Set as Default Phone App
 6. Done
