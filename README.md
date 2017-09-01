@@ -1,6 +1,6 @@
-# Android O emojis replacer (Systemless)
+# Android Oreo emojis replacer (Systemless)
 
-Systemlessly replaces emoji font with Android O.
+Systemlessly replaces emoji font with Android Oreo.
 
 ### How to install
 * Download the [latest release](https://github.com/Alex193a/Magisk-Android-O-systemless/releases)
