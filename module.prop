@@ -1,7 +1,7 @@
 id=HuaweiCallRecorder
 name=Huawei Call Recorder for Magisk
-version=v1
-versionCode=1
+version=v1.2
+versionCode=1.2
 author=Atarii
 description=Call Recorder for Huawei devices
-template=4
+template=1400
