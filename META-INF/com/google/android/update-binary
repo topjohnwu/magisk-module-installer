@@ -10,19 +10,8 @@
 ps | grep zygote | grep -v grep >/dev/null && BOOTMODE=true || BOOTMODE=false
 $BOOTMODE || ps -A 2>/dev/null | grep zygote | grep -v grep >/dev/null && BOOTMODE=true
 
-# This path should work in any cases
-TMPDIR=/dev/tmp
-MOUNTPATH=$TMPDIR/magisk_img
-$BOOTMODE && IMG=/data/magisk_merge.img || IMG=/data/magisk.img
-INSTALLER=$TMPDIR/install
-MAGISKBIN=/data/magisk
-
 # Default permissions
 umask 022
-
-# Initial cleanup
-rm -rf $TMPDIR 2>/dev/null
-mkdir -p $INSTALLER
 
 ##########################################################################################
 # Environment
@@ -34,6 +23,15 @@ ZIP=$3
 # echo before loading util_functions
 ui_print() { echo "$1"; }
 
+is_mounted() {
+  if [ ! -z "$2" ]; then
+    cat /proc/mounts | grep $1 | grep $2, >/dev/null
+  else
+    cat /proc/mounts | grep $1 >/dev/null
+  fi
+  return $?
+}
+
 require_new_magisk() {
   ui_print "***********************************"
   ui_print "! $MAGISKBIN isn't setup properly!"
@@ -42,7 +40,25 @@ require_new_magisk() {
   exit 1
 }
 
+# Mount /data and /cache to access MAGISKBIN
 mount /data 2>/dev/null
+mount /cache 2>/dev/null
+
+# This path should work in any cases
+TMPDIR=/dev/tmp
+MOUNTPATH=$TMPDIR/magisk_img
+INSTALLER=$TMPDIR/install
+if is_mounted /data; then
+  MAGISKBIN=/data/magisk
+  $BOOTMODE && IMG=/data/magisk_merge.img || IMG=/data/magisk.img
+else
+  IMG=/cache/magisk.img
+  MAGISKBIN=/cache/data_bin
+fi
+
+# Initial cleanup
+rm -rf $TMPDIR 2>/dev/null
+mkdir -p $INSTALLER
 
 # Utility functions must exist
 [ -f $MAGISKBIN/util_functions.sh ] || require_new_magisk
