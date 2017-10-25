@@ -1,7 +1,6 @@
 # RAM management fixes by crok
 
-## Tweak the memory management of the device,
-## enable more background apps.. et cetera..
+## Tweak the memory management of the device, enable more background apps.. et cetera..
 
 ```
 ro.config.fha_enable=true
