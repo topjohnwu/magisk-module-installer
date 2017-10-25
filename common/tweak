@@ -1,15 +1,6 @@
 #!/system/bin/sh
-# Please don't hardcode /magisk/modname/... ; instead, please use $MODDIR/...
-# This will make your scripts compatible even if Magisk change its mount point in the future
-MODDIR=${0%/*}
-
-# This script will be executed in late_start service mode
-# More info in the main Magisk thread
-
 # Wait..
 sleep 30
-$MODDIR/./tweak
-./tweak
 # Virtual memory tweaks
 stop perfd
 echo '30' > /proc/sys/vm/swappiness
@@ -32,3 +23,12 @@ echo '70' > /proc/sys/vm/dirty_background_ratio
 chmod 666 /sys/module/lowmemorykiller/parameters/minfree
 chown root /sys/module/lowmemorykiller/parameters/minfree
 echo '21816,29088,36360,43632,50904,65448' > /sys/module/lowmemorykiller/parameters/minfree
+# Adding 500MB of zRAM
+#  swapoff /dev/block/zram0 > /dev/null 2>&1
+#  echo '1' > /sys/block/zram0/reset
+#  echo '0' > /sys/block/zram0/disksize
+#  echo '1' > /sys/block/zram0/max_comp_streams
+#  echo '524288000' > /sys/block/zram0/disksize
+#  mkswap /dev/block/zram0 > /dev/null 2>&1
+#  swapon /dev/block/zram0 > /dev/null 2>&1
+exit 0
