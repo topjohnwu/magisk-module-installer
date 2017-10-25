@@ -42,4 +42,6 @@ echo '21816,29088,36360,43632,50904,65448' > /sys/module/lowmemorykiller/paramet
 *Some tweaks are there only to have a positive effect when another feature will be activated
 like agressive LMK is disabled but LMS scaling has been set or vm.swappiness set to 30 but no swap/zRAM by default.*
 
-These can easily be set via other apps that support init.d scripts and build.prop editing but I use Magisk anyway so.. why not using it to do the job properly - with successful SafetyNet test  ( :
+
+These can be easily set via other tools or apps that support init.d scripts and build.prop editing but I use Magisk anyway.. so.. why not using it to do the job, properly - with successful SafetyNet test    ( :
+
