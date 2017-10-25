@@ -1,6 +1,7 @@
-# RAM management fixes by crok
+## RAM management fixes by crok
 
 # Tweak the memory management of the device, enable more background apps.. et cetera..
+```
 ro.config.fha_enable=true
 ro.sys.fw.bg_apps_limit=32
 ro.config.dha_cached_max=16
@@ -10,8 +11,10 @@ ro.config.dha_lmk_scale=0.545
 ro.config.dha_th_rate=2.3
 ro.config.sdha_apps_bg_max=64
 ro.config.sdha_apps_bg_min=8
+```
 
 # Virtual memory tweaks
+```
 stop perfd
 echo '30' > /proc/sys/vm/swappiness
 echo '0' > /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk
@@ -33,3 +36,7 @@ echo '70' > /proc/sys/vm/dirty_background_ratio
 chmod 666 /sys/module/lowmemorykiller/parameters/minfree
 chown root /sys/module/lowmemorykiller/parameters/minfree
 echo '21816,29088,36360,43632,50904,65448' > /sys/module/lowmemorykiller/parameters/minfree
+```
+
+*Some tweaks are there only to have a positive effect when another feature will be activated
+like agressive LMK is disabled but LMS scaling has been set or vm.swappiness set to 30 but no swap/zRAM by default.*
