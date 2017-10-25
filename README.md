@@ -45,3 +45,6 @@ like agressive LMK is disabled but LMS scaling has been set or vm.swappiness set
 
 These can be easily set via other tools or apps that support init.d scripts and build.prop editing but I use Magisk anyway.. so.. why not using it to do the job, properly - with successful SafetyNet test    ( :
 
+These changes are basic/fundamental changes in the behavior of Android system (ActivityManager, etc.) and the Linux kernel (LMK) - thus works on almost anything starting from Android 4+ as far as I can tell you. The only bottleneck is the RAM: I recommend at least 2GB or RAM, it has been tested on 3GB and 4GB with AEX 4.6 and ElectraBlue kernel and MIUI EU Dev ROM. 
+
+[Here](https://drive.google.com/file/d/0B4FApl7433hBNEZtRElUbzRwTkU/view) is a video from a testuser that shows how efficient is the multitasking with the module (no tab reloading in Chrome, no reloading of apps - even though the testuser is using 20+ apps).
