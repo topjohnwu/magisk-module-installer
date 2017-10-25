@@ -1,6 +1,8 @@
-## RAM management fixes by crok
+# RAM management fixes by crok
 
-# Tweak the memory management of the device, enable more background apps.. et cetera..
+## Tweak the memory management of the device,
+## enable more background apps.. et cetera..
+
 ```
 ro.config.fha_enable=true
 ro.sys.fw.bg_apps_limit=32
@@ -13,7 +15,7 @@ ro.config.sdha_apps_bg_max=64
 ro.config.sdha_apps_bg_min=8
 ```
 
-# Virtual memory tweaks
+## Virtual memory tweaks
 ```
 stop perfd
 echo '30' > /proc/sys/vm/swappiness
@@ -40,3 +42,5 @@ echo '21816,29088,36360,43632,50904,65448' > /sys/module/lowmemorykiller/paramet
 
 *Some tweaks are there only to have a positive effect when another feature will be activated
 like agressive LMK is disabled but LMS scaling has been set or vm.swappiness set to 30 but no swap/zRAM by default.*
+
+These can easily be set via other apps that support init.d scripts and build.prop editing but I use Magisk anyway so.. why not using it to do the job properly - with successful SafetyNet test  ( :
