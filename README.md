@@ -49,4 +49,4 @@ These changes are basic/fundamental changes in the behavior of Android system (A
 
 [Here](https://drive.google.com/file/d/0B4FApl7433hBNEZtRElUbzRwTkU/view) is a video from a testuser that shows how efficient is the multitasking with the module (no tab reloading in Chrome, no reloading of apps - even though the testuser is using 20+ apps).
 
-*NOTE: If you are using MIUI ROM please disable MIUI optimization and MIUI memory optimization because it resets most of these settings.*
+*NOTE: If you are using MIUI ROM please disable MIUI optimization and MIUI memory optimization because it resets most of these settings. If you use any app that tweaks settings above please uninstall or at least disable them to run and ruin the module's settings.*
