@@ -1,4 +1,4 @@
-# RAM management fixes by crok
+# Android RAM management fixes by crok
 
 ## Tweak the memory management of the device, enable more background apps.. et cetera..
 
