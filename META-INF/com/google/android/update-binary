@@ -23,7 +23,7 @@ umask 022
 # Initial cleanup
 rm -rf $TMPDIR 2>/dev/null
 mkdir -p $INSTALLER
-
+	   
 ##########################################################################################
 # Environment
 ##########################################################################################
@@ -37,7 +37,7 @@ ui_print() { echo "$1"; }
 require_new_magisk() {
   ui_print "***********************************"
   ui_print "! $MAGISKBIN isn't setup properly!"
-  ui_print "! Please install Magisk v14.0+!"
+  ui_print "!  Please install Magisk v14.0+!"
   ui_print "***********************************"
   exit 1
 }
@@ -52,6 +52,11 @@ mount /data 2>/dev/null
 get_outfd
 
 mount_partitions
+
+# Magisk clean flash support
+if [ -d /data/magisk -a ! -f /data/magisk.img ]; then
+  /system/bin/make_ext4fs -l 64M /data/magisk.img
+fi
 
 $BOOTMODE && ! is_mounted /magisk && abort "! Magisk is not activated!"
 [ ! -f /system/build.prop ] && abort "! /system could not be mounted!"
@@ -78,7 +83,7 @@ unzip -o "$ZIP" module.prop config.sh 'common/*' -d $INSTALLER 2>/dev/null
 
 # Check the min magisk version
 MIN_VER=`grep_prop template $INSTALLER/module.prop`
-[ ! -z $MAGISK_VER_CODE -a $MAGISK_VER_CODE -ge $MIN_VER ] || require_new_magisk
+[ ! -z $MAGISK_VER_CODE -a $MAGISK_VER_CODE -ge $MIN_VER ] || require_new_magisk							  
 MODID=`grep_prop id $INSTALLER/module.prop`
 MODPATH=$MOUNTPATH/$MODID
 
@@ -114,43 +119,65 @@ ui_print "- Mounting $IMG to $MOUNTPATH"
 MAGISKLOOP=`$MAGISKBIN/magisk --mountimg $IMG $MOUNTPATH`
 is_mounted $MOUNTPATH || abort "! $IMG mount failed..."
 
-# Create mod paths
-rm -rf $MODPATH 2>/dev/null
-mkdir -p $MODPATH
-
-ui_print "- Extracting module files"
-unzip -o "$ZIP" 'system/*' -d $MODPATH 2>/dev/null
-# Remove placeholder (people always forgot to remove it...)
-rm -f $MODPATH/system/placeholder 2>/dev/null
-
-# Handle replace folders
-for TARGET in $REPLACE; do
-  mktouch $MODPATH$TARGET/.replace
-done
-
-# Auto Mount
-$AUTOMOUNT && touch $MODPATH/auto_mount
-
-# prop files
-$PROPFILE && cp -af $INSTALLER/common/system.prop $MODPATH/system.prop
-
-# Module info
-cp -af $INSTALLER/module.prop $MODPATH/module.prop
-if $BOOTMODE; then
-  # Update info for Magisk Manager
-  mktouch /magisk/$MODID/update
-  cp -af $INSTALLER/module.prop /magisk/$MODID/module.prop
+# Detect if mod is already installed
+$BOOTMODE && MOD_VER=/magisk/$MODID/module.prop || MOD_VER=$MODPATH/module.prop
+if [ -f "$MOD_VER" ]; then
+  if [ $(grep "versionCode=" $MOD_VER | sed 's/^.*=//') -ge $(grep "versionCode=" $INSTALLER/module.prop | sed 's/^.*=//') ]; then
+    ACTION="Uninstall"
+  else
+    ACTION="Install"
+  fi
+else
+  ACTION="Install"
 fi
 
-# post-fs-data mode scripts
-$POSTFSDATA && cp -af $INSTALLER/common/post-fs-data.sh $MODPATH/post-fs-data.sh
+if [ "$ACTION" == "Install" ]; then
 
-# service mode scripts
-$LATESTARTSERVICE && cp -af $INSTALLER/common/service.sh $MODPATH/service.sh
+  # Create mod paths
+  rm -rf $MODPATH 2>/dev/null
+  mkdir -p $MODPATH
 
-ui_print "- Setting permissions"
-set_permissions
+  ui_print "- Extracting module files"
+  unzip -o "$ZIP" 'system/*' -d $MODPATH 2>/dev/null
+  # Remove placeholder (people always forgot to remove it...)
+  rm -f $MODPATH/system/placeholder 2>/dev/null
 
+  # Handle replace folders
+  for TARGET in $REPLACE; do
+    mktouch $MODPATH$TARGET/.replace
+  done
+
+  # Auto Mount
+  $AUTOMOUNT && touch $MODPATH/auto_mount
+
+  # prop files
+  $PROPFILE && cp -af $INSTALLER/common/system.prop $MODPATH/system.prop
+
+  # Module info
+  cp -af $INSTALLER/module.prop $MODPATH/module.prop
+  if $BOOTMODE; then
+    # Update info for Magisk Manager
+    mktouch /magisk/$MODID/update
+    cp -af $INSTALLER/module.prop /magisk/$MODID/module.prop
+  fi
+
+  # post-fs-data mode scripts
+  $POSTFSDATA && cp -af $INSTALLER/common/post-fs-data.sh $MODPATH/post-fs-data.sh
+
+  # service mode scripts
+  $LATESTARTSERVICE && cp -af $INSTALLER/common/service.sh $MODPATH/service.sh
+
+  ui_print "- Setting permissions"
+  set_permissions
+
+else
+
+  # Uninstall module
+  ui_print "- ! Current or Newer Version of Module Detected ! Uninstalling -"
+  rm -rf $MODPATH 2>/dev/null
+  rm -rf /magisk/$MODID
+
+fi
 ##########################################################################################
 # Finalizing
 ##########################################################################################
