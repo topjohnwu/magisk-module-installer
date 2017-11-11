@@ -23,7 +23,7 @@ umask 022
 # Initial cleanup
 rm -rf $TMPDIR 2>/dev/null
 mkdir -p $INSTALLER
-	   
+
 ##########################################################################################
 # Environment
 ##########################################################################################
@@ -37,7 +37,7 @@ ui_print() { echo "$1"; }
 require_new_magisk() {
   ui_print "***********************************"
   ui_print "! $MAGISKBIN isn't setup properly!"
-  ui_print "!  Please install Magisk v14.0+!"
+  ui_print "! Please install Magisk v14.0+!"
   ui_print "***********************************"
   exit 1
 }
@@ -83,7 +83,7 @@ unzip -o "$ZIP" module.prop config.sh 'common/*' -d $INSTALLER 2>/dev/null
 
 # Check the min magisk version
 MIN_VER=`grep_prop template $INSTALLER/module.prop`
-[ ! -z $MAGISK_VER_CODE -a $MAGISK_VER_CODE -ge $MIN_VER ] || require_new_magisk							  
+[ ! -z $MAGISK_VER_CODE -a $MAGISK_VER_CODE -ge $MIN_VER ] || require_new_magisk
 MODID=`grep_prop id $INSTALLER/module.prop`
 MODPATH=$MOUNTPATH/$MODID
 
