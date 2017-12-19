@@ -1,7 +1,7 @@
-id=template
-name=Template Module
+id=Razerify-Sounds
+name=Razerify Sounds
 version=v1
 versionCode=1
-author=topjohnwu
-description=A short description
+author=Sandelinos
+description=Get Razer Phone's UI-, notification-, alarm- sounds and ringtones on any Android device.
 template=1400
