@@ -5,3 +5,6 @@ This is a magisk version of this mod found [here](https://forum.xda-developers.c
 This module will boost your headset volume for Mi Max 2
 
 tested with MIUI Global 9.0|Stable 9.0.3.0(NDDMIEI)
+
+#### version 1
+* Initial Release
