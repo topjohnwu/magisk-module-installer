@@ -1,7 +1,7 @@
-id=template
-name=Template Module
+id=MiMax2_HeadsetAudioBoost
+name=MiMax2 Headset AudioBoost
 version=v1
 versionCode=1
-author=topjohnwu
-description=A short description
+author=Reversegear
+description=Headset Audio Boost Systemlessly for Global ROM MIUI 9.0.3.0(NDDMIEI)
 minMagisk=1500
