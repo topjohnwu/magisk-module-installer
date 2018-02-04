@@ -10,12 +10,9 @@
 ps | grep zygote | grep -v grep >/dev/null && BOOTMODE=true || BOOTMODE=false
 $BOOTMODE || ps -A 2>/dev/null | grep zygote | grep -v grep >/dev/null && BOOTMODE=true
 
-# This path should work in any cases
 TMPDIR=/dev/tmp
-MOUNTPATH=$TMPDIR/magisk_img
-$BOOTMODE && IMG=/data/magisk_merge.img || IMG=/data/magisk.img
 INSTALLER=$TMPDIR/install
-MAGISKBIN=/data/magisk
+MAGISKBIN=/data/adb/magisk
 
 # Default permissions
 umask 022
@@ -24,6 +21,16 @@ umask 022
 rm -rf $TMPDIR 2>/dev/null
 mkdir -p $INSTALLER
 
+# echo before loading util_functions
+ui_print() { echo "$1"; }
+
+require_new_magisk() {
+  ui_print "*******************************"
+  ui_print " Please install Magisk v15.0+! "
+  ui_print "*******************************"
+  exit 1
+}  
+                                
 ##########################################################################################
 # Environment
 ##########################################################################################
@@ -31,58 +38,34 @@ mkdir -p $INSTALLER
 OUTFD=$2
 ZIP=$3
 
-# echo before loading util_functions
-ui_print() { echo "$1"; }
-
-require_new_magisk() {
-  ui_print "***********************************"
-  ui_print "! $MAGISKBIN isn't setup properly!"
-  ui_print "! Please install Magisk v14.0+!"
-  ui_print "***********************************"
-  exit 1
-}
-
 mount /data 2>/dev/null
 
 # Utility functions must exist
 [ -f $MAGISKBIN/util_functions.sh ] || require_new_magisk
-# Load utility fuctions
+# Load utility functions
 . $MAGISKBIN/util_functions.sh
 
+# We can't alter magisk image live, use alternative image if required
+$BOOTMODE && IMG=/data/adb/magisk_merge.img
+# Always mount under tmp
+MOUNTPATH=$TMPDIR/magisk_img
+
+# Preperation for flashable zips                                                                    
 get_outfd
-
-mount_partitions
-
-# Magisk clean flash support
-if [ -d /data/magisk -a ! -f /data/magisk.img ]; then
-  /system/bin/make_ext4fs -l 64M /data/magisk.img
-fi
-
-$BOOTMODE && ! is_mounted /magisk && abort "! Magisk is not activated!"
-[ ! -f /system/build.prop ] && abort "! /system could not be mounted!"
-
-# Detect version and architecture
-api_level_arch_detect
-
-# You can get the Android API version from $API, the CPU architecture from $ARCH
-# Useful if you are creating Android version / platform dependent mods
-
-# We need busybox/binaries to be setup
-$BOOTMODE && boot_actions || recovery_actions
 
 ##########################################################################################
 # Preparation
 ##########################################################################################
 
 # Extract common files
-unzip -o "$ZIP" module.prop config.sh 'common/*' -d $INSTALLER 2>/dev/null
+unzip -o "$ZIP" module.prop config.sh 'common/*' -d $INSTALLER >&2
 
 [ ! -f $INSTALLER/config.sh ] && abort "! Unable to extract zip file!"
 # Load configurations
 . $INSTALLER/config.sh
 
-# Check the min magisk version
-MIN_VER=`grep_prop template $INSTALLER/module.prop`
+# Check the installed magisk version
+MIN_VER=`grep_prop minMagisk $INSTALLER/module.prop`
 [ ! -z $MAGISK_VER_CODE -a $MAGISK_VER_CODE -ge $MIN_VER ] || require_new_magisk
 MODID=`grep_prop id $INSTALLER/module.prop`
 MODPATH=$MOUNTPATH/$MODID
@@ -95,48 +78,46 @@ ui_print "******************************"
 ui_print "Powered by Magisk (@topjohnwu)"
 ui_print "******************************"
 
+# Mount partitions
+mount_partitions
+
+# Detect version and architecture
+api_level_arch_detect
+
+# You can get the Android API version from $API, the CPU architecture from $ARCH
+# Useful if you are creating Android version / platform dependent mods
+
+# Setup busybox and binaries
+$BOOTMODE && boot_actions || recovery_actions
+
 ##########################################################################################
 # Install
 ##########################################################################################
 
+# Get the variable reqSizeM. Use your own method to determine reqSizeM if needed                                                                               
 request_zip_size_check "$ZIP"
 
-if [ -f "$IMG" ]; then
-  ui_print "- Found $IMG"
-  image_size_check $IMG
-  if [ "$reqSizeM" -gt "$curFreeM" ]; then
-    newSizeM=$(((reqSizeM + curUsedM) / 32 * 32 + 64))
-    ui_print "- Resizing $IMG to ${newSizeM}M"
-    $MAGISKBIN/magisk --resizeimg $IMG $newSizeM
-  fi
-else
-  newSizeM=$((reqSizeM / 32 * 32 + 64));
-  ui_print "- Creating $IMG with size ${newSizeM}M"
-  $MAGISKBIN/magisk --createimg $IMG $newSizeM
-fi
-
-ui_print "- Mounting $IMG to $MOUNTPATH"
-MAGISKLOOP=`$MAGISKBIN/magisk --mountimg $IMG $MOUNTPATH`
-is_mounted $MOUNTPATH || abort "! $IMG mount failed..."
+# This function will mount $IMG to $MOUNTPATH, and resize the image based on $reqSizeM
+mount_magisk_img
 
 # Detect if mod is already installed
-$BOOTMODE && MOD_VER=/magisk/$MODID/module.prop || MOD_VER=$MODPATH/module.prop
+$BOOTMODE && MOD_VER=/sbin/.core/img/$MODID/module.prop || MOD_VER=$MODPATH/module.prop
 if [ -f "$MOD_VER" ]; then
   if [ $(grep "versionCode=" $MOD_VER | sed 's/^.*=//') -ge $(grep "versionCode=" $INSTALLER/module.prop | sed 's/^.*=//') ]; then
-    ACTION="Uninstall"
+    INSTALL=false
   else
-    ACTION="Install"
+    INSTALL=true
   fi
 else
-  ACTION="Install"
+  INSTALL=true
 fi
 
-if [ "$ACTION" == "Install" ]; then
-
+if $INSTALL; then
   # Create mod paths
   rm -rf $MODPATH 2>/dev/null
   mkdir -p $MODPATH
 
+  # Extract files to system. Use your own method if needed                                                        
   ui_print "- Extracting module files"
   unzip -o "$ZIP" 'system/*' -d $MODPATH 2>/dev/null
   # Remove placeholder (people always forgot to remove it...)
@@ -157,8 +138,8 @@ if [ "$ACTION" == "Install" ]; then
   cp -af $INSTALLER/module.prop $MODPATH/module.prop
   if $BOOTMODE; then
     # Update info for Magisk Manager
-    mktouch /magisk/$MODID/update
-    cp -af $INSTALLER/module.prop /magisk/$MODID/module.prop
+    mktouch /sbin/.core/img/$MODID/update
+    cp -af $INSTALLER/module.prop /sbin/.core/img/$MODID/module.prop
   fi
 
   # post-fs-data mode scripts
@@ -175,22 +156,15 @@ else
   # Uninstall module
   ui_print "- ! Current or Newer Version of Module Detected ! Uninstalling -"
   rm -rf $MODPATH 2>/dev/null
-  rm -rf /magisk/$MODID
+  rm -rf /sbin/.core/img/$MODID
 
 fi
 ##########################################################################################
 # Finalizing
 ##########################################################################################
 
-$MAGISKBIN/magisk --umountimg $MOUNTPATH $MAGISKLOOP
-
-# Shrink the image if possible
-image_size_check $IMG
-newSizeM=$((curUsedM / 32 * 32 + 64))
-if [ $curSizeM -gt $newSizeM ]; then
-  ui_print "- Shrinking $IMG to ${newSizeM}M"
-  $MAGISKBIN/magisk --resizeimg $IMG $newSizeM
-fi
+# Unmount magisk image and shrink if possible
+unmount_magisk_img
 
 $BOOTMODE || recovery_cleanup
 rm -rf $TMPDIR
