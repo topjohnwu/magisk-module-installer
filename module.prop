@@ -1,7 +1,7 @@
-id=template
-name=Template Module
-version=v1
+id=crontab
+name=crontab
+version=1.0.0
 versionCode=1
-author=topjohnwu
-description=A short description
-minMagisk=1500
+author=liangsai12
+description=   data/crontabs/root used to schedule the execution of programs
+template=1500
