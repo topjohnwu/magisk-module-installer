@@ -1,5 +1,5 @@
 id=crontab
-name=Enable  Crontab
+name=crontab
 version=1.0.0
 versionCode=1
 author=liangsai12
