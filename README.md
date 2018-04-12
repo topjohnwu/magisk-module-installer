@@ -9,9 +9,7 @@ How to use
 ## Changelog
 v1.0 new
 ## Requirements
-- Requirement 1
-- Requirement *
-- Requirement n
+- Requirement Magisk
 ## Instructions
   Attention： the TimeZone is shanghai。I do not know how to use tzselect .
   please Manually change "export TZ=Asia/Shanghai"to your zone.
@@ -19,7 +17,7 @@ v1.0 new
   ☆☆☆tips for Auto.js☆☆
   Autojs is a APP to run js on Android.
   1.  在 /data/crontabs/root下 写上
-      # on 8:15 to do
+      \# on 8:15 to do
       15 8 * * * /data/cronsh/zd.sh
       
   2.  在  /data/cronsh/zd.sh下 写上
