@@ -11,9 +11,11 @@ v1.0 new
 ## Requirements
 - Requirement Magisk
 ## Instructions
-  Attention： the TimeZone is shanghai。I do not know how to use tzselect .
-  please Manually change "export TZ=Asia/Shanghai"to your zone.
-  You don't need this file'/data/cronsh/zd.sh' if you like
+  Attention： the TimeZone is shanghai.
+  I do not know how to use tzselect .
+  please Manually change " export TZ=Asia/Shanghai " to your zone.
+  You don't need this file'/data/cronsh/zd.sh' if you like.
+  
   ☆☆☆tips for Auto.js☆☆
   Autojs is a APP to run js on Android.
   1.  在 /data/crontabs/root下 写上
