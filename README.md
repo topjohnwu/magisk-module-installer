@@ -1,30 +1,33 @@
-# Magisk Module Template
-
-This `README.md` will be shown in Magisk Manager. Place any information / changelog / notes you like.
-
-**Please update `README.md` if you want to submit your module to the online repo!**
-
-Github has its own online markdown editor with a preview feature, you can use it to update your `README.md`! If you need more advanced syntax, check the [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
-
-For more information about modules and repos, please check the [official documentations](https://github.com/topjohnwu/Magisk/blob/master/docs/modules.md)
-
----
-# **Module Name**
+# **crontab**
 ## Description
-Description here
+My work : use "crond -c /data/crontabs " to change path 
+How to use
+  crontab command in /data/crontabs/root   
+  crontab examples:
+  Every 5 minutes to log date
+  */5 * * * * 	date >sdcard/log.txt
 ## Changelog
-Changelog here
+v1.0 new
 ## Requirements
 - Requirement 1
 - Requirement *
 - Requirement n
 ## Instructions
-Instructions here
-- Or other instructions here
-- Followed by more instructions
-1. Or a list of instructions
-2. With more instructions
+  Attention： the TimeZone is shanghai。I do not know how to use tzselect .
+  please Manually change "export TZ=Asia/Shanghai"to your zone.
+  You don't need this file'/data/cronsh/zd.sh' if you like
+  ☆☆☆tips for Auto.js☆☆
+  Autojs is a APP to run js on Android.
+  1.  在 /data/crontabs/root下 写上
+      # on 8:15 to do
+      15 8 * * * /data/cronsh/zd.sh
+      
+  2.  在  /data/cronsh/zd.sh下 写上
+  
+  am start -n com.stardust.scriptdroid/.external.open.RunIntentActivity -d /sdcard/脚本/脚本名字.js -t application/x-javascript
+  
+  这样你的脚本就自动执行了
 ## Links
-[Module XDA Forum Thread](https://forum.xda-developers.com/apps/magisk/module-url-here "Module official XDA thread")
+[crontab editing](http://corntab.com/")
 
-[Latest stable Magisk](http://www.tiny.cc/latestmagisk)
+[autojs](https://www.autojs.org/)
