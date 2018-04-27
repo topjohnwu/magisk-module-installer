@@ -4,10 +4,9 @@
 This module works by adding the "ro.bionic.ld.warning=0" to the  build.prop through magisk systemless
 
 ### Warning:
-1:This module works only in OREO+
-2:Please do not install this module below OREO
-3:I'm not sure this module can work 100% in any device or any rom
-
+• This module works only in OREO+
+• Please do not install this module below OREO
+• I'm not sure this module can work 100% in any device or any roms
 ### Requirements:
 - An android device
 - Magisk installed [V16+]
