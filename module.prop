@@ -1,7 +1,0 @@
-id=ForceDisableBionicldWarning
-name=Force Disable Bionic ld Warning
-version=v1
-versionCode=1
-author=Artoriarcher
-description=A module to force disable bionic ld warning to system. 
-minMagisk=1600
