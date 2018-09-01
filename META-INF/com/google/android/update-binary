@@ -1,35 +1,36 @@
 #!/sbin/sh
 ##########################################################################################
 #
-# Magisk Module Template Install Script
+# Magisk 模块安装脚本模板
 # by topjohnwu
+# 翻译: cjybyjk
 #
 ##########################################################################################
 
 TMPDIR=/dev/tmp
 INSTALLER=$TMPDIR/install
-# Always mount under tmp
+# 总在 tmp 下挂载
 MOUNTPATH=$TMPDIR/magisk_img
 
-# Default permissions
+# 默认权限
 umask 022
 
-# Initial cleanup
+# 清除工作
 rm -rf $TMPDIR 2>/dev/null
 mkdir -p $INSTALLER
 
-# echo before loading util_functions
+# 在加载 util_functions 前 echo
 ui_print() { echo "$1"; }
 
 require_new_magisk() {
   ui_print "*******************************"
-  ui_print " Please install Magisk v17.0+! "
+  ui_print " 请安装 Magisk v17.0+! "
   ui_print "*******************************"
   exit 1
 }
 
 ##########################################################################################
-# Environment
+# 环境设置
 ##########################################################################################
 
 OUTFD=$2
@@ -37,7 +38,7 @@ ZIP=$3
 
 mount /data 2>/dev/null
 
-# Load utility functions
+# 加载公用函数
 if [ -f /data/adb/magisk/util_functions.sh ]; then
   . /data/adb/magisk/util_functions.sh
 elif [ -f /data/magisk/util_functions.sh ]; then
@@ -47,107 +48,108 @@ else
   require_new_magisk
 fi
 
-# Use alternative image if in BOOTMODE
+# 如果处于 BOOTMODE(系统模式)，则使用替代镜像
 $BOOTMODE && IMG=$NVBASE/magisk_merge.img
 
-# Preperation for flashable zips
+# 准备卡刷 zip 包
 setup_flashable
 
-# Mount partitions
+# 挂载分区
 mount_partitions
 
-# Detect version and architecture
+# 检测版本和架构
 api_level_arch_detect
 
-# You can get the Android API version from $API, the CPU architecture from $ARCH
-# Useful if you are creating Android version / platform dependent mods
+# 你可以从 $API 取得 Android API 版本, 从 $ARCH 取得 CPU 架构
+# 如果您正在创建依赖特定 Android版本/平台 的模块，这是非常有用的
 
-# Setup busybox and binaries
+# 安装 busybox 和二进制文件
 $BOOTMODE && boot_actions || recovery_actions
 
 ##########################################################################################
-# Preparation
+# 准备
 ##########################################################################################
 
-# Extract common files
+# 提取公共文件
 unzip -o "$ZIP" module.prop config.sh 'common/*' -d $INSTALLER >&2
 
-[ ! -f $INSTALLER/config.sh ] && abort "! Unable to extract zip file!"
-# Load configurations
+[ ! -f $INSTALLER/config.sh ] && abort "! 从 zip 中提取文件失败!"
+# 加载设置
 . $INSTALLER/config.sh
 
-# Check the installed magisk version
+# 检查已安装的 Magisk 版本
 MIN_VER=`grep_prop minMagisk $INSTALLER/module.prop`
 [ ! -z $MAGISK_VER_CODE -a $MAGISK_VER_CODE -ge $MIN_VER ] || require_new_magisk
 MODID=`grep_prop id $INSTALLER/module.prop`
 MODPATH=$MOUNTPATH/$MODID
 
-# Print mod name
+# 打印模块名称
 print_modname
 
-# Please leave this message in your flashable zip for credits :)
+# 请将这个信息保留在您的 zip 卡刷包中 :)
 ui_print "******************************"
 ui_print "Powered by Magisk (@topjohnwu)"
 ui_print "******************************"
 
 ##########################################################################################
-# Install
+# 安装
 ##########################################################################################
 
-# Get the variable reqSizeM. Use your own method to determine reqSizeM if needed
+# 获取变量 reqSizeM。如果需要，可以使用自己的方法来确定 reqSizeM
+# reqSizeM 为安装这个模块需要的空间大小, 单位MB
 request_zip_size_check "$ZIP"
 
-# This function will mount $IMG to $MOUNTPATH, and resize the image based on $reqSizeM
+# 这个函数将挂载 $IMG 到 $MOUNTPATH，并根据 $reqSizeM 调整镜像大小
 mount_magisk_img
 
-# Create mod paths
+# 创建模块路径
 rm -rf $MODPATH 2>/dev/null
 mkdir -p $MODPATH
 
-# Extract files to system. Use your own method if needed
-ui_print "- Extracting module files"
+# 将文件解压缩到 system 。如果需要，可以使用自己的方法
+ui_print "- 正在解压模块文件"
 unzip -o "$ZIP" 'system/*' -d $MODPATH >&2
 
-# Remove placeholder
+# 删除 placeholder
 rm -f $MODPATH/system/placeholder 2>/dev/null
 
-# Handle replace folders
+# 处理 replace 文件夹
 for TARGET in $REPLACE; do
   mktouch $MODPATH$TARGET/.replace
 done
 
-# Auto Mount
+# 自动挂载
 $AUTOMOUNT && touch $MODPATH/auto_mount
 
-# prop files
+# prop 文件
 $PROPFILE && cp -af $INSTALLER/common/system.prop $MODPATH/system.prop
 
-# Module info
+# 模块信息
 cp -af $INSTALLER/module.prop $MODPATH/module.prop
 if $BOOTMODE; then
-  # Update info for Magisk Manager
+  # 为 Magisk Manager 更新信息
   mktouch /sbin/.core/img/$MODID/update
   cp -af $INSTALLER/module.prop /sbin/.core/img/$MODID/module.prop
 fi
 
-# post-fs-data mode scripts
+# post-fs-data 模式脚本
 $POSTFSDATA && cp -af $INSTALLER/common/post-fs-data.sh $MODPATH/post-fs-data.sh
 
-# service mode scripts
+# service 模式脚本
 $LATESTARTSERVICE && cp -af $INSTALLER/common/service.sh $MODPATH/service.sh
 
-ui_print "- Setting permissions"
+ui_print "- 正在设置权限"
 set_permissions
 
 ##########################################################################################
-# Finalizing
+# 结束
 ##########################################################################################
 
-# Unmount magisk image and shrink if possible
+# 卸载 magisk 镜像, 并尽可能地缩小它
 unmount_magisk_img
 
 $BOOTMODE || recovery_cleanup
 rm -rf $TMPDIR
 
-ui_print "- Done"
+ui_print "- 完成"
 exit 0

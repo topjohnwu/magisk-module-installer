@@ -1,7 +1,7 @@
 id=template
-name=Template Module
+name=模块模板
 version=v1
 versionCode=1
 author=topjohnwu
-description=A short description
+description=一个简短的描述
 minMagisk=17000

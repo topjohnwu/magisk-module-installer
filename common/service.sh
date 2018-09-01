@@ -1,7 +1,7 @@
 #!/system/bin/sh
-# Please don't hardcode /magisk/modname/... ; instead, please use $MODDIR/...
-# This will make your scripts compatible even if Magisk change its mount point in the future
+# 请不要硬编码 /magisk/modname/... ; 请使用 $MODDIR/...
+# 这将使你的脚本更加兼容，即使Magisk在未来改变了它的挂载点
 MODDIR=${0%/*}
 
-# This script will be executed in late_start service mode
-# More info in the main Magisk thread
+# 这个脚本将以 late_start service 模式执行
+# 更多信息请访问 Magisk 主题

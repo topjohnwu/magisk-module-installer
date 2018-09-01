@@ -1,58 +1,59 @@
 ##########################################################################################
 #
-# Magisk Module Template Config Script
+# Magisk 模块配置脚本示例
 # by topjohnwu
+# 翻译: cjybyjk
 #
 ##########################################################################################
 ##########################################################################################
 #
-# Instructions:
+# 说明:
 #
-# 1. Place your files into system folder (delete the placeholder file)
-# 2. Fill in your module's info into module.prop
-# 3. Configure the settings in this file (config.sh)
-# 4. If you need boot scripts, add them into common/post-fs-data.sh or common/service.sh
-# 5. Add your additional or modified system properties into common/system.prop
+# 1. 将您的文件放入 system 文件夹 (删除 placeholder 文件)
+# 2. 将模块信息写入 module.prop
+# 3. 在这个文件中进行设置 (config.sh)
+# 4. 如果您需要在启动时执行命令, 请把它们加入 common/post-fs-data.sh 或 common/service.sh
+# 5. 如果需要修改系统属性(build.prop), 请把它加入 common/system.prop
 #
 ##########################################################################################
 
 ##########################################################################################
-# Configs
+# 配置
 ##########################################################################################
 
-# Set to true if you need to enable Magic Mount
-# Most mods would like it to be enabled
+# 如果您需要启用 Magic Mount, 请把它设置为 true
+# 大多数模块都需要启用它
 AUTOMOUNT=true
 
-# Set to true if you need to load system.prop
+# 如果您需要加载 system.prop, 请把它设置为 true
 PROPFILE=false
 
-# Set to true if you need post-fs-data script
+# 如果您需要执行 post-fs-data 脚本, 请把它设置为 true
 POSTFSDATA=false
 
-# Set to true if you need late_start service script
+# 如果您需要执行 service 脚本, 请把它设置为 true
 LATESTARTSERVICE=false
 
 ##########################################################################################
-# Installation Message
+# 安装信息
 ##########################################################################################
 
-# Set what you want to show when installing your mod
+# 在这里设置您想要在模块安装过程中显示的信息
 
 print_modname() {
   ui_print "*******************************"
-  ui_print "     Magisk Module Template    "
+  ui_print "        Magisk 模块示例        "
   ui_print "*******************************"
 }
 
 ##########################################################################################
-# Replace list
+# 替换列表
 ##########################################################################################
 
-# List all directories you want to directly replace in the system
-# Check the documentations for more info about how Magic Mount works, and why you need this
+# 列出您想在系统中直接替换的所有目录
+# 查看文档，了解更多关于Magic Mount如何工作的信息，以及您为什么需要它
 
-# This is an example
+# 这是个示例
 REPLACE="
 /system/app/Youtube
 /system/priv-app/SystemUI
@@ -60,40 +61,39 @@ REPLACE="
 /system/framework
 "
 
-# Construct your own list here, it will override the example above
-# !DO NOT! remove this if you don't need to replace anything, leave it empty as it is now
+# 在这里构建您自己的列表，它将覆盖上面的示例
+# 如果你不需要替换任何东西，!千万不要! 删除它，让它保持现在的状态
 REPLACE="
 "
 
 ##########################################################################################
-# Permissions
+# 权限设置
 ##########################################################################################
 
 set_permissions() {
-  # Only some special files require specific permissions
-  # The default permissions should be good enough for most cases
+  # 只有一些特殊文件需要特定的权限
+  # 默认的权限应该适用于大多数情况
 
-  # Here are some examples for the set_perm functions:
+  # 下面是 set_perm 函数的一些示例:
 
-  # set_perm_recursive  <dirname>                <owner> <group> <dirpermission> <filepermission> <contexts> (default: u:object_r:system_file:s0)
-  # set_perm_recursive  $MODPATH/system/lib       0       0       0755            0644
+  # set_perm_recursive  <目录>                <所有者> <用户组> <目录权限> <文件权限> <上下文> (默认值是: u:object_r:system_file:s0)
+  # set_perm_recursive  $MODPATH/system/lib       0       0       0755        0644
 
-  # set_perm  <filename>                         <owner> <group> <permission> <contexts> (default: u:object_r:system_file:s0)
-  # set_perm  $MODPATH/system/bin/app_process32   0       2000    0755         u:object_r:zygote_exec:s0
-  # set_perm  $MODPATH/system/bin/dex2oat         0       2000    0755         u:object_r:dex2oat_exec:s0
-  # set_perm  $MODPATH/system/lib/libart.so       0       0       0644
+  # set_perm  <文件名>                         <所有者> <用户组> <文件权限> <上下文> (默认值是: u:object_r:system_file:s0)
+  # set_perm  $MODPATH/system/bin/app_process32   0       2000      0755       u:object_r:zygote_exec:s0
+  # set_perm  $MODPATH/system/bin/dex2oat         0       2000      0755       u:object_r:dex2oat_exec:s0
+  # set_perm  $MODPATH/system/lib/libart.so       0       0         0644
 
-  # The following is default permissions, DO NOT remove
+  # 以下是默认权限，请勿删除
   set_perm_recursive  $MODPATH  0  0  0755  0644
 }
 
 ##########################################################################################
-# Custom Functions
+# 自定义函数
 ##########################################################################################
 
-# This file (config.sh) will be sourced by the main flash script after util_functions.sh
-# If you need custom logic, please add them here as functions, and call these functions in
-# update-binary. Refrain from adding code directly into update-binary, as it will make it
-# difficult for you to migrate your modules to newer template versions.
-# Make update-binary as clean as possible, try to only do function calls in it.
+# 这个文件 (config.sh) 将被安装脚本在 util_functions.sh 之后 source 化(设置为环境变量)
+# 如果你需要自定义操作, 请在这里以函数方式定义它们, 然后在 update-binary 里调用这些函数
+# 不要直接向 update-binary 添加代码，因为这会让您很难将模块迁移到新的模板版本
+# 尽量不要对 update-binary 文件做其他修改，尽量只在其中执行函数调用
 
