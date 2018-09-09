@@ -1,7 +1,7 @@
-id=template
-name=Template Module
-version=v1
-versionCode=1
-author=topjohnwu
-description=A short description
+id=magisk-fix-ttl
+name=Magisk Fix TTL "64"
+version=v1.0
+versionCode=7
+author=-=AverTV=-
+description=Fake MNO ;)
 minMagisk=17000
