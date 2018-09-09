@@ -1,7 +1,7 @@
 ## Description
-Time To Live (TTL) and sets TTL to 64.
-This module includes support for fixing the Fix TTL 64.
-With kernel support enabled !
+* Time To Live (TTL) and sets TTL to 64.
+* This module includes support for fixing the Fix TTL 64.
+* With kernel support enabled !
 
 #### Current Version
 1.0
