@@ -1,7 +1,18 @@
-# Magisk Module Template
+## Description
+* Time To Live (TTL) and sets TTL to 64.
+* This module includes support for fixing the Fix TTL 64.
+* With kernel support enabled !
 
-**Update `README.md` if you want to submit your module to the online repo!** This `README.md` will be shown in a Webview dialog when a user taps your module in Magisk Manager, so make sure to place some information / changelog / notes here.
+#### Current Version
+1.0
 
-If you are not familiar with the Markdown syntax, you can start by experimenting on GitHub's online Markdown editor, which will let you preview before publishing. If you need more help, the [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) will be handy.
+#### Changelog
 
-For more information about modules and repos, please check the [official documentation](https://github.com/topjohnwu/Magisk/blob/master/docs/modules.md)
+* 1.0   (2018-09-08) - Initial release
+
+#### Magisk Template
+v17000
+
+#### NOTICE
+
+* You should use latest Magisk Manager to install this module. If you meet any problem under installation from Magisk Manager, please try to install it from recovery.
