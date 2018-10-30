@@ -90,54 +90,94 @@ ui_print "******************************"
 ui_print "Powered by Magisk (@topjohnwu)"
 ui_print "******************************"
 
+# Get Installation or Uninstallation Choice from ZIP filename
+choice=$(basename "$ZIP");
+
+# Set Action depending on Choice
+case $choice in
+  *uninstall*|*Uninstall*|*UNINSTALL*) action=uninstallation;;
+  *) action=installation;;
+esac;
+
 ##########################################################################################
 # Install
 ##########################################################################################
 
-# Get the variable reqSizeM. Use your own method to determine reqSizeM if needed
-request_zip_size_check "$ZIP"
+# If Action is Installation then Install
+if [ "$action" == "installation" ]; then
 
-# This function will mount $IMG to $MOUNTPATH, and resize the image based on $reqSizeM
-mount_magisk_img
+  # Get the variable reqSizeM. Use your own method to determine reqSizeM if needed
+  request_zip_size_check "$ZIP"
 
-# Create mod paths
-rm -rf $MODPATH 2>/dev/null
-mkdir -p $MODPATH
+  # This function will mount $IMG to $MOUNTPATH, and resize the image based on $reqSizeM
+  mount_magisk_img
 
-# Extract files to system. Use your own method if needed
-ui_print "- Extracting module files"
-unzip -o "$ZIP" 'system/*' -d $MODPATH >&2
+  # Create mod paths
+  rm -rf $MODPATH 2>/dev/null
+  mkdir -p $MODPATH
 
-# Remove placeholder
-rm -f $MODPATH/system/placeholder 2>/dev/null
+  # Extract files to system. Use your own method if needed
+  ui_print "- Extracting module files"
+  unzip -o "$ZIP" 'system/*' -d $MODPATH >&2
 
-# Handle replace folders
-for TARGET in $REPLACE; do
-  mktouch $MODPATH$TARGET/.replace
-done
+  # Remove placeholder
+  rm -f $MODPATH/system/placeholder 2>/dev/null
 
-# Auto Mount
-$AUTOMOUNT && touch $MODPATH/auto_mount
+  # Handle replace folders
+  for TARGET in $REPLACE; do
+    mktouch $MODPATH$TARGET/.replace
+  done
 
-# prop files
-$PROPFILE && cp -af $INSTALLER/common/system.prop $MODPATH/system.prop
+  # Auto Mount
+  $AUTOMOUNT && touch $MODPATH/auto_mount
 
-# Module info
-cp -af $INSTALLER/module.prop $MODPATH/module.prop
-if $BOOTMODE; then
-  # Update info for Magisk Manager
-  mktouch /sbin/.core/img/$MODID/update
-  cp -af $INSTALLER/module.prop /sbin/.core/img/$MODID/module.prop
+  # prop files
+  $PROPFILE && cp -af $INSTALLER/common/system.prop $MODPATH/system.prop
+
+  # Module info
+  cp -af $INSTALLER/module.prop $MODPATH/module.prop
+  if $BOOTMODE; then
+    # Update info for Magisk Manager
+    mktouch /sbin/.core/img/$MODID/update
+    cp -af $INSTALLER/module.prop /sbin/.core/img/$MODID/module.prop
+  fi
+
+  # post-fs-data mode scripts
+  $POSTFSDATA && cp -af $INSTALLER/common/post-fs-data.sh $MODPATH/post-fs-data.sh
+
+  # service mode scripts
+  $LATESTARTSERVICE && cp -af $INSTALLER/common/service.sh $MODPATH/service.sh
+
+  ui_print "- Setting permissions"
+  set_permissions
+
 fi
 
-# post-fs-data mode scripts
-$POSTFSDATA && cp -af $INSTALLER/common/post-fs-data.sh $MODPATH/post-fs-data.sh
+##########################################################################################
+# Uninstall
+##########################################################################################
 
-# service mode scripts
-$LATESTARTSERVICE && cp -af $INSTALLER/common/service.sh $MODPATH/service.sh
+# If Action is Uninstallation then Uninstall
+if [ "$action" == "uninstallation" ]; then
 
-ui_print "- Setting permissions"
-set_permissions
+  # This function will mount $IMG to $MOUNTPATH, and resize the image based on $reqSizeM
+  mount_magisk_img
+
+  # In bootmode remove residue files
+  if $BOOTMODE && -e "/sbin/.core/img/$MODID" ; then
+    rm -rf /sbin/.core/img/$MODID 2>/dev/null
+  fi
+
+  # Remove Module if exist
+  if [ ! -e "$MODPATH" ]; then
+    unmount_magisk_img
+    abort "! No module installation found!"
+  else
+    ui_print "- Uninstalling module files"
+    rm -rf $MODPATH 2>/dev/null
+  fi
+
+fi
 
 ##########################################################################################
 # Finalizing
