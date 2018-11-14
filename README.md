@@ -1,9 +1,9 @@
-#AD主机
+# AD hosts
 ### 依然的爱
 *替换hosts来屏蔽广告*
 
 ### Links
-* [GitHub](https://github.com/Magisk-Modules-Repo/Adreno-Systemless-Installer)
+* [GitHub](https://github.com/E7KMbb/AD-hosts)
 
 ### 介绍
 本模块会以Systemless的形式替换hosts进行广告屏蔽。
