@@ -1,7 +1,12 @@
-# Magisk Module Template
+# AD hosts
+### 依然的爱
+*替换hosts来屏蔽广告*
 
-**Update `README.md` if you want to submit your module to the online repo!** This `README.md` will be shown in a Webview dialog when a user taps your module in Magisk Manager, so make sure to place some information / changelog / notes here.
+### Links
+* [GitHub](https://github.com/Magisk-Modules-Repo/Adreno-Systemless-Installer)
 
-If you are not familiar with the Markdown syntax, you can start by experimenting on GitHub's online Markdown editor, which will let you preview before publishing. If you need more help, the [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) will be handy.
+### 介绍
+本模块会以Systemless的形式替换hosts进行广告屏蔽。
 
-For more information about modules and repos, please check the [official documentation](https://topjohnwu.github.io/Magisk/)
+### 注意
+使用时请关闭其它的hosts模块，并打开Systemless hosts选项。
