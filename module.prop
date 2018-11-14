@@ -1,7 +1,7 @@
-id=template
-name=Template Module
-version=v1
-versionCode=1
-author=topjohnwu
-description=A short description
-minMagisk=17000
+id=AD-Hosts
+name=AD Hosts
+version=v3.7
+versionCode=3
+author=依然的爱
+description=屏蔽广告（大部分）还有大部分视频app的广告，hosts规则来自于网络搜索和github及酷友提供，使用时请关闭其它的hosts模块，并打开Systemless hosts选项
+minMagisk=1500
