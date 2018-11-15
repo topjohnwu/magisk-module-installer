@@ -1,5 +1,6 @@
 #********************************************************************
-# 本hosts由多个hosts整合而来hosts源均来自于github，及网络搜索*
+# 本hosts由多个hosts整合而来hosts源均来自于github，及网络搜索
+# https://github.com/E7KMbb/AD-hosts
 #********************************************************************
 127.0.0.1 localhost
 127.0.0.11 localhost
@@ -20,6 +21,7 @@
 127.0.0.1 114study.adsame.com
 127.0.0.1 1.21shebao.com
 127.0.0.1 123.sogou.com
+127.0.0.1 smart.789.image.mucang.cn
 127.0.0.1 1251.adsina.allyes.com
 127.0.0.1 1276.adsina.allyes.com
 127.0.0.1 144.dragonparking.com
@@ -416,7 +418,6 @@
 127.0.0.1 api.primecaster.net
 127.0.0.1 api-push.meizu.com
 127.0.0.1 api.ra2.xlmc.sec.miui.com
-127.0.0.1 api.sec.miui.com
 127.0.0.1 api.share.baidu.com
 127.0.0.1 api-shoulei-ssl.xunlei.com
 127.0.0.1 api.shuaji.360.cn
@@ -426,7 +427,6 @@
 127.0.0.1 api.tongji.today
 127.0.0.1 api.tr.blismedia.com
 127.0.0.1 api.tuisong.baidu.com
-127.0.0.1 api.tw06.xlmc.sec.miui.com
 127.0.0.1 api.viglink.com
 127.0.0.1 api.wapa.taobao.com
 127.0.0.1 api.waptest.taobao.com
@@ -461,7 +461,6 @@
 127.0.0.1 asp.adsame.com
 127.0.0.1 assets.210189.com
 127.0.0.1 assets.servedby-buysellads.com
-127.0.0.1 astat.bugly.qq.com
 127.0.0.1 a.stat.xiaomi.com
 127.0.0.1 astrategy.beacon.qq.com
 127.0.0.1 as.trklinklog.com
@@ -3765,7 +3764,6 @@
 127.0.0.1 api.primecaster.net
 127.0.0.1 api-push.meizu.com
 127.0.0.1 api.ra2.xlmc.sec.miui.com
-127.0.0.1 api.sec.miui.com
 127.0.0.1 api.share.baidu.com
 127.0.0.1 api-shoulei-ssl.xunlei.com
 127.0.0.1 api.shuaji.360.cn
@@ -3775,7 +3773,6 @@
 127.0.0.1 api.tongji.today
 127.0.0.1 api.tr.blismedia.com
 127.0.0.1 api.tuisong.baidu.com
-127.0.0.1 api.tw06.xlmc.sec.miui.com
 127.0.0.1 api.viglink.com
 127.0.0.1 api.wapa.taobao.com
 127.0.0.1 api.waptest.taobao.com
@@ -3810,7 +3807,6 @@
 127.0.0.1 asp.adsame.com
 127.0.0.1 assets.210189.com
 127.0.0.1 assets.servedby-buysellads.com
-127.0.0.1 astat.bugly.qq.com
 127.0.0.1 a.stat.xiaomi.com
 127.0.0.1 astrategy.beacon.qq.com
 127.0.0.1 as.trklinklog.com
@@ -6736,7 +6732,6 @@
 127.0.0.1 test.ad.xiaomi.com
 127.0.0.1 test.e.ad.xiaomi.com
 127.0.0.1 test.zeus.ad.xiaomi.com
-127.0.0.1 api.tw06.xlmc.sec.miui.com
 
 #pkg=iqiyi.com;（爱奇艺）iqiyi
 127.0.0.1 api.cupid.iqiyi.com
@@ -7025,7 +7020,6 @@
 127.0.0.1 mou.niu.xunlei.com
 127.0.0.1 sdksitter.m.sjzhushou.com
 127.0.0.1 static.m.sjzhushou.com
-127.0.0.1 astat.bugly.qq.com
 127.0.0.1 android.bugly.qq.com
 127.0.0.1 p.l.qq.com
 127.0.0.1 dp3.qq.com
@@ -9470,7 +9464,6 @@
 127.0.0.1 hot.browser.miui.com
 127.0.0.1 r.browser.miui.com
 127.0.0.1 etl.xlmc.sandai.net
-127.0.0.1 api.tw06.xlmc.sec.miui.com
 127.0.0.1 etl.xlmc.sec.miui.com
 127.0.0.1 fb.xk.miui.com
 127.0.0.1 notice.game.xiaomi.com
@@ -31082,7 +31075,6 @@
 127.0.0.1 huanqiu.allyes.com
 127.0.0.1 huanqiu.datamaster.com.cn
 127.0.0.1 hub.adlpartner.com
-127.0.0.1 hub5btmain.sandai.net
 127.0.0.1 hub5c.sandai.net
 127.0.0.1 hub5emu.sandai.net
 127.0.0.1 hub5pn.sandai.net
@@ -37208,7 +37200,6 @@
 127.0.0.1 powersearch.us.com
 127.0.0.1 powertube.bitterstrawberry.com
 127.0.0.1 pp.keyrun.com
-127.0.0.1 pp.myapp.com
 127.0.0.1 pp.nrelate.com
 127.0.0.1 pp1.pplive.com
 127.0.0.1 pp2.as.pplive.cn
@@ -56643,3 +56634,5 @@
 127.0.0.1 www.loteria.com.ec
 127.0.0.1 www.nationallottery.co.za
 127.0.0.1 www.mylotto.co.nz
+#某线上赌场
+127.0.0.1 xyxshop.com
