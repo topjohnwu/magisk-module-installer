@@ -7,7 +7,7 @@
 
 <p align="center">
 <b> 捐赠 </b><br>
-  <img src="https://github.com/E7KMbb/AD-hosts/common/Donation/IMG_20181116_081927.jpg">
+  <img src="https://github.com/E7KMbb/AD-hosts/blob/17000/common/Donation/IMG_20181116_081927.jpg">
 </p>
 
 ### 介绍
@@ -17,4 +17,4 @@
 使用时请关闭其它的hosts模块，并打开Systemless hosts选项。
 
 ### 捐赠
-* [捐赠](https://github.com/E7KMbb/AD-hosts/common/Donation/IMG_20181116_081927.jpg)
+* [捐赠](https://github.com/E7KMbb/AD-hosts/blob/17000/common/Donation/IMG_20181116_081927.jpg)
