@@ -5,6 +5,11 @@
 ### Links
 * [GitHub](https://github.com/E7KMbb/AD-hosts)
 
+<p align="center">
+<b> 捐赠 </b><br>
+  <img src="https://github.com/E7KMbb/AD-hosts/common/Donation/IMG_20181116_081927.jpg">
+</p>
+
 ### 介绍
 本模块会以Systemless的形式替换hosts进行广告屏蔽。
 
