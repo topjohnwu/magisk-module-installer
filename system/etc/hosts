@@ -6,6 +6,17 @@
 127.0.0.11 localhost
 127.0.0.11 ip6-localhost
 127.0.0.11 ip6-loopback
+
+#联通运管商劫持（会影响网络，不需要不要启用默认关闭）
+#127.0.0.1 ab.sspsky.com
+#127.0.0.1 cp.drmfslx.cn
+#127.0.0.1 d.drmfslx.cn
+#127.0.0.1 t.drmfslx.cn
+#127.0.0.1 engine.drmfslx.cn
+#127.0.0.1 re.drmfslx.cn
+#127.0.0.1 res.drmfslx.cn
+#127.0.0.1 dsp-res.drmfslx.cn
+
 127.0.0.1 g1.163.com
 127.0.0.1 www.qchannel01.cn
 127.0.0.1 adreq.vivo.com.cn
