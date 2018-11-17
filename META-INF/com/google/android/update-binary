@@ -104,7 +104,7 @@ esac;
 ##########################################################################################
 
 # If Action is Installation then Install
-if [ "$action" == "installation" ]; then
+if [ $BOOTMODE || "$action" == "installation" ]; then
 
   # Get the variable reqSizeM. Use your own method to determine reqSizeM if needed
   request_zip_size_check "$ZIP"
@@ -158,20 +158,14 @@ fi
 ##########################################################################################
 
 # If Action is Uninstallation then Uninstall
-if [ "$action" == "uninstallation" ]; then
+if [ ! $BOOTMODE && "$action" == "uninstallation" ]; then
 
-  # This function will mount $IMG to $MOUNTPATH, and resize the image based on $reqSizeM
+  # This function will mount $IMG to $MOUNTPATH
   mount_magisk_img
-
-  # In bootmode remove residue files
-  if $BOOTMODE && -e "/sbin/.core/img/$MODID" ; then
-    rm -rf /sbin/.core/img/$MODID 2>/dev/null
-  fi
 
   # Remove Module if exist
   if [ ! -e "$MODPATH" ]; then
-    unmount_magisk_img
-    abort "! No module installation found!"
+    ui_print "! No module installation found!"
   else
     ui_print "- Uninstalling module files"
     rm -rf $MODPATH 2>/dev/null
