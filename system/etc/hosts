@@ -277,8 +277,6 @@
 127.0.0.1 adsview2.qq.com
 127.0.0.1 adsview.qq.com
 127.0.0.1 ads.voiceads.cn
-127.0.0.1 ads.waps.cn
-127.0.0.1 ads.wapx.cn
 127.0.0.1 ads-west-colo.adsymptotic.com
 127.0.0.1 ads.yahoo.com
 127.0.0.1 ads.yam.com
@@ -439,8 +437,6 @@
 127.0.0.1 api.tr.blismedia.com
 127.0.0.1 api.tuisong.baidu.com
 127.0.0.1 api.viglink.com
-127.0.0.1 api.wapa.taobao.com
-127.0.0.1 api.waptest.taobao.com
 127.0.0.1 api.w.inmobi.com
 127.0.0.1 api.wsq.umeng.com
 127.0.0.1 api.y.igexin.com
@@ -462,7 +458,6 @@
 127.0.0.1 app.uu.cc
 127.0.0.1 appuu.cn
 127.0.0.1 appwall.api.airpush.com
-127.0.0.1 app.waps.cn
 127.0.0.1 app.wapx.cn
 127.0.0.1 a.qiao024.com
 127.0.0.1 aqqgli3vle.bid
@@ -36024,7 +36019,6 @@
 127.0.0.1 opads.ero-advertising.com
 127.0.0.1 ope.tanx.com
 127.0.0.1 open.ad.yieldmanager.net
-127.0.0.1 open.bmob.cn
 127.0.0.1 open.mkt1397.com
 127.0.0.1 open.momark.cn
 127.0.0.1 openad.travelnow.com
