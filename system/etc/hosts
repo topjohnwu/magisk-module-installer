@@ -1,13 +1,14 @@
 #********************************************************************
 # 本hosts由多个hosts整合而来hosts源均来自于github，及网络搜索
-# https://github.com/E7KMbb/AD-hosts
+# 维护不易，如果觉的好用，不妨打赏一下
+# 开源地址：https://github.com/E7KMbb/AD-hosts
 #********************************************************************
 127.0.0.1 localhost
 127.0.0.11 localhost
 127.0.0.11 ip6-localhost
 127.0.0.11 ip6-loopback
 
-#联通运管商劫持（会影响网络，不需要不要启用默认关闭）
+#联通运管商劫持（联通用户会轻微影响网络，不需要不要启用默认关闭）
 #127.0.0.1 ab.sspsky.com
 #127.0.0.1 cp.drmfslx.cn
 #127.0.0.1 d.drmfslx.cn
@@ -922,7 +923,6 @@
 127.0.0.1 databank.yoyi.com.cn
 127.0.0.1 data.flurry.com
 127.0.0.1 data.haoma.sogou.com
-127.0.0.1 data.mistat.xiaomi.com
 127.0.0.1 datax.baidu.com
 127.0.0.1 dat.gtags.net
 127.0.0.1 db1.fuz.cc
@@ -4266,7 +4266,6 @@
 127.0.0.1 databank.yoyi.com.cn
 127.0.0.1 data.flurry.com
 127.0.0.1 data.haoma.sogou.com
-127.0.0.1 data.mistat.xiaomi.com
 127.0.0.1 datax.baidu.com
 127.0.0.1 dat.gtags.net
 127.0.0.1 db1.fuz.cc
@@ -9460,7 +9459,6 @@
 127.0.0.1 zeus.ad.xiaomi.com
 127.0.0.1 a.stat.xiaomi.com
 127.0.0.1 abtest.mistat.xiaomi.com
-127.0.0.1 data.mistat.xiaomi.com
 127.0.0.1 storeconfig.mistat.xiaomi.com
 127.0.0.1 r.browser.miui.com
 127.0.0.1 etl.xlmc.sandai.net
@@ -12695,7 +12693,6 @@
 127.0.0.1 statis.mobile.youku.com
 127.0.0.1 v2html.atm.youku.com
 127.0.0.1 val.atm.youku.com
-127.0.0.1 valb.atm.youku.com
 127.0.0.1 valc.atm.youku.com
 127.0.0.1 valf.atm.youku.com
 127.0.0.1 valp.atm.youku.com
@@ -14982,8 +14979,7 @@
 127.0.0.1 xpjkf888.com
 127.0.0.1 xz.ercfh.com
 127.0.0.1 h5.jiumaster.com
-127.0.0.1       localhost
-127.0.0.11             ip6-localhost
+
 127.0.0.1 livep.l.qq.com
 127.0.0.1 vqq.admaster.com.cn
 127.0.0.1 dp3.qq.com
@@ -14991,63 +14987,25 @@
 127.0.0.1 lives.l.qq.com
 127.0.0.1 www.vqq.admaster.com.cn
 
-#Youku
-127.0.0.1 atm.youku.com
-127.0.0.1 fvid.atm.youku.com
-127.0.0.1 html.atm.youku.com
-127.0.0.1 valb.atm.youku.com
-127.0.0.1 valc.atm.youku.com
-127.0.0.1 valf.atm.youku.com
-127.0.0.1 valo.atm.youku.com
-127.0.0.1 valp.atm.youku.com
-127.0.0.1 vid.atm.youku.com
-127.0.0.1 walp.atm.youku.com
-127.0.0.1 lstat.youku.com
-127.0.0.1 speed.lstat.youku.com
-127.0.0.1 static.lstat.youku.com
-127.0.0.1 urchin.lstat.youku.com
-127.0.0.1 stat.youku.com
-
 #去优酷广告 
-0.0.0.0 stat.youku.com 
-0.0.0.0 static.lstat.youku.com 
-0.0.0.0 valb.atm.youku.com 
-0.0.0.0 valc.atm.youku.com 
-0.0.0.0 valf.atm.youku.com 
-0.0.0.0 valo.atm.youku.com 
-0.0.0.0 valp.atm.youku.com 
-0.0.0.0 vid.atm.youku.com 
-0.0.0.0 walp.atm.youku.com 
-
 127.0.0.1 atm.youku.com
-
 127.0.0.1 Fvid.atm.youku.com
-
 127.0.0.1 html.atm.youku.com
-
 127.0.0.1 valb.atm.youku.com
-
 127.0.0.1 valf.atm.youku.com
-
 127.0.0.1 valo.atm.youku.com
-
 127.0.0.1 valp.atm.youku.com
-
 127.0.0.1 lstat.youku.com
-
 127.0.0.1 speed.lstat.youku.com
-
 127.0.0.1 urchin.lstat.youku.com
-
 127.0.0.1 stat.youku.com
-
 127.0.0.1 static.lstat.youku.com
-
 127.0.0.1 valc.atm.youku.com
-
 127.0.0.1 vid.atm.youku.com
-
 127.0.0.1 walp.atm.youku.com
+127.0.0.1 ad.api.3g.youku.com
+127.0.0.1 api.gamex.mobile.youku.com
+127.0.0.1 mf.atm.youku.com
 #去土豆网广告 
 127.0.0.1 adextensioncontrol.tudou.com 
 127.0.0.1 iwstat.tudou.com 
@@ -56632,3 +56590,20 @@
 127.0.0.1 www.mylotto.co.nz
 #某线上赌场
 127.0.0.1 xyxshop.com
+
+#AD 爱好（部分）
+127.0.0.1 business.inveno.com
+127.0.0.1 zuimeitianqi.inveno.com
+127.0.0.1 update.coolyun.com
+127.0.0.1 e.tchep.com
+127.0.0.1 e.xdunv.com
+127.0.0.1 m.iangp.com
+127.0.0.1 m.sfanf.com
+127.0.0.1 m.tchep.com
+127.0.0.1 m.whsjg.cn
+127.0.0.1 m.xdunv.com
+127.0.0.1 sypd.w13qh.cn
+127.0.0.1 y.unilz588.com
+127.0.0.1 m.ilancc.com
+127.0.0.1 y.ilancc.com
+127.0.0.1 x.dami66.cn
