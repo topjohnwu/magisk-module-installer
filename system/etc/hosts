@@ -17,6 +17,7 @@
 #127.0.0.1 res.drmfslx.cn
 #127.0.0.1 dsp-res.drmfslx.cn
 
+127.0.0.1 www.winrar.com.cn
 127.0.0.1 g1.163.com
 127.0.0.1 adreq.vivo.com.cn
 127.0.0.1 localhost
@@ -681,7 +682,6 @@
 127.0.0.1 click.admaster.com.cn
 127.0.0.1 click.atdmt.com
 127.0.0.1 click.bes.baidu.com
-127.0.0.1 click.hm.baidu.com
 127.0.0.1 click.jebe.renren.com
 127.0.0.1 clickjs.cnzz.com
 127.0.0.1 click.mz.simba.taobao.com
@@ -1284,7 +1284,6 @@
 127.0.0.1 hlrcv.stage.adobe.com
 127.0.0.1 hm2.cnzz.com
 127.0.0.1 hm3.cnzz.com
-127.0.0.1 hm.baidu.com
 127.0.0.1 hm.l.qq.com
 127.0.0.1 hmma.baidu.com
 127.0.0.1 h.msn.com
@@ -1360,7 +1359,6 @@
 127.0.0.1 ifengad.3g.ifeng.com
 127.0.0.1 ifeng.adsame.com
 127.0.0.1 i.flow.browser.oppomobile.com
-127.0.0.1 iflow.uczzd.cn
 127.0.0.1 iflow.uczzd.com
 127.0.0.1 iflow.uczzd.com.cn
 127.0.0.1 iflow.uczzd.net
@@ -1689,7 +1687,6 @@
 127.0.0.1 max.adsame.com
 127.0.0.1 maxsys.adsame.com
 127.0.0.1 maxwebsearch.com
-127.0.0.1 mazu.3g.qq.com
 127.0.0.1 m.bailingjiankang.com
 127.0.0.1 m.beacon.sina.com.cn
 127.0.0.1 m.breezily168.com
@@ -1739,7 +1736,6 @@
 127.0.0.1 migc.g.mi.com
 127.0.0.1 migcreport.g.mi.com
 127.0.0.1 mi.gdt.qq.com
-127.0.0.1 migrate.driveapi.micloud.xiaomi.net
 127.0.0.1 m.inccnd.com
 127.0.0.1 minfo.wps.cn
 127.0.0.1 minghui.com
@@ -1977,7 +1973,6 @@
 127.0.0.1 pc.quansj.cn
 127.0.0.1 pc.videoclick.baidu.com
 127.0.0.1 pcxzo.pluto.sogou.com
-127.0.0.1 pdc.micloud.xiaomi.net
 127.0.0.1 pd.dopa.com.cn
 127.0.0.1 pdl.gionee.com
 127.0.0.1 pd.ok365.com
@@ -4024,7 +4019,6 @@
 127.0.0.1 click.admaster.com.cn
 127.0.0.1 click.atdmt.com
 127.0.0.1 click.bes.baidu.com
-127.0.0.1 click.hm.baidu.com
 127.0.0.1 click.jebe.renren.com
 127.0.0.1 clickjs.cnzz.com
 127.0.0.1 click.mz.simba.taobao.com
@@ -4628,7 +4622,6 @@
 127.0.0.1 hlrcv.stage.adobe.com
 127.0.0.1 hm2.cnzz.com
 127.0.0.1 hm3.cnzz.com
-127.0.0.1 hm.baidu.com
 127.0.0.1 hm.l.qq.com
 127.0.0.1 hmma.baidu.com
 127.0.0.1 h.msn.com
@@ -4704,7 +4697,6 @@
 127.0.0.1 ifengad.3g.ifeng.com
 127.0.0.1 ifeng.adsame.com
 127.0.0.1 i.flow.browser.oppomobile.com
-127.0.0.1 iflow.uczzd.cn
 127.0.0.1 iflow.uczzd.com
 127.0.0.1 iflow.uczzd.com.cn
 127.0.0.1 iflow.uczzd.net
@@ -5034,7 +5026,6 @@
 127.0.0.1 max.adsame.com
 127.0.0.1 maxsys.adsame.com
 127.0.0.1 maxwebsearch.com
-127.0.0.1 mazu.3g.qq.com
 127.0.0.1 m.bailingjiankang.com
 127.0.0.1 m.beacon.sina.com.cn
 127.0.0.1 m.breezily168.com
@@ -5084,7 +5075,6 @@
 127.0.0.1 migc.g.mi.com
 127.0.0.1 migcreport.g.mi.com
 127.0.0.1 mi.gdt.qq.com
-127.0.0.1 migrate.driveapi.micloud.xiaomi.net
 127.0.0.1 m.inccnd.com
 127.0.0.1 minfo.wps.cn
 127.0.0.1 minghui.com
@@ -5323,7 +5313,6 @@
 127.0.0.1 pc.quansj.cn
 127.0.0.1 pc.videoclick.baidu.com
 127.0.0.1 pcxzo.pluto.sogou.com
-127.0.0.1 pdc.micloud.xiaomi.net
 127.0.0.1 pd.dopa.com.cn
 127.0.0.1 pdl.gionee.com
 127.0.0.1 pd.ok365.com
@@ -5932,7 +5921,6 @@
 127.0.0.1 ss.cnnic.cn
 127.0.0.1 ssdk.adkmob.com
 127.0.0.1 ss.he9630.com
-127.0.0.1 ssl-cdn.static.browser.mi-img.com
 127.0.0.1 ssl.google-analytics.com
 127.0.0.1 ssl.ymapp.com
 127.0.0.1 ss.missyouxi.com
@@ -6701,8 +6689,8 @@
 127.0.0.11 localhost
 
 #pkg=white.ad.web.com;浏览器提示误伤(不勾选以下两条)
-#127.0.0.1 t7z.cupid.iqiyi.com
-#127.0.0.1 livew.l.qq.com
+127.0.0.1 t7z.cupid.iqiyi.com
+127.0.0.1 livew.l.qq.com
 
 #pkg=ad.xiaomi.com;（小米视频）MIUI
 127.0.0.1 api.ad.xiaomi.com
@@ -7295,7 +7283,6 @@
 127.0.0.1 eclick.baidu.com
 127.0.0.1 eiv.baidu.com
 127.0.0.1 entry.baidu.com
-127.0.0.1 hm.baidu.com
 127.0.0.1 idm-su.baidu.com
 127.0.0.1 idm.bce.baidu.com
 127.0.0.1 mobads-logs.baidu.com
@@ -7321,7 +7308,6 @@
 127.0.0.1 baichuan.baidu.com
 127.0.0.1 bce.baidu.com
 127.0.0.1 click.bes.baidu.com
-127.0.0.1 click.hm.baidu.com
 127.0.0.1 cm.baichuan.baidu.com
 127.0.0.1 ers.baidu.com
 127.0.0.1 fclick.baidu.com
@@ -8368,7 +8354,6 @@
 127.0.0.1 eclick.baidu.com
 127.0.0.1 eiv.baidu.com
 127.0.0.1 entry.baidu.com
-127.0.0.1 hm.baidu.com
 127.0.0.1 idm-su.baidu.com
 127.0.0.1 idm.bce.baidu.com
 127.0.0.1 mobads-logs.baidu.com
@@ -10272,7 +10257,6 @@
 127.0.0.1 f.fj95560.com
 127.0.0.1 f.haoxinjaju.com
 127.0.0.1 fpb.kuhou.com
-127.0.0.1 fpdownload.macromedia.com
 127.0.0.1 g.aligames.com
 127.0.0.1 game.9xzj.com
 127.0.0.1 gx38.cn
@@ -10314,7 +10298,6 @@
 127.0.0.1 pass2.soogif.com
 127.0.0.1 pjogndc8ixoidna.360doc.cn
 127.0.0.1 plz.jandan.net
-127.0.0.1 ps.3fenge.com
 127.0.0.1 qiyem.ejunshi.com
 127.0.0.1 qiyezs.ejunshi.com
 127.0.0.1 rk.rongchengxxw.com
@@ -11276,7 +11259,6 @@
 127.0.0.1 image.haiyunx.com
 127.0.0.1 image.hj217.com
 127.0.0.1 image.qj175.com
-127.0.0.1 images.tyyjzs.cn
 127.0.0.1 img.09mk.cn
 127.0.0.1 img.9ads.net
 127.0.0.1 img.contx.cn
@@ -13182,7 +13164,6 @@
 127.0.0.1 baichuan.baidu.com
 127.0.0.1 bce.baidu.com
 127.0.0.1 click.bes.baidu.com
-127.0.0.1 click.hm.baidu.com
 127.0.0.1 cm.baichuan.baidu.com
 127.0.0.1 ers.baidu.com
 127.0.0.1 fclick.baidu.com
@@ -13242,7 +13223,6 @@
 127.0.0.1 ads8.com
 127.0.0.1 www.ads8.com
 127.0.0.1 count.1133.cc
-127.0.0.1 images1.1133.cc
 127.0.0.1 img7.1133.cc
 127.0.0.1 img9.1133.cc
 127.0.0.1 m.1133.cc
@@ -13354,9 +13334,6 @@
 127.0.0.1 b4.6dad.com
 127.0.0.1 e4.6dad.com
 127.0.0.1 www.6dad.com
-127.0.0.1 pic183025.images9999.com
-127.0.0.1 pic494036.images9999.com
-127.0.0.1 pic837013.images9999.com
 127.0.0.1 e.7clink.com
 127.0.0.1 img.7clink.com
 127.0.0.1 img.88rpg.net
@@ -13399,7 +13376,6 @@
 127.0.0.1 ad7.tagphi.net
 127.0.0.1 a.ad7.com
 127.0.0.1 asap.ad7.com
-127.0.0.1 images.ad7.com
 127.0.0.1 js.ad7.com
 127.0.0.1 trace.ad7.com
 127.0.0.1 www.ad7.com
@@ -13986,7 +13962,6 @@
 127.0.0.1 admin.ninebox.cn
 127.0.0.1 col.pagechoice.net
 127.0.0.1 dap.pagechoice.net
-127.0.0.1 images.pagechoice.net
 127.0.0.1 motu.pagechoice.net
 127.0.0.1 sit.pagechoice.net
 127.0.0.1 www.pagechoice.net
@@ -14980,8 +14955,6 @@
 127.0.0.1 xpjkf888.com
 127.0.0.1 xz.ercfh.com
 127.0.0.1 h5.jiumaster.com
-127.0.0.1       localhost
-127.0.0.11             ip6-localhost
 127.0.0.1 livep.l.qq.com
 127.0.0.1 vqq.admaster.com.cn
 127.0.0.1 dp3.qq.com
@@ -18729,7 +18702,6 @@
 127.0.0.1 adinterax.cnet.com.edgesuite.net
 127.0.0.1 adinterax.com
 127.0.0.1 adintop.go2cloud.org
-127.0.0.1 adipics.com
 127.0.0.1 adiq.coupons.com
 127.0.0.1 adiqglobal.com
 127.0.0.1 adireland.com
@@ -21042,7 +21014,6 @@
 127.0.0.1 adspeed.com
 127.0.0.1 adspeed.net
 127.0.0.1 adsphinx.com
-127.0.0.1 adspics.com
 127.0.0.1 adspinner.com
 127.0.0.1 adsplay.go2cloud.org
 127.0.0.1 ad-sponsor.com
@@ -30893,7 +30864,6 @@
 127.0.0.1 hlgsolutions.go2cloud.org
 127.0.0.1 hlht.adsame.com
 127.0.0.1 hljdnserror1.wo.com.cn
-127.0.0.1 hm.baidu.com
 127.0.0.1 hm.d1.sc.omtrdc.net
 127.0.0.1 hm.l.qq.com
 127.0.0.1 hm.webtrends.com
@@ -33119,7 +33089,6 @@
 127.0.0.1 log.go.com
 127.0.0.1 log.hankooki.com
 127.0.0.1 log.hiiir.com
-127.0.0.1 log.hm.baidu.com
 127.0.0.1 log.houyi.baofeng.net
 127.0.0.1 log.hunantv.com
 127.0.0.1 log.ideamelt.com
@@ -36825,7 +36794,6 @@
 127.0.0.1 ping-fast.com
 127.0.0.1 pingfore.soso.com
 127.0.0.1 pinghot.qq.com
-127.0.0.1 pingjs.qq.com
 127.0.0.1 pingomatic.com
 127.0.0.1 pings.conviva.com
 127.0.0.1 pingtas.qq.com
@@ -44337,7 +44305,6 @@
 127.0.0.1 www.adimages.beeb.com
 127.0.0.1 www.adimpact.com
 127.0.0.1 www.adinterax.com
-127.0.0.1 www.adipics.com
 127.0.0.1 www.adireland.com
 127.0.0.1 www.adition.com
 127.0.0.1 www.adjug.com
@@ -44425,7 +44392,6 @@
 127.0.0.1 www.adspaces.ero-advertising.com
 127.0.0.1 www.adspeed.com
 127.0.0.1 www.adsphinx.com
-127.0.0.1 www.adspics.com
 127.0.0.1 www.adspinner.com
 127.0.0.1 www.adspserving.com
 127.0.0.1 www.adsserving.net
@@ -56631,12 +56597,6 @@
 #某线上赌场
 127.0.0.1 xyxshop.com
 
-#网源
-127.0.0.1 mi.gdt.qq.com
-127.0.0.1 pp.myapp.com
-127.0.0.1 qzonestyle.gtimg.cn
-127.0.0.1 pgdt.gtimg.cn
-127.0.0.1 v.gdt.qq.com
 #以下是我在上网时弹出的广告.js所在域名
 127.0.0.1 www.12l22.net
 127.0.0.1 js.12l22.net
@@ -56662,7 +56622,6 @@
 127.0.0.1 www.weoweoisky.com
 127.0.0.1 adp.whoclick.cn
 127.0.0.1 cbjs.baidu.com
-127.0.0.1 hm.baidu.com
 127.0.0.1 ubmcmm.baidustatic.com
 127.0.0.1 dup.baidustatic.com
 127.0.0.1 kwcdn.ggmm777.com
@@ -56671,3 +56630,11 @@
 127.0.0.1 www.google-analytics.com
 127.0.0.1 wan.52pk.com
 127.0.0.1 yeskyafp.allyes.com
+
+#b乎
+127.0.0.1 com.zhihu.android.app.appview.AppView2
+127.0.0.1 api.zhihu.com
+127.0.0.1 apilocate.amap.com
+127.0.0.1 com.zhihu.android.app.live.receiver.LiveVideoLiveActionReceiver
+127.0.0.1 com.zhihu.android.app.ZhihuApplication
+127.0.0.1 appcloud.zhihu.com
