@@ -398,7 +398,6 @@
 127.0.0.1 api.adbana.com
 127.0.0.1 api.adcome.cn
 127.0.0.1 api.admob.com
-127.0.0.1 api.ad.xiaomi.com
 127.0.0.1 api.airpush.com
 127.0.0.1 api.appjiagu.com
 127.0.0.1 api.appsflyer.com
@@ -2989,7 +2988,6 @@
 127.0.0.1 wenku-cms.bj.bcebos.com
 127.0.0.1 weyyae.com
 127.0.0.1 w.gdown.baidu.com
-127.0.0.1 wgo.mmstat.com
 127.0.0.1 widget.criteo.com
 127.0.0.1 widget.weibo.com
 127.0.0.1 widnd.dajiadou6.com
@@ -3729,7 +3727,6 @@
 127.0.0.1 api.adbana.com
 127.0.0.1 api.adcome.cn
 127.0.0.1 api.admob.com
-127.0.0.1 api.ad.xiaomi.com
 127.0.0.1 api.airpush.com
 127.0.0.1 api.appjiagu.com
 127.0.0.1 api.appsflyer.com
@@ -6328,7 +6325,6 @@
 127.0.0.1 wenku-cms.bj.bcebos.com
 127.0.0.1 weyyae.com
 127.0.0.1 w.gdown.baidu.com
-127.0.0.1 wgo.mmstat.com
 127.0.0.1 widget.criteo.com
 127.0.0.1 widget.weibo.com
 127.0.0.1 widnd.dajiadou6.com
@@ -6448,7 +6444,6 @@
 127.0.0.1 wss.cnzz.com
 127.0.0.1 ws.sj.qq.com
 127.0.0.1 ws.voiceads.cn
-127.0.0.1 wtradv.market.xiaomi.com
 127.0.0.1 wujieliulan.com
 127.0.0.1 wuliao.epro.sogou.com
 127.0.0.1 wup.imtt.qq.com
@@ -6697,13 +6692,10 @@
 127.0.0.1 clickc.admaster.com.cn
 127.0.0.1 v.admaster.com.cn
 127.0.0.1 video.market.xiaomi.com
-127.0.0.1 t2.market.mi-img.com
-127.0.0.1 f4.market.xiaomi.com
 127.0.0.1 f8.market.xiaomi.com
 127.0.0.1 t1.a.market.xiaomi.com
 127.0.0.1 t2.a.market.xiaomi.com
 127.0.0.1 t3.a.market.xiaomi.com
-127.0.0.1 t4.a.market.xiaomi.com
 127.0.0.1 t5.a.market.xiaomi.com
 127.0.0.1 cmonitor.iqiyi.com
 127.0.0.1 puma.api.iqiyi.com
@@ -8162,7 +8154,6 @@
 127.0.0.1 static.mct01.com
 127.0.0.1 ac.mmstat.com
 127.0.0.1 cnzz.mmstat.com
-127.0.0.1 wgo.mmstat.com
 127.0.0.1 yt.mmstat.com
 127.0.0.1 init.phpwind.net
 127.0.0.1 a.tanx.com
@@ -33093,7 +33084,6 @@
 127.0.0.1 log.liverail.com
 127.0.0.1 log.m.taobao.com
 127.0.0.1 log.mm.vip.cnz.alimama.com
-127.0.0.1 log.mmstat.com
 127.0.0.1 log.netgeography.net
 127.0.0.1 log.newsvine.com
 127.0.0.1 log.nexgen.neustar.biz
@@ -43844,7 +43834,6 @@
 127.0.0.1 wfs01.wapka.mobi
 127.0.0.1 wgc1.acecounter.com
 127.0.0.1 wg-gesucht.de.intellitxt.com
-127.0.0.1 wgo.mmstat.com
 127.0.0.1 whainteryield.jmp9.com
 127.0.0.1 whaleads.com
 127.0.0.1 whatifholdings.go2cloud.org
