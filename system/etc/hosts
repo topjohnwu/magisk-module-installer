@@ -3310,7 +3310,6 @@
 127.0.0.1 zhengwunet.org
 127.0.0.1 zhuichaguoji.org
 127.0.0.1 zhushou.2345.com
-127.0.0.1 zhwnlapi.etouch.cn
 127.0.0.1 zjvnet.allyes.com
 127.0.0.1 znsv.baidu.com
 127.0.0.1 zs10.cnzz.com
@@ -6646,7 +6645,6 @@
 127.0.0.1 zhengwunet.org
 127.0.0.1 zhuichaguoji.org
 127.0.0.1 zhushou.2345.com
-127.0.0.1 zhwnlapi.etouch.cn
 127.0.0.1 zjvnet.allyes.com
 127.0.0.1 znsv.baidu.com
 127.0.0.1 zs10.cnzz.com
@@ -56612,7 +56610,15 @@
 #b乎
 127.0.0.1 com.zhihu.android.app.appview.AppView2
 127.0.0.1 api.zhihu.com
-127.0.0.1 apilocate.amap.com
 127.0.0.1 com.zhihu.android.app.live.receiver.LiveVideoLiveActionReceiver
 127.0.0.1 com.zhihu.android.app.ZhihuApplication
 127.0.0.1 appcloud.zhihu.com
+
+#大纪元
+127.0.0.1 www.epochtimes.com
+127.0.0.1 gmpg.org
+127.0.0.1 epochweekly.com
+127.0.0.1 epaper.epochtimes.com
+127.0.0.1 www.edninfo.com
+127.0.0.1 i.epochtimes.com
+127.0.0.1 s.w.org
