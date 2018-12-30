@@ -375,7 +375,6 @@
 127.0.0.1 android.bugly.qq.com
 127.0.0.1 android-lrcresource.wps.cn
 127.0.0.1 android.push.126.net
-127.0.0.1 android.rqd.qq.com
 127.0.0.1 an.m.liebao.cn
 127.0.0.1 anquan.baidu.com
 127.0.0.1 antivirus.baidu.com
@@ -1937,7 +1936,6 @@
 127.0.0.1 p.admob.com
 127.0.0.1 padsdel2.cdnads.com
 127.0.0.1 p.adsymptotic.com
-127.0.0.1 pagead2.googlesyndication.com
 127.0.0.1 pagead46.l.doubleclick.net
 127.0.0.1 pagead.google.com
 127.0.0.1 pagead.l.google.com
@@ -1994,7 +1992,6 @@
 127.0.0.1 ping.acc.sogou.com
 127.0.0.1 pingfore.qq.com
 127.0.0.1 pingfore.tenpay.com
-127.0.0.1 pinghot.qq.com
 127.0.0.1 pingma.qq.com
 127.0.0.1 ping.pinyin.sogou.com
 127.0.0.1 p.inte.sogou.com
@@ -3702,7 +3699,6 @@
 127.0.0.1 android.bugly.qq.com
 127.0.0.1 android-lrcresource.wps.cn
 127.0.0.1 android.push.126.net
-127.0.0.1 android.rqd.qq.com
 127.0.0.1 an.m.liebao.cn
 127.0.0.1 anquan.baidu.com
 127.0.0.1 antivirus.baidu.com
@@ -5271,7 +5267,6 @@
 127.0.0.1 p.admob.com
 127.0.0.1 padsdel2.cdnads.com
 127.0.0.1 p.adsymptotic.com
-127.0.0.1 pagead2.googlesyndication.com
 127.0.0.1 pagead46.l.doubleclick.net
 127.0.0.1 pagead.google.com
 127.0.0.1 pagead.l.google.com
@@ -5328,7 +5323,6 @@
 127.0.0.1 ping.acc.sogou.com
 127.0.0.1 pingfore.qq.com
 127.0.0.1 pingfore.tenpay.com
-127.0.0.1 pinghot.qq.com
 127.0.0.1 pingma.qq.com
 127.0.0.1 ping.pinyin.sogou.com
 127.0.0.1 p.inte.sogou.com
@@ -7321,7 +7315,6 @@
 
 #pkg=qq.com;腾讯广告服务
 127.0.0.1 aeventlog.beacon.qq.com
-127.0.0.1 android.rqd.qq.com
 127.0.0.1 astrategy.beacon.qq.com
 127.0.0.1 eventlog.beacon.qq.com
 127.0.0.1 monitor.uu.qq.com
@@ -8701,7 +8694,6 @@
 127.0.0.1 dc.ads.linkedin.com
 127.0.0.1 px.ads.linkedin.com
 127.0.0.1 aeventlog.beacon.qq.com
-127.0.0.1 android.rqd.qq.com
 127.0.0.1 astrategy.beacon.qq.com
 127.0.0.1 eventlog.beacon.qq.com
 127.0.0.1 monitor.uu.qq.com
@@ -36765,7 +36757,6 @@
 127.0.0.1 pinger.macromedia.com
 127.0.0.1 ping-fast.com
 127.0.0.1 pingfore.soso.com
-127.0.0.1 pinghot.qq.com
 127.0.0.1 pingomatic.com
 127.0.0.1 pings.conviva.com
 127.0.0.1 pingtas.qq.com
@@ -51392,7 +51383,6 @@
 127.0.0.1 view.atdmt.com.23151.9161.302br.net
 127.0.0.1 qnlcq.voluumtrk.com
 127.0.0.1 20576991p.rfihub.com
-127.0.0.1 pinghot.qq.com
 127.0.0.1 rad.live.com
 127.0.0.1 www.wwwhsn.com
 127.0.0.1 ad.doubleclick.net.21533.9075.302br.net
@@ -56614,3 +56604,8 @@
 127.0.0.1 www.edninfo.com
 127.0.0.1 i.epochtimes.com
 127.0.0.1 s.w.org
+
+#某安全网络弹窗广告，一打开关不掉的那种
+127.0.0.1 sll.16881616.com:8905
+127.0.0.1 sll.16881616.com
+127.0.0.1 www.w3.org
