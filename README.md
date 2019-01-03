@@ -1,7 +1,12 @@
-# Magisk Module Template
+# SafetyPatcher
 
-**Update `README.md` if you want to submit your module to the online repo!** This `README.md` will be shown in a Webview dialog when a user taps your module in Magisk Manager, so make sure to place some information / changelog / notes here.
-
-If you are not familiar with the Markdown syntax, you can start by experimenting on GitHub's online Markdown editor, which will let you preview before publishing. If you need more help, the [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) will be handy.
-
-For more information about modules and repos, please check the [official documentation](https://topjohnwu.github.io/Magisk/)
+## Description
+Fixes SafetyNet basicIntegrity & CTS on Xiaomi Mi Max 3 and most devices, after you've applied magiskhide
+## Changelog
+- V1 - Adds a load of stuff so that it now also has a GUI (run safetypatcher in shell as root) and also passes CTS.
+## Requirements
+- Magisk
+- Magisk Hide (https://www.didgeridoohan.com/magisk/MagiskHide)
+## Instructions
+1. Flash in Magisk Manager
+2. Reboot
