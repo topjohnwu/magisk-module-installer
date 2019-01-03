@@ -1,7 +1,7 @@
-id=template
-name=Template Module
-version=v1
+id=safetypatcher
+name=SafetyNet Patch for Mi Max 3
+version=V1
 versionCode=1
-author=topjohnwu
-description=A short description
+author=iDevil (wqbpw on 4PDA)
+description=Flash the module and reboot.
 minMagisk=17000
