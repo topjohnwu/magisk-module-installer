@@ -1,1 +1,39 @@
-This file will be deleted in Magisk Manager, it is only a placeholder for git
+#!/system/bin/sh
+
+#Debug script for safetypatch
+function menu {
+    echo '############# SafetyPatch GUI #############'
+    echo '# 1) Gather debug info                    #'
+    echo '# 2) Disable cts until reboot             #'
+    echo '# 3) Disable basicIntegrity until reboot  #'
+    echo '## Enter your choice or any key to exit. ##'
+    read ans
+    if [ "$ans" == "1" ]
+    then
+        echo 'Gathering debug info to /sdcard/safetypatch.debug'
+        echo '---/proc/cmdline---' > /sdcard/safetypatch.debug
+        cat /proc/cmdline >> /sdcard/safetypatch.debug
+        echo '---/data/local/tmp/cmdline---' >> /sdcard/safetypatch.debug
+        cat /data/local/tmp/cmdline >> /sdcard/safetypatch.debug
+        echo '---/system/build.prop---' >> /sdcard/safetypatch.debug
+        cat /system/build.prop >> /sdcard/safetypatch.debug
+        echo '---/data/local/tmp/build.prop---' >> /sdcard/safetypatch.debug
+        cat /data/local/tmp/build.prop >> /sdcard/safetypatch.debug
+        echo '--end of log---' >> /sdcard/safetypatch.debug
+        echo 'Logging Completed!'
+    elif [ "$ans" == "2" ]
+    then
+        umount -lf /proc/cmdline
+        echo 'Disabled'
+    elif [ "$ans" == "3" ]
+    then
+        umount -lf /system/build.prop
+        echo 'Disabled'
+    else
+        echo 'Bye!'
+        exit 0
+    fi
+}
+while true
+do menu
+done
