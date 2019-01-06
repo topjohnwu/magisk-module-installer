@@ -262,7 +262,6 @@
 127.0.0.1 ads.ninemsn.com.au
 127.0.0.1 adsolution.imtt.qq.com
 127.0.0.1 ads.pubmatic.com
-127.0.0.1 adsp.xunlei.com
 127.0.0.1 adsqqclick.qq.com
 127.0.0.1 adsrich.qq.com
 127.0.0.1 adsrvmedia.adk2x.com
@@ -425,7 +424,6 @@
 127.0.0.1 api-push.meizu.com
 127.0.0.1 api.ra2.xlmc.sec.miui.com
 127.0.0.1 api.share.baidu.com
-127.0.0.1 api-shoulei-ssl.xunlei.com
 127.0.0.1 api.shuaji.360.cn
 127.0.0.1 api.so.lianmeng.360.cn
 127.0.0.1 apistaging.airpush.com
@@ -501,7 +499,6 @@
 127.0.0.1 banner.cooguo.com
 127.0.0.1 banner.img.static.youmi.net
 127.0.0.1 baofeng.m.cn.miaozhen.com
-127.0.0.1 b.appjiagu.com
 127.0.0.1 bar.baidu.com
 127.0.0.1 bazinga.mse.sogou.com
 127.0.0.1 b.bdstatic.com
@@ -544,7 +541,6 @@
 127.0.0.1 bigdata.adsunflower.com
 127.0.0.1 bigdata.adups.com
 127.0.0.1 bigdata.advmob.com
-127.0.0.1 biz.live.xunlei.com
 127.0.0.1 biz.vpon.com
 127.0.0.1 biz.weibo.com
 127.0.0.1 bj.bcebos.com
@@ -1108,7 +1104,6 @@
 127.0.0.1 e.rpaulfrank.com
 127.0.0.1 ers.baidu.com
 127.0.0.1 etg.qq.com
-127.0.0.1 etl.xlmc.sandai.net
 127.0.0.1 etl.xlmc.sec.miui.com
 127.0.0.1 et.tanx.com
 127.0.0.1 et.w.inmobi.com
@@ -2411,7 +2406,6 @@
 127.0.0.1 sdkm.w.inmobi.com
 127.0.0.1 sdk.open.amp.igexin.com
 127.0.0.1 sdk.open.lbs.igexin.com
-127.0.0.1 sdk.open.phone.igexin.com
 127.0.0.1 sdk.open.talk.gepush.com
 127.0.0.1 sdk.open.talk.igexin.com
 127.0.0.1 sdkpay.uu.cc
@@ -3577,7 +3571,6 @@
 127.0.0.1 ads.ninemsn.com.au
 127.0.0.1 adsolution.imtt.qq.com
 127.0.0.1 ads.pubmatic.com
-127.0.0.1 adsp.xunlei.com
 127.0.0.1 adsqqclick.qq.com
 127.0.0.1 adsrich.qq.com
 127.0.0.1 adsrvmedia.adk2x.com
@@ -3743,7 +3736,6 @@
 127.0.0.1 api-push.meizu.com
 127.0.0.1 api.ra2.xlmc.sec.miui.com
 127.0.0.1 api.share.baidu.com
-127.0.0.1 api-shoulei-ssl.xunlei.com
 127.0.0.1 api.shuaji.360.cn
 127.0.0.1 api.so.lianmeng.360.cn
 127.0.0.1 apistaging.airpush.com
@@ -3822,7 +3814,6 @@
 127.0.0.1 banner.cooguo.com
 127.0.0.1 banner.img.static.youmi.net
 127.0.0.1 baofeng.m.cn.miaozhen.com
-127.0.0.1 b.appjiagu.com
 127.0.0.1 bar.baidu.com
 127.0.0.1 bazinga.mse.sogou.com
 127.0.0.1 b.bdstatic.com
@@ -3866,7 +3857,6 @@
 127.0.0.1 bigdata.adsunflower.com
 127.0.0.1 bigdata.adups.com
 127.0.0.1 bigdata.advmob.cn
-127.0.0.1 biz.live.xunlei.com
 127.0.0.1 biz.vpon.com
 127.0.0.1 biz.weibo.com
 127.0.0.1 bj.bcebos.com
@@ -4431,7 +4421,6 @@
 127.0.0.1 e.rpaulfrank.com
 127.0.0.1 ers.baidu.com
 127.0.0.1 etg.qq.com
-127.0.0.1 etl.xlmc.sandai.net
 127.0.0.1 etl.xlmc.sec.miui.com
 127.0.0.1 et.tanx.com
 127.0.0.1 et.w.inmobi.com
@@ -5737,7 +5726,6 @@
 127.0.0.1 sdkm.w.inmobi.com
 127.0.0.1 sdk.open.amp.igexin.com
 127.0.0.1 sdk.open.lbs.igexin.com
-127.0.0.1 sdk.open.phone.igexin.com
 127.0.0.1 sdk.open.talk.gepush.com
 127.0.0.1 sdk.open.talk.igexin.com
 127.0.0.1 sdkpay.uu.cc
@@ -6968,7 +6956,6 @@
 127.0.0.1 ups.ksmobile.net
 127.0.0.1 ws.ksmobile.net
 127.0.0.1 adsp.xunlei.com
-127.0.0.1 api-shoulei-ssl.xunlei.com
 127.0.0.1 biz.live.xunlei.com
 127.0.0.1 ct.niu.xunlei.com
 127.0.0.1 mou.niu.xunlei.com
@@ -7524,7 +7511,6 @@
 127.0.0.1 p.s.360.cn
 127.0.0.1 a.appjiagu.com
 127.0.0.1 api.appjiagu.com
-127.0.0.1 b.appjiagu.com
 127.0.0.1 c.appjiagu.com
 127.0.0.1 j.appjiagu.com
 127.0.0.1 p.appjiagu.com
@@ -9406,7 +9392,6 @@
 127.0.0.1 data.mistat.xiaomi.com
 127.0.0.1 storeconfig.mistat.xiaomi.com
 127.0.0.1 r.browser.miui.com
-127.0.0.1 etl.xlmc.sandai.net
 127.0.0.1 etl.xlmc.sec.miui.com
 127.0.0.1 fb.xk.miui.com
 127.0.0.1 notice.game.xiaomi.com
@@ -9853,7 +9838,7 @@
 127.0.0.1 ad-android.51wnl.com
 127.0.0.1 cdn1.lbesec.com
 127.0.0.1 adsp.xunlei.com
-127.0.0.1 api-shoulei-ssl.xunlei.com
+#127.0.0.1 api-shoulei-ssl.xunlei.com
 127.0.0.1 biz.live.xunlei.com
 127.0.0.1 ct.niu.xunlei.com
 127.0.0.1 mou.niu.xunlei.com
@@ -13355,7 +13340,6 @@
 127.0.0.1 sdk.conf.igexin.com
 127.0.0.1 sdk.open.amp.igexin.com
 127.0.0.1 sdk.open.lbs.igexin.com
-127.0.0.1 sdk.open.phone.igexin.com
 127.0.0.1 sdk.open.talk.igexin.com
 127.0.0.1 talk.nz.igexin.com
 127.0.0.1 adirects.com
@@ -20078,7 +20062,6 @@
 127.0.0.1 ads.somd.com
 127.0.0.1 ads.sonital.com
 127.0.0.1 ads.sonobi.com
-127.0.0.1 ads.sourceforge.net
 127.0.0.1 ads.southbendtribune.com
 127.0.0.1 ads.space.com
 127.0.0.1 ads.spaceports.com
@@ -52548,7 +52531,6 @@
 127.0.0.1 ads.bluesq.com
 127.0.0.1 y.jmp9.com
 127.0.0.1 ad.doubleclick.net.66117.9501.302br.net
-127.0.0.1 downloads.superfish.com
 127.0.0.1 www.pagerank.net.au
 127.0.0.1 ad.doubleclick.net.34565.9252.302br.net
 127.0.0.1 d.abnad.net
