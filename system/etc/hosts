@@ -1723,7 +1723,6 @@
 127.0.0.1 miaozhen.com
 127.0.0.1 migc.g.mi.com
 127.0.0.1 migcreport.g.mi.com
-127.0.0.1 mi.gdt.qq.com
 127.0.0.1 m.inccnd.com
 127.0.0.1 minfo.wps.cn
 127.0.0.1 minghui.com
@@ -1754,7 +1753,6 @@
 127.0.0.1 m.nbhaosheng168.com
 127.0.0.1 mobaders.oss-cn-beijing.aliyuncs.com
 127.0.0.1 mobads.baidu.com
-127.0.0.1 mobads-logs.baidu.com
 127.0.0.1 mobi.adsage.com
 127.0.0.1 mobileads.google.com
 127.0.0.1 mobileads.msn.com
@@ -2126,7 +2124,6 @@
 127.0.0.1 re.m.taobao.com
 127.0.0.1 renminbao.com
 127.0.0.1 report.adview.cn
-127.0.0.1 report.huatuo.qq.com
 127.0.0.1 report.qcloud.com
 127.0.0.1 report.vip.qq.com
 127.0.0.1 res.adcome.cn
@@ -5042,7 +5039,6 @@
 127.0.0.1 miaozhen.com
 127.0.0.1 migc.g.mi.com
 127.0.0.1 migcreport.g.mi.com
-127.0.0.1 mi.gdt.qq.com
 127.0.0.1 m.inccnd.com
 127.0.0.1 minfo.wps.cn
 127.0.0.1 minghui.com
@@ -5073,7 +5069,6 @@
 127.0.0.1 m.nbhaosheng168.com
 127.0.0.1 mobaders.oss-cn-beijing.aliyuncs.com
 127.0.0.1 mobads.baidu.com
-127.0.0.1 mobads-logs.baidu.com
 127.0.0.1 mobi.adsage.com
 127.0.0.1 mobileads.google.com
 127.0.0.1 mobileads.msn.com
@@ -5446,7 +5441,6 @@
 127.0.0.1 re.m.taobao.com
 127.0.0.1 renminbao.com
 127.0.0.1 report.adview.cn
-127.0.0.1 report.huatuo.qq.com
 127.0.0.1 report.qcloud.com
 127.0.0.1 report.vip.qq.com
 127.0.0.1 res.adcome.cn
@@ -7239,7 +7233,6 @@
 127.0.0.1 entry.baidu.com
 127.0.0.1 idm-su.baidu.com
 127.0.0.1 idm.bce.baidu.com
-127.0.0.1 mobads-logs.baidu.com
 127.0.0.1 mobads.baidu.com
 127.0.0.1 msite.baidu.com
 127.0.0.1 nsclick.baidu.com
@@ -7342,7 +7335,6 @@
 127.0.0.1 c.gdt.qq.com
 127.0.0.1 d.gdt.qq.com
 127.0.0.1 i.gdt.qq.com
-127.0.0.1 mi.gdt.qq.com
 127.0.0.1 q.i.gdt.qq.com
 127.0.0.1 rm.gdt.qq.com
 127.0.0.1 t.gdt.qq.com
@@ -8306,7 +8298,6 @@
 127.0.0.1 entry.baidu.com
 127.0.0.1 idm-su.baidu.com
 127.0.0.1 idm.bce.baidu.com
-127.0.0.1 mobads-logs.baidu.com
 127.0.0.1 mobads.baidu.com
 127.0.0.1 msite.baidu.com
 127.0.0.1 nsclick.baidu.com
@@ -8721,7 +8712,6 @@
 127.0.0.1 c.gdt.qq.com
 127.0.0.1 d.gdt.qq.com
 127.0.0.1 i.gdt.qq.com
-127.0.0.1 mi.gdt.qq.com
 127.0.0.1 nc.gdt.qq.com
 127.0.0.1 q.i.gdt.qq.com
 127.0.0.1 rm.gdt.qq.com
@@ -9839,7 +9829,7 @@
 127.0.0.1 cdn1.lbesec.com
 127.0.0.1 adsp.xunlei.com
 #127.0.0.1 api-shoulei-ssl.xunlei.com
-127.0.0.1 biz.live.xunlei.com
+#mobads-logs.baidu.com
 127.0.0.1 ct.niu.xunlei.com
 127.0.0.1 mou.niu.xunlei.com
 127.0.0.1 sdksitter.m.sjzhushou.com
@@ -34213,7 +34203,6 @@
 127.0.0.1 mgwsav.112.2o7.net
 127.0.0.1 mgwsls.112.2o7.net
 127.0.0.1 mi.adinterax.com
-127.0.0.1 mi.gdt.qq.com
 127.0.0.1 mi9.gscontxt.net
 127.0.0.1 miami.ero-advertising.com
 127.0.0.1 miaozhen.com
@@ -34404,7 +34393,6 @@
 127.0.0.1 mob.tictacti.com
 127.0.0.1 mobads.baidu.com
 127.0.0.1 mobads.e.shifen.com
-127.0.0.1 mobads-logs.baidu.com
 127.0.0.1 mobads-speed.baidu.com
 127.0.0.1 mobaloo.go2cloud.org
 127.0.0.1 mobbridge.mobpartner.mobi
