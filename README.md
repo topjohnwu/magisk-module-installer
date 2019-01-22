@@ -9,7 +9,7 @@
 本模块会以Systemless的形式替换hosts进行广告屏蔽。
 
 ### 注意
-使用时请关闭其它的hosts模块，并打开Systemless hosts选项。
+使用时请关闭其它的hosts模块，18.0请关闭systemless hosts模块(如果有)，18.0以下打开设置中的systemless hosts选项
 
 <p align="center">
 <b> 捐赠 </b><br>
