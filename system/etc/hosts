@@ -1,5 +1,6 @@
 #********************************************************************
 # 本hosts由多个hosts整合而来hosts源均来自于github，及网络搜索
+#update[hosts]: 2019-01-23 09:52
 # https://github.com/E7KMbb/AD-hosts
 #********************************************************************
 127.0.0.1 localhost
@@ -7,7 +8,7 @@
 127.0.0.11 ip6-localhost
 127.0.0.11 ip6-loopback
 
-#联通运管商劫持（会影响网络，不需要不要启用默认关闭）
+#联通运管商劫持（有概率会影响联通用户的网络，不需要不要启用默认关闭）
 #127.0.0.1 ab.sspsky.com
 #127.0.0.1 cp.drmfslx.cn
 #127.0.0.1 d.drmfslx.cn
@@ -56541,9 +56542,8 @@
 127.0.0.1 yeskyafp.allyes.com
 
 #b乎
-127.0.0.1 com.zhihu.android.app.appview.AppView2
+127.0.0.1 cdn.zampda.net
 127.0.0.1 api.zhihu.com
-127.0.0.1 com.zhihu.android.app.live.receiver.LiveVideoLiveActionReceiver
 127.0.0.1 com.zhihu.android.app.ZhihuApplication
 127.0.0.1 appcloud.zhihu.com
 
