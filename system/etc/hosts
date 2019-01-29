@@ -1,6 +1,6 @@
 #********************************************************************
 # 本hosts由多个hosts整合而来hosts源均来自于github，及网络搜索
-#update[hosts]: 2019-01-23 09:52
+#update[hosts]: 2019-02-01 09:52
 # https://github.com/E7KMbb/AD-hosts
 #********************************************************************
 127.0.0.1 localhost
@@ -628,7 +628,6 @@
 127.0.0.1 cdn-ads.oss-cn-shanghai.aliyuncs.com
 127.0.0.1 cdn.adstract.com
 127.0.0.1 cdn.ad.xiaomi.com
-127.0.0.1 cdn.ark.qq.com
 127.0.0.1 cdnas.hyperpromote.com
 127.0.0.1 cdn.bidvertiser.com
 127.0.0.1 cdn.cooguo.com
@@ -3935,7 +3934,6 @@
 127.0.0.1 cdn-ads.oss-cn-shanghai.aliyuncs.com
 127.0.0.1 cdn.adstract.com
 127.0.0.1 cdn.ad.xiaomi.com
-127.0.0.1 cdn.ark.qq.com
 127.0.0.1 cdnas.hyperpromote.com
 127.0.0.1 cdn.bidvertiser.com
 127.0.0.1 cdn.cooguo.com
