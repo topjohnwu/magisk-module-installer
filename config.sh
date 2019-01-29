@@ -42,9 +42,8 @@ LATESTARTSERVICE=false
 
 print_modname() {
   ui_print "*******************************"
-  ui_print "        AD hosts 酷安@依然的爱        "
-  ui_print "牙膏会迟到，但永远不会缺席"
-  ui_print "修复了大部分的误杀情况，但还需诸位反馈"
+  ui_print "   AD hosts 酷安@依然的爱      "
+  ui_print "     下次更新时间:未知。        "
   ui_print "*******************************"
 }
 
@@ -89,6 +88,7 @@ set_permissions() {
 
   # 以下是默认权限，请勿删除
   set_perm_recursive  $MODPATH  0  0  0755  0644
+  chmod 644 $MODPATH/./system/etc/hosts
 }
 
 ##########################################################################################
