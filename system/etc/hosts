@@ -1,6 +1,6 @@
 #********************************************************************
 # 本hosts由多个hosts整合而来hosts源均来自于github，及网络搜索
-#update[hosts]: 2019-02-01 09:52
+#update[hosts]: 2019-02-01 08:16
 # https://github.com/E7KMbb/AD-hosts
 #********************************************************************
 127.0.0.1 localhost
@@ -134,7 +134,6 @@
 127.0.0.1 activate-sjc0.adobe.com
 127.0.0.1 activate.wip3.adobe.com
 127.0.0.1 activity.yuyiya.com
-127.0.0.1 actsdk.idreamsky.com
 127.0.0.1 acuityplatform.com
 127.0.0.1 ad.1111cpc.com
 127.0.0.1 ad1.greedland.net
@@ -420,7 +419,6 @@
 127.0.0.1 api.koudaikj.com
 127.0.0.1 api.mobula.sdk.duapps.com
 127.0.0.1 api.newad.ifeng.com
-127.0.0.1 api.open.uc.cn
 127.0.0.1 api.primecaster.net
 127.0.0.1 api-push.meizu.com
 127.0.0.1 api.ra2.xlmc.sec.miui.com
@@ -1244,7 +1242,6 @@
 127.0.0.1 hao.7654.com
 127.0.0.1 hao.qquu8.com
 127.0.0.1 haostat.qihoo.com
-127.0.0.1 hao.uc.cn
 127.0.0.1 h.atdmt.com
 127.0.0.1 hbdnserror1.wo.com.cn
 127.0.0.1 hbdnserror2.wo.com.cn
@@ -1260,7 +1257,6 @@
 127.0.0.1 hivedata.cc
 127.0.0.1 hk-cdn.effectivemeasure.net
 127.0.0.1 hk.jtsh123.com
-127.0.0.1 hk.napi.ucweb.com
 127.0.0.1 hl2rcv.adobe.com
 127.0.0.1 hljdnserror1.wo.com.cn
 127.0.0.1 hljdnserror2.wo.com.cn
@@ -1571,7 +1567,6 @@
 127.0.0.1 kwcscdn.000dn.com
 127.0.0.1 kwflvcdn.000dn.com
 127.0.0.1 kw.ra.icast.cn
-127.0.0.1 kwurl.ucweb.com
 127.0.0.1 l2.l.qq.com
 127.0.0.1 labs.ra.icast.cn
 127.0.0.1 lb.gtimg.com
@@ -2030,8 +2025,6 @@
 127.0.0.1 pubads.g.doubleclick.net
 127.0.0.1 pub.pxl.ace.advertising.com
 127.0.0.1 pub.se.360.cn
-127.0.0.1 puds.test.uae.uc.cn
-127.0.0.1 puds.ucweb.com
 127.0.0.1 pull.push.sogou.com
 127.0.0.1 pups.bdimg.com
 127.0.0.1 push.5z5zw.com
@@ -2123,7 +2116,6 @@
 127.0.0.1 report.vip.qq.com
 127.0.0.1 res.adcome.cn
 127.0.0.1 res.aduu.cn
-127.0.0.1 rescn.u3.ucweb.com
 127.0.0.1 res.icast.cn
 127.0.0.1 res.ipingke.com
 127.0.0.1 res.mi.baidu.com
@@ -2408,7 +2400,6 @@
 127.0.0.1 sdownload.stargame.com
 127.0.0.1 sdsp.ipinyou.com
 127.0.0.1 sdu.adwo.com
-127.0.0.1 sea.napi.ucweb.com
 127.0.0.1 sec-cdn.static.xiaomi.net
 127.0.0.1 sec.resource.xiaomi.net
 127.0.0.1 secretchina.com
@@ -2757,7 +2748,6 @@
 127.0.0.1 tracking.miui.com
 127.0.0.1 tracking-server-prod-1.zenmxapps.com
 127.0.0.1 track.ra.icast.cn
-127.0.0.1 track.uc.cn
 127.0.0.1 trafficfactory.biz
 127.0.0.1 trc.adsage.com
 127.0.0.1 trc.taboola.com
@@ -2797,7 +2787,6 @@
 127.0.0.1 u.ads8.com
 127.0.0.1 uat1.bfsspadserver.8le8le.com
 127.0.0.1 ubmcmm.baidustatic.com
-127.0.0.1 uc9.ucweb.com
 127.0.0.1 ucstat.baidu.com
 127.0.0.1 ucus.ucweb.com
 127.0.0.1 uc.xiansuper.com
@@ -2857,7 +2846,6 @@
 127.0.0.1 utility.baidu.com
 127.0.0.1 utk.baidu.com
 127.0.0.1 utop.umengcloud.com
-127.0.0.1 utp.ucweb.com
 127.0.0.1 u.uc123.com
 127.0.0.1 u.ucfly.com
 127.0.0.1 uuidapi.yunos.com
@@ -2871,7 +2859,6 @@
 127.0.0.1 v13.cnzz.com
 127.0.0.1 v14.cnzz.com
 127.0.0.1 v1.cnzz.com
-127.0.0.1 v1-feed.idreamsky.com
 127.0.0.1 v1.log.moji.com
 127.0.0.1 v2.cnzz.com
 127.0.0.1 v2.fm.n.duokanbox.com
@@ -3427,7 +3414,6 @@
 127.0.0.1 activate-sjc0.adobe.com
 127.0.0.1 activate.wip3.adobe.com
 127.0.0.1 activity.yuyiya.com
-127.0.0.1 actsdk.idreamsky.com
 127.0.0.1 acuityplatform.com
 127.0.0.1 ad.1111cpc.com
 127.0.0.1 ad1.greedland.net
@@ -3721,7 +3707,6 @@
 127.0.0.1 api.koudaikj.com
 127.0.0.1 api.mobula.sdk.duapps.com
 127.0.0.1 api.newad.ifeng.com
-127.0.0.1 api.open.uc.cn
 127.0.0.1 api.primecaster.net
 127.0.0.1 api-push.meizu.com
 127.0.0.1 api.ra2.xlmc.sec.miui.com
@@ -4550,7 +4535,6 @@
 127.0.0.1 hao.7654.com
 127.0.0.1 hao.qquu8.com
 127.0.0.1 haostat.qihoo.com
-127.0.0.1 hao.uc.cn
 127.0.0.1 h.atdmt.com
 127.0.0.1 hbdnserror1.wo.com.cn
 127.0.0.1 hbdnserror2.wo.com.cn
@@ -4566,7 +4550,6 @@
 127.0.0.1 hivedata.cc
 127.0.0.1 hk-cdn.effectivemeasure.net
 127.0.0.1 hk.jtsh123.com
-127.0.0.1 hk.napi.ucweb.com
 127.0.0.1 hl2rcv.adobe.com
 127.0.0.1 hljdnserror1.wo.com.cn
 127.0.0.1 hljdnserror2.wo.com.cn
@@ -4878,7 +4861,6 @@
 127.0.0.1 kwcscdn.000dn.com
 127.0.0.1 kwflvcdn.000dn.com
 127.0.0.1 kw.ra.icast.cn
-127.0.0.1 kwurl.ucweb.com
 127.0.0.1 l2.l.qq.com
 127.0.0.1 labs.ra.icast.cn
 127.0.0.1 lb.gtimg.com
@@ -5338,8 +5320,6 @@
 127.0.0.1 pubads.g.doubleclick.net
 127.0.0.1 pub.pxl.ace.advertising.com
 127.0.0.1 pub.se.360.cn
-127.0.0.1 puds.test.uae.uc.cn
-127.0.0.1 puds.ucweb.com
 127.0.0.1 pull.push.sogou.com
 127.0.0.1 pups.bdimg.com
 127.0.0.1 push.5z5zw.com
@@ -6065,7 +6045,6 @@
 127.0.0.1 tracking.miui.com
 127.0.0.1 tracking-server-prod-1.zenmxapps.com
 127.0.0.1 track.ra.icast.cn
-127.0.0.1 track.uc.cn
 127.0.0.1 trafficfactory.biz
 127.0.0.1 trc.adsage.com
 127.0.0.1 trc.taboola.com
@@ -6179,7 +6158,6 @@
 127.0.0.1 v13.cnzz.com
 127.0.0.1 v14.cnzz.com
 127.0.0.1 v1.cnzz.com
-127.0.0.1 v1-feed.idreamsky.com
 127.0.0.1 v1.log.moji.com
 127.0.0.1 v2.cnzz.com
 127.0.0.1 v2.fm.n.duokanbox.com
@@ -8115,10 +8093,6 @@
 127.0.0.1 redirect.simba.taobao.com
 127.0.0.1 strip.taobaocdn.com
 127.0.0.1 tunion-api.m.taobao.com
-127.0.0.1 adn.insight.ucweb.com
-127.0.0.1 adtrack.ucweb.com
-127.0.0.1 hk.napi.ucweb.com
-127.0.0.1 kwurl.ucweb.com
 127.0.0.1 puds.ucweb.com
 127.0.0.1 rescn.u3.ucweb.com
 127.0.0.1 sea.napi.ucweb.com
@@ -8133,9 +8107,7 @@
 127.0.0.1 alissl.ucdl.pp.uc.cn
 127.0.0.1 api.mp.uc.cn
 127.0.0.1 applog.uc.cn
-127.0.0.1 hao.uc.cn
 127.0.0.1 puds.test.uae.uc.cn
-127.0.0.1 track.uc.cn
 127.0.0.1 woodpecker.uc.cn
 127.0.0.1 log.cs.pp.cn
 127.0.0.1 patriot.cs.pp.cn
@@ -9514,8 +9486,6 @@
 127.0.0.1 open.play.cn
 127.0.0.1 log.vcgame.cn
 127.0.0.1 mcore.vcgame.cn
-127.0.0.1 actsdk.idreamsky.com
-127.0.0.1 v1-feed.idreamsky.com
 127.0.0.1 ad.1kxun.com
 127.0.0.1 pc.yingshi.tcclick.1kxun.mobi
 127.0.0.1 tcad.wedolook.com
@@ -10228,7 +10198,6 @@
 127.0.0.1 u.ddvip.com
 127.0.0.1 u349036.ff112222.com
 127.0.0.1 union1.xiaojianjian.net
-127.0.0.1 utp.ucweb.com
 127.0.0.1 vol.lflili.com
 127.0.0.1 vs19.gzcu.u3.ucweb.com
 127.0.0.1 vs7.gzcu.u3.ucweb.com
@@ -10542,7 +10511,6 @@
 127.0.0.1 272829.cc
 127.0.0.1 35baba.cn
 127.0.0.1 360vip.front99.com
-127.0.0.1 3wz6z.bchuangpi.cn
 127.0.0.1 4xhyr.shuimujinggong.com
 127.0.0.1 5.qqm98.com
 127.0.0.1 526d.uunice.com
@@ -14750,7 +14718,6 @@
 127.0.0.1 ffb.feihuo.com
 127.0.0.1 gi.xi.gxabj.com
 127.0.0.1 girlcc.cc
-127.0.0.1 hao.tiandi.com
 127.0.0.1 hao916.com
 127.0.0.1 hjc1990.com
 127.0.0.1 hwt.player888.cn
@@ -17338,7 +17305,6 @@
 127.0.0.1 activity.homescape.com
 127.0.0.1 activity.serving-sys.com
 127.0.0.1 actonsoftware.com
-127.0.0.1 actsdk.idreamsky.com
 127.0.0.1 actualdeals.com
 127.0.0.1 actualite-de-stars.fr.intellitxt.com
 127.0.0.1 actvtrack.com
@@ -28001,7 +27967,6 @@
 127.0.0.1 dl.getprivate.net
 127.0.0.1 dl.goreald.net
 127.0.0.1 dl.hao123.com
-127.0.0.1 dl.idreamsky.com
 127.0.0.1 dl.ijinshan.com
 127.0.0.1 dl.keywordstrategy.org
 127.0.0.1 dl.liebao.cn
@@ -31198,7 +31163,6 @@
 127.0.0.1 idm.us.intellitxt.com
 127.0.0.1 idontlikeyouinthatway.us.intellitxt.com
 127.0.0.1 idpix.media6degrees.com
-127.0.0.1 idreamsky.com
 127.0.0.1 idregie.com
 127.0.0.1 idritracker.com
 127.0.0.1 idspaces.ero-advertising.com
@@ -43041,7 +43005,6 @@
 127.0.0.1 v12.cnzz.com
 127.0.0.1 v13.cnzz.com
 127.0.0.1 v14.cnzz.com
-127.0.0.1 v1-feed.idreamsky.com
 127.0.0.1 v1log.v1.cn
 127.0.0.1 v2.adgoto.com
 127.0.0.1 v2.adsbookie.com
@@ -45330,7 +45293,6 @@
 127.0.0.1 www.icptrack.com
 127.0.0.1 www.ideaworks.com
 127.0.0.1 www.idirect.com
-127.0.0.1 www.idreamsky.com
 127.0.0.1 www.idritracker.com
 127.0.0.1 www.ientry.com
 127.0.0.1 www.ientrymail.com
