@@ -1,6 +1,6 @@
 #********************************************************************
 # 本hosts由多个hosts整合而来hosts源均来自于github，及网络搜索
-#update[hosts]: 2019-02-01 08:16
+#update[hosts]: 2019-02-01 11:40
 # https://github.com/E7KMbb/AD-hosts
 #********************************************************************
 127.0.0.1 localhost
@@ -1333,8 +1333,6 @@
 127.0.0.1 idm-su.baidu.com
 127.0.0.1 i.domob.cn
 127.0.0.1 i.dreamfull.cn
-127.0.0.1 ids1.deliver.ifeng.com
-127.0.0.1 ids.deliver.ifeng.com
 127.0.0.1 idx.m.hub.sandai.net
 127.0.0.1 iebar.baidu.com
 127.0.0.1 ieonline.microsoft.com
@@ -1488,7 +1486,6 @@
 127.0.0.1 jldnserror4.wo.com.cn
 127.0.0.1 jldnserror5.wo.com.cn
 127.0.0.1 jpg.cooguo.com
-127.0.0.1 jpush.html5.qq.com
 127.0.0.1 jqmt.qq.com
 127.0.0.1 jrj.adsame.com
 127.0.0.1 js1151.yongkang6.com
@@ -1578,7 +1575,6 @@
 127.0.0.1 ldpgl.code.mytanwan.com
 127.0.0.1 ldy.350.com
 127.0.0.1 leak.360.cn
-127.0.0.1 ledou.dl.uu.cc
 127.0.0.1 letv.allyes.com
 127.0.0.1 letv.axp.admaster.com.cn
 127.0.0.1 letv.cm.admaster.com.cn
@@ -4626,8 +4622,6 @@
 127.0.0.1 idm-su.baidu.com
 127.0.0.1 i.domob.cn
 127.0.0.1 i.dreamfull.cn
-127.0.0.1 ids1.deliver.ifeng.com
-127.0.0.1 ids.deliver.ifeng.com
 127.0.0.1 idx.m.hub.sandai.net
 127.0.0.1 iebar.baidu.com
 127.0.0.1 ieonline.microsoft.com
@@ -4782,7 +4776,6 @@
 127.0.0.1 jldnserror4.wo.com.cn
 127.0.0.1 jldnserror5.wo.com.cn
 127.0.0.1 jpg.cooguo.com
-127.0.0.1 jpush.html5.qq.com
 127.0.0.1 jqmt.qq.com
 127.0.0.1 jrj.adsame.com
 127.0.0.1 js1151.yongkang6.com
@@ -4872,7 +4865,6 @@
 127.0.0.1 ldpgl.code.mytanwan.com
 127.0.0.1 ldy.350.com
 127.0.0.1 leak.360.cn
-127.0.0.1 ledou.dl.uu.cc
 127.0.0.1 letv.allyes.com
 127.0.0.1 letv.axp.admaster.com.cn
 127.0.0.1 letv.cm.admaster.com.cn
@@ -7167,7 +7159,6 @@
 127.0.0.1 au.youmi.net
 127.0.0.1 coconuts.boy.jp
 127.0.0.1 iacpromotion.s3.amazonaws.com
-127.0.0.1 plugin.2easydroid.com
 127.0.0.1 adimg3.search.naver.net
 127.0.0.1 ads.adadapted.com
 127.0.0.1 a.medialytics.com
@@ -7487,7 +7478,6 @@
 127.0.0.1 dmpclick.deliver.ifeng.com
 127.0.0.1 dol.deliver.ifeng.com
 127.0.0.1 dolphin.deliver.ifeng.com
-127.0.0.1 ids1.deliver.ifeng.com
 127.0.0.1 iis1.deliver.ifeng.com
 127.0.0.1 iis3g.deliver.ifeng.com
 127.0.0.1 mfp.deliver.ifeng.com
@@ -9399,7 +9389,6 @@
 127.0.0.1 ad.gtbrowser.com
 127.0.0.1 adsense.html5.qq.com
 127.0.0.1 game.html5.qq.com
-127.0.0.1 jpush.html5.qq.com
 127.0.0.1 mqqad.cs0309.html5.qq.com
 127.0.0.1 mqqad.html5.qq.com
 127.0.0.1 novelsns.html5.qq.com
@@ -9476,7 +9465,6 @@
 127.0.0.1 dl.uu.cc
 127.0.0.1 game.subway.uu.cc
 127.0.0.1 in1.feed.uu.cc
-127.0.0.1 ledou.dl.uu.cc
 127.0.0.1 in1.secure.uu.cc
 127.0.0.1 sdklog.uu.cc
 127.0.0.1 sdkpay.uu.cc
@@ -9708,7 +9696,6 @@
 127.0.0.1 dmpclick.deliver.ifeng.com
 127.0.0.1 dol.deliver.ifeng.com
 127.0.0.1 dolphin.deliver.ifeng.com
-127.0.0.1 ids1.deliver.ifeng.com
 127.0.0.1 iis1.deliver.ifeng.com
 127.0.0.1 iis3g.deliver.ifeng.com
 127.0.0.1 mfp.deliver.ifeng.com
@@ -13668,11 +13655,6 @@
 127.0.0.1 lc.jiathis.com
 127.0.0.1 v2.jiathis.com
 127.0.0.1 v3.jiathis.com
-127.0.0.1 im.jpush.cn
-127.0.0.1 im64.jpush.cn
-127.0.0.1 s.jpush.cn
-127.0.0.1 stats.jpush.cn
-127.0.0.1 sis.jpush.io
 127.0.0.1 update.sdk.jiguang.cn
 127.0.0.1 demo.jointreport-switch.com
 127.0.0.1 lg2.jointreport-switch.com
@@ -13682,7 +13664,6 @@
 127.0.0.1 popup.jointreport-switch.com
 127.0.0.1 safe-aisle.jointreport-switch.com
 127.0.0.1 static.jointreport-switch.com
-127.0.0.1 www.jpush.cn
 127.0.0.1 cms.v5.juzi.cn
 127.0.0.1 id.juzi.cn
 127.0.0.1 iu.juzi.cn
@@ -36836,10 +36817,6 @@
 127.0.0.1 pls.webtype.com
 127.0.0.1 plsdrct2.me
 127.0.0.1 plsoyfoods.112.2o7.net
-127.0.0.1 plug.plugerr.com
-127.0.0.1 plugin.2easydroid.com
-127.0.0.1 plugin.mediavoice.com
-127.0.0.1 plugin.reactful.com
 127.0.0.1 pluginx.perfectgonzo.com
 127.0.0.1 plugrush.com
 127.0.0.1 plus.iwon.com
@@ -38390,7 +38367,6 @@
 127.0.0.1 s.ipinyou.com
 127.0.0.1 s.ivillage.us.intellitxt.com
 127.0.0.1 s.ixiaa.com
-127.0.0.1 s.jpush.cn
 127.0.0.1 s.js.lmmedia.com.cn
 127.0.0.1 s.jwpltx.com
 127.0.0.1 s.krebsonsecurity.com
@@ -39536,7 +39512,6 @@
 127.0.0.1 sinoa.com
 127.0.0.1 sinuatemedia.com
 127.0.0.1 sired.com
-127.0.0.1 sis.jpush.io
 127.0.0.1 sit.pagechoice.net
 127.0.0.1 site.falconbucks.com
 127.0.0.1 site.img.4tube.com
@@ -40521,7 +40496,6 @@
 127.0.0.1 stats.ipvertising.com
 127.0.0.1 stats.ircfast.com
 127.0.0.1 stats.iwebtrack.com
-127.0.0.1 stats.jpush.cn
 127.0.0.1 stats.jtvnw.net
 127.0.0.1 stats.justin.tv
 127.0.0.1 stats.kaltura.com
@@ -45397,9 +45371,6 @@
 127.0.0.1 www.jmpgo.com
 127.0.0.1 www.jmplink.com
 127.0.0.1 www.joinourwebsite.com
-127.0.0.1 www.jpush.cn
-127.0.0.1 www.jscount.com
-127.0.0.1 www.jscripts.org
 127.0.0.1 www.jsfeedadsget.com
 127.0.0.1 www.jsfeedget.com
 127.0.0.1 www.juiceadv.com
