@@ -1,6 +1,6 @@
 #********************************************************************
 # 本hosts由多个hosts整合而来hosts源均来自于github，及网络搜索
-#update[hosts]: 2019-02-01 11:40
+#update[hosts]: 2019-02-01 22:54
 # https://github.com/E7KMbb/AD-hosts
 #********************************************************************
 127.0.0.1 localhost
@@ -291,7 +291,6 @@
 127.0.0.1 adv.app.qq.com
 127.0.0.1 adver.qq.com
 127.0.0.1 adview.cn
-127.0.0.1 adv.sec.miui.com
 127.0.0.1 ad.wang502.com
 127.0.0.1 ad.winrar.com.cn
 127.0.0.1 ad.wretch.cc
@@ -1423,12 +1422,10 @@
 127.0.0.1 in1.feed.uu.cc
 127.0.0.1 in1.secure.uu.cc
 127.0.0.1 in.aikan6.com
-127.0.0.1 info.analysis.kp.sec.miui.com
 127.0.0.1 infocenter.meizu.com
 127.0.0.1 info.downsave.com
 127.0.0.1 info.gomlab.com
 127.0.0.1 info.pinyin.sogou.com
-127.0.0.1 info.sec.miui.com
 127.0.0.1 info.yitsoftware.com
 127.0.0.1 in.gyeet.com
 127.0.0.1 in.hkfuy.com
@@ -1612,7 +1609,6 @@
 127.0.0.1 log.tbs.qq.com
 127.0.0.1 log.umsns.com
 127.0.0.1 log.umtrack.com
-127.0.0.1 logupdate.avlyun.sec.miui.com
 127.0.0.1 log.vcgame.cn
 127.0.0.1 log.voicecloud.cn
 127.0.0.1 log.web.kugou.com
@@ -2010,7 +2006,6 @@
 127.0.0.1 promotion.aliyun.com
 127.0.0.1 promotion.gomlab.com
 127.0.0.1 proton.flurry.com
-127.0.0.1 proxy.sec.miui.com
 127.0.0.1 pr.ybp.yahoo.com
 127.0.0.1 p.sdu8cvc.com
 127.0.0.1 psfq.gou.sogou.com
@@ -3575,7 +3570,6 @@
 127.0.0.1 adv.app.qq.com
 127.0.0.1 adver.qq.com
 127.0.0.1 adview.cn
-127.0.0.1 adv.sec.miui.com
 127.0.0.1 ad.wang502.com
 127.0.0.1 ad.winrar.com.cn
 127.0.0.1 ad.wretch.cc
@@ -4717,7 +4711,6 @@
 127.0.0.1 info.downsave.com
 127.0.0.1 info.gomlab.com
 127.0.0.1 info.pinyin.sogou.com
-127.0.0.1 info.sec.miui.com
 127.0.0.1 info.yitsoftware.com
 127.0.0.1 in.gyeet.com
 127.0.0.1 in.hkfuy.com
@@ -4902,7 +4895,6 @@
 127.0.0.1 log.tbs.qq.com
 127.0.0.1 log.umsns.com
 127.0.0.1 log.umtrack.com
-127.0.0.1 logupdate.avlyun.sec.miui.com
 127.0.0.1 log.vcgame.cn
 127.0.0.1 log.voicecloud.cn
 127.0.0.1 log.web.kugou.com
@@ -5301,7 +5293,6 @@
 127.0.0.1 promotion.aliyun.com
 127.0.0.1 promotion.gomlab.com
 127.0.0.1 proton.flurry.com
-127.0.0.1 proxy.sec.miui.com
 127.0.0.1 pr.ybp.yahoo.com
 127.0.0.1 p.sdu8cvc.com
 127.0.0.1 psfq.gou.sogou.com
@@ -6117,7 +6108,6 @@
 127.0.0.1 up.cm.ksmobile.com
 127.0.0.1 update.123juzi.net
 127.0.0.1 update.360safe.com
-127.0.0.1 update.avlyun.sec.miui.com
 127.0.0.1 updatecenter.qq.com
 127.0.0.1 update.minipage.2345.com
 127.0.0.1 upoll.umengcloud.com
@@ -9329,7 +9319,6 @@
 127.0.0.1 fb.xk.miui.com
 127.0.0.1 notice.game.xiaomi.com
 127.0.0.1 ppurifier.game.xiaomi.com
-127.0.0.1 adv.sec.miui.com
 127.0.0.1 tracking.miui.com
 127.0.0.1 beha.ksmobile.com
 127.0.0.1 up.cm.ksmobile.com
@@ -47513,7 +47502,6 @@
 127.0.0.1 www.wzajs.com
 127.0.0.1 fans.bestvogue.com
 127.0.0.1 xlmc.sec.miui.com
-127.0.0.1 adv.sec.miui.com
 127.0.0.1 cdn.read.html5.qq.com
 127.0.0.1 bcscdn.baidu.com
 127.0.0.1 v.6dvip.com
