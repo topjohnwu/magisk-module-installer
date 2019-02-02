@@ -1,6 +1,6 @@
 #********************************************************************
 # 本hosts由多个hosts整合而来hosts源均来自于github，及网络搜索
-#update[hosts]: 2019-02-01 22:54
+#update[hosts]: 2019-02-02 12:40
 # https://github.com/E7KMbb/AD-hosts
 #********************************************************************
 127.0.0.1 localhost
@@ -56437,12 +56437,6 @@
 127.0.0.1 www.google-analytics.com
 127.0.0.1 wan.52pk.com
 127.0.0.1 yeskyafp.allyes.com
-
-#b乎
-127.0.0.1 cdn.zampda.net
-127.0.0.1 api.zhihu.com
-127.0.0.1 com.zhihu.android.app.ZhihuApplication
-127.0.0.1 appcloud.zhihu.com
 
 #大纪元
 127.0.0.1 www.epochtimes.com
