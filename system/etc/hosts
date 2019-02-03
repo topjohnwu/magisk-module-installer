@@ -1,6 +1,6 @@
 #********************************************************************
 # 本hosts由多个hosts整合而来hosts源均来自于github，及网络搜索
-#update[hosts]: 2019-02-02 12:40
+#update[hosts]: 2019-02-03 23:52
 # https://github.com/E7KMbb/AD-hosts
 #********************************************************************
 127.0.0.1 localhost
@@ -3060,7 +3060,6 @@
 127.0.0.1 wss.cnzz.com
 127.0.0.1 ws.sj.qq.com
 127.0.0.1 ws.voiceads.cn
-127.0.0.1 wtradv.market.xiaomi.com
 127.0.0.1 wujieliulan.com
 127.0.0.1 wuliao.epro.sogou.com
 127.0.0.1 wup.imtt.qq.com
@@ -6597,12 +6596,6 @@
 127.0.0.1 397c0.admaster.com.cn
 127.0.0.1 clickc.admaster.com.cn
 127.0.0.1 v.admaster.com.cn
-127.0.0.1 video.market.xiaomi.com
-127.0.0.1 f8.market.xiaomi.com
-127.0.0.1 t1.a.market.xiaomi.com
-127.0.0.1 t2.a.market.xiaomi.com
-127.0.0.1 t3.a.market.xiaomi.com
-127.0.0.1 t5.a.market.xiaomi.com
 127.0.0.1 cmonitor.iqiyi.com
 127.0.0.1 puma.api.iqiyi.com
 127.0.0.1 ppvabs.pplive.com
@@ -9322,7 +9315,6 @@
 127.0.0.1 tracking.miui.com
 127.0.0.1 beha.ksmobile.com
 127.0.0.1 up.cm.ksmobile.com
-127.0.0.1 wtradv.market.xiaomi.com
 127.0.0.1 cloudservice12.kingsoft-office-service.com
 127.0.0.1 cloudservice13.kingsoft-office-service.com
 127.0.0.1 cloudservice22.kingsoft-office-service.com
