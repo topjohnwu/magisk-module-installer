@@ -1,6 +1,6 @@
 #********************************************************************
 # 本hosts由多个hosts整合而来hosts源均来自于github，及网络搜索
-#update[hosts]: 2019-02-06 18:32
+#update[hosts]: 2019-02-06
 # https://github.com/E7KMbb/AD-hosts
 #********************************************************************
 127.0.0.1 localhost
@@ -8887,8 +8887,11 @@
 127.0.0.1 www.2144.cn
 127.0.0.1 iadctest.qwapi.com
 127.0.0.1 ieonline.microsoft.com
+#破解迅雷下载版权限制(破解后下载加速失效)
 127.0.0.1 hub5btmain.sandai.net
+127.0.0.1 upgrade.xl9.xunlei.com
 127.0.0.1 hub5emu.sandai.net
+
 120.52.19.113 bbs.pcbeta.com
 120.52.19.113 cdn.pcbeta.attachment.inimc.com
 120.52.19.113 cdn.pcbeta.css.inimc.com
@@ -30870,7 +30873,6 @@
 127.0.0.1 huanqiu.datamaster.com.cn
 127.0.0.1 hub.adlpartner.com
 127.0.0.1 hub5c.sandai.net
-127.0.0.1 hub5emu.sandai.net
 127.0.0.1 hub5pn.sandai.net
 127.0.0.1 hub5pnc.sandai.net
 127.0.0.1 hub5u.sandai.net
