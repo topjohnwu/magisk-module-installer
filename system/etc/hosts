@@ -1,6 +1,6 @@
 #********************************************************************
 # 本hosts由多个hosts整合而来hosts源均来自于github，及网络搜索
-#update[hosts]: 2019-02-03 23:52
+#update[hosts]: 2019-02-06 18:32
 # https://github.com/E7KMbb/AD-hosts
 #********************************************************************
 127.0.0.1 localhost
@@ -8,15 +8,16 @@
 127.0.0.11 ip6-localhost
 127.0.0.11 ip6-loopback
 
-#联通运管商劫持（有概率会影响联通用户的网络，不需要不要启用默认关闭）
-#127.0.0.1 ab.sspsky.com
-#127.0.0.1 cp.drmfslx.cn
-#127.0.0.1 d.drmfslx.cn
-#127.0.0.1 t.drmfslx.cn
-#127.0.0.1 engine.drmfslx.cn
-#127.0.0.1 re.drmfslx.cn
-#127.0.0.1 res.drmfslx.cn
-#127.0.0.1 dsp-res.drmfslx.cn
+#联通运管商劫持（有概率会影响联通用户的网络，默认开启）
+127.0.0.1 ab.sspsky.com
+127.0.0.1 cp.drmfslx.cn
+127.0.0.1 d.drmfslx.cn
+127.0.0.1 t.drmfslx.cn
+127.0.0.1 engine.drmfslx.cn
+127.0.0.1 re.drmfslx.cn
+127.0.0.1 res.drmfslx.cn
+127.0.0.1 dsp-res.drmfslx.cn
+127.255.255.255 dl.ayasc.com
 
 127.0.0.1 www.winrar.com.cn
 127.0.0.1 g1.163.com
@@ -56395,6 +56396,31 @@
 127.0.0.1 www.mylotto.co.nz
 #某线上赌场
 127.0.0.1 xyxshop.com
+
+#新的血液
+127.0.0.1 interface.m.sjzhushou.com 
+127.0.0.1 7xnvqo.com1.z0.glb.clouddn.com 
+127.0.0.1 p1.pstatp.com 
+127.0.0.1 p2.pstatp.com 
+127.0.0.1 p3.pstatp.com 
+127.0.0.1 static.m.sjzhushou.com 
+127.0.0.1 home.m.sjzhushou.com127.0.0.1 xl-shoulei2.rcv.sandai.net
+127.0.0.1 wimg.spriteapp.cn
+127.0.0.1 szlong.weixin.qq.com
+127.0.0.1 stats.jpush.cn
+127.0.0.1 res.wx.qq.com
+127.0.0.1 p8.pstatp.com
+127.0.0.1 login.mobile.reg2t.sandai.net
+127.0.0.1 jifenshangcheng.m.xunlei.com
+127.0.0.1 img.vip.kanimg.com
+127.0.0.1 img.user.kanimg.com
+127.0.0.1 etl.xlmc.sandai.net
+127.0.0.1 duanzi.m.xunlei.com
+127.0.0.1 bubble.vip.xunlei.com
+127.0.0.1 kanimg.com
+127.0.0.1 dm.xiazaibao.xunlei.com
+127.0.0.1 api.comm.miui.com
+127.0.0.1 weatherapi.market.xiaomi.com
 
 #以下是我在上网时弹出的广告.js所在域名
 127.0.0.1 www.12l22.net
