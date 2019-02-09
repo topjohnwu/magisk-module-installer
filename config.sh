@@ -26,7 +26,7 @@
 AUTOMOUNT=true
 
 # 如果您需要加载 system.prop, 请把它设置为 true
-PROPFILE=true
+PROPFILE=false
 
 # 如果您需要执行 post-fs-data 脚本, 请把它设置为 true
 POSTFSDATA=false
