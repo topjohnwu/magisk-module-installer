@@ -1357,13 +1357,9 @@
 127.0.0.1 i.jiathis.com
 127.0.0.1 ikcode.baidu.com
 127.0.0.1 i.l.inmobicdn.net
-127.0.0.1 image.139y.com
 127.0.0.1 image.atdmt.com
-127.0.0.1 image.box.xiaomi.com
 127.0.0.1 image.haiyunx.com
-127.0.0.1 image.p4p.sogou.com
 127.0.0.1 images.fastclick.net
-127.0.0.1 images.taboola.com
 127.0.0.1 image.zzd.sm.cn
 127.0.0.1 imagzine.oppomobile.com
 127.0.0.1 imc.l.qq.com
@@ -2811,7 +2807,6 @@
 127.0.0.1 union.discuz.qq.com
 127.0.0.1 unionimage.baidu.com
 127.0.0.1 union.mop.com
-127.0.0.1 union.sogou.com
 127.0.0.1 unitacs.m.taobao.com
 127.0.0.1 up1.tj.u2.ucweb.com
 127.0.0.1 up4.ucweb.com
@@ -4639,13 +4634,7 @@
 127.0.0.1 i.jiathis.com
 127.0.0.1 ikcode.baidu.com
 127.0.0.1 i.l.inmobicdn.net
-127.0.0.1 image.139y.com
 127.0.0.1 image.atdmt.com
-127.0.0.1 image.box.xiaomi.com
-127.0.0.1 image.haiyunx.com
-127.0.0.1 image.p4p.sogou.com
-127.0.0.1 images.fastclick.net
-127.0.0.1 images.taboola.com
 127.0.0.1 image.zzd.sm.cn
 127.0.0.1 imagzine.oppomobile.com
 127.0.0.1 imc.l.qq.com
@@ -6099,7 +6088,6 @@
 127.0.0.1 union.discuz.qq.com
 127.0.0.1 unionimage.baidu.com
 127.0.0.1 union.mop.com
-127.0.0.1 union.sogou.com
 127.0.0.1 unitacs.m.taobao.com
 127.0.0.1 up1.tj.u2.ucweb.com
 127.0.0.1 up4.ucweb.com
@@ -6717,7 +6705,6 @@
 127.0.0.1 plt.data.pplive.com
 127.0.0.1 web.data.pplive.com
 127.0.0.1 apm.suning.cn
-127.0.0.1 click.suning.cn
 127.0.0.1 dfp.suning.com
 127.0.0.1 ssac.suning.com
 
@@ -8883,7 +8870,6 @@
 127.0.0.1 files2.sogou.com
 127.0.0.1 goto.sogou.com
 127.0.0.1 ht.www.sogou.com
-127.0.0.1 image.p4p.sogou.com
 127.0.0.1 p3p.sogou.com
 127.0.0.1 pb.sogou.com
 127.0.0.1 pbd.sogou.com
@@ -9628,9 +9614,6 @@
 127.0.0.1 app.aplus.pptv.com
 127.0.0.1 as.aplus.pptv.com
 127.0.0.1 de.as.pptv.com
-127.0.0.1 img1.g.pptv.com
-127.0.0.1 img2.g.pptv.com
-127.0.0.1 img3.g.pptv.com
 127.0.0.1 jp.as.pptv.com
 127.0.0.1 static.g.pptv.com
 127.0.0.1 tj.g.pptv.com
@@ -9640,7 +9623,6 @@
 127.0.0.1 plt.data.pplive.com
 127.0.0.1 web.data.pplive.com
 127.0.0.1 apm.suning.cn
-127.0.0.1 click.suning.cn
 127.0.0.1 dfp.suning.com
 127.0.0.1 ssac.suning.com
 127.0.0.1 adinf.voole.com
@@ -19658,7 +19640,6 @@
 127.0.0.1 rto.steelhousemedia.com
 127.0.0.1 15.taboola.com
 127.0.0.1 cdn.taboola.com
-127.0.0.1 images.taboola.com
 127.0.0.1 imprhkmp.taboola.com
 127.0.0.1 match.taboola.com
 127.0.0.1 trc.taboola.com
@@ -36505,7 +36486,6 @@
 127.0.0.1 image.linkexchange.net
 127.0.0.1 image.masterstats.com
 127.0.0.1 image.nsk-sys.com
-127.0.0.1 image.p4p.sogou.com
 127.0.0.1 image.pathfinder.com
 127.0.0.1 image.providesupport.com
 127.0.0.1 image.reporo.net
