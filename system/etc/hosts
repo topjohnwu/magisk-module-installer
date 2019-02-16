@@ -1,6 +1,6 @@
 #********************************************************************
 # 本hosts由多个hosts整合而来hosts源均来自于github，及网络搜索
-#update[hosts]: 2019-02-06
+#update[hosts]: 2019-02-16
 # https://github.com/E7KMbb/AD-hosts
 #********************************************************************
 127.0.0.1 localhost
@@ -2007,7 +2007,6 @@
 127.0.0.1 ps.haohaowan8.com
 127.0.0.1 p.store.qq.com
 127.0.0.1 p.tanx.com
-127.0.0.1 p.tencentmind.com
 127.0.0.1 pubads.g.doubleclick.net
 127.0.0.1 pub.pxl.ace.advertising.com
 127.0.0.1 pub.se.360.cn
@@ -5284,7 +5283,6 @@
 127.0.0.1 ps.haohaowan8.com
 127.0.0.1 p.store.qq.com
 127.0.0.1 p.tanx.com
-127.0.0.1 p.tencentmind.com
 127.0.0.1 pubads.g.doubleclick.net
 127.0.0.1 pub.pxl.ace.advertising.com
 127.0.0.1 pub.se.360.cn
@@ -8689,7 +8687,6 @@
 127.0.0.1 ta.qq.com
 127.0.0.1 tajs.qq.com
 127.0.0.1 tcss.qq.com
-127.0.0.1 p.tencentmind.com
 127.0.0.1 e.qq.com
 127.0.0.1 cm.e.qq.com
 127.0.0.1 sdk.e.qq.com
@@ -9842,7 +9839,6 @@
 127.0.0.1 c1.wkanx.com
 127.0.0.1 static.wkanx.com
 127.0.0.1 adnew.wifi8.com
-127.0.0.1 cmsapi.wifi8.com
 127.0.0.1 wifishow.ggsafe.com
 127.0.0.1 ad.zdworks.com
 127.0.0.1 adclock.zdworks.com
@@ -10403,7 +10399,7 @@
 127.0.0.1 img.cmm.xmfish.com
 127.0.0.1 gg.ptfish.com
 127.0.0.1 adimgs.xici.net
-127.0.0.1 sugar.zhihu.com
+#127.0.0.1 sugar.zhihu.com
 127.0.0.1 zhihu-web-analytics.zhihu.com
 127.0.0.1 a.77shw.com
 127.0.0.1 b.77shw.com
@@ -11172,7 +11168,6 @@
 127.0.0.1 e.wcjup.com
 127.0.0.1 e.wdeie.com
 127.0.0.1 e.wduis.com
-127.0.0.1 e.weixingshexiangji.net
 127.0.0.1 e.wikigifth.com
 127.0.0.1 e.wjier.com
 127.0.0.1 e.wkjhd.com
@@ -11912,7 +11907,6 @@
 127.0.0.1 m.wcjup.com
 127.0.0.1 m.wdeie.com
 127.0.0.1 m.wduis.com
-127.0.0.1 m.weixingshexiangji.net
 127.0.0.1 m.wervp.com
 127.0.0.1 m.wgewj.cn
 127.0.0.1 m.whsjg.cn
@@ -12491,7 +12485,6 @@
 127.0.0.1 www.86kx.com
 127.0.0.1 www.888zr022.com
 127.0.0.1 www.88cncc.com
-127.0.0.1 www.910weixin.com
 127.0.0.1 www.93vitoo.com
 127.0.0.1 www.a0b11.com
 127.0.0.1 www.a0c77.com
@@ -12638,7 +12631,6 @@
 127.0.0.1 www.vangmobi.com
 127.0.0.1 www.wancai.com
 127.0.0.1 www.webkooo.com
-127.0.0.1 www.weiguizhizuo.com
 127.0.0.1 www.whcrdz.com
 127.0.0.1 www.whshangsha.com
 127.0.0.1 www.whxhhjx.com
@@ -13167,7 +13159,6 @@
 127.0.0.1 xs.1drj.com
 127.0.0.1 z.clickvip.shop
 127.0.0.1 dd.wx16999.com
-127.0.0.1 weixin.renrenying.com
 127.0.0.1 jump.ishop789.com
 127.0.0.1 uzsrh.cn
 127.0.0.1 www.dcimei.tw
@@ -19129,8 +19120,6 @@
 127.0.0.1 ads.ahvuw.com
 127.0.0.1 ads.aim4media.com
 127.0.0.1 ads.airpush.com
-127.0.0.1 ads.ak.facebook.com
-127.0.0.1 ads.ak.facebook.com.edgesuite.net
 127.0.0.1 ads.al.com
 127.0.0.1 ads.albawaba.com
 127.0.0.1 ads.allaboutvision.com
@@ -22176,7 +22165,7 @@
 127.0.0.1 analytics.yola.net
 127.0.0.1 analytics.yolacdn.net
 127.0.0.1 analytics.youramigo.com
-127.0.0.1 analytics.zhihu.com
+#127.0.0.1 analytics.zhihu.com
 127.0.0.1 analytics-api-samples.googlecode.com
 127.0.0.1 analyticsengine.s3.amazonaws.com
 127.0.0.1 analytics-news.seevolution.com
@@ -27262,7 +27251,6 @@
 127.0.0.1 creative.ad7m.com
 127.0.0.1 creative.adbooth.net
 127.0.0.1 creative.adonion.com
-127.0.0.1 creative.ak.facebook.com
 127.0.0.1 creative.ak.fbcdn.net
 127.0.0.1 creative.cc-dt.com
 127.0.0.1 creative.clicksor.com
@@ -46414,7 +46402,6 @@
 127.0.0.1 www.td553.com
 127.0.0.1 www.teasermedia.net
 127.0.0.1 www.teasernet.com
-127.0.0.1 www.tencentmind.com
 127.0.0.1 www.tenzero.com
 127.0.0.1 www.tesimages.com
 127.0.0.1 www.textad.net
@@ -56585,7 +56572,6 @@
 127.0.0.1 static.m.sjzhushou.com 
 127.0.0.1 home.m.sjzhushou.com127.0.0.1 xl-shoulei2.rcv.sandai.net
 127.0.0.1 wimg.spriteapp.cn
-127.0.0.1 szlong.weixin.qq.com
 127.0.0.1 stats.jpush.cn
 127.0.0.1 res.wx.qq.com
 127.0.0.1 p8.pstatp.com
