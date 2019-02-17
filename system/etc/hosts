@@ -17,9 +17,9 @@
 127.0.0.1 re.drmfslx.cn
 127.0.0.1 res.drmfslx.cn
 127.0.0.1 dsp-res.drmfslx.cn
-127.255.255.255 dl.ayasc.com
+#127.255.255.255 dl.ayasc.com
 
-127.0.0.1 www.winrar.com.cn
+#127.0.0.1 www.winrar.com.cn
 127.0.0.1 g1.163.com
 127.0.0.1 adreq.vivo.com.cn
 127.0.0.1 localhost
@@ -322,8 +322,6 @@
 127.0.0.1 agr.voiceads.cn
 127.0.0.1 a.hl.mi.com
 127.0.0.1 a.holagames.com
-127.0.0.1 aider-res.meizu.com
-127.0.0.1 aidps.atdmt.com
 127.0.0.1 a.img.static.youmi.net
 127.0.0.1 ai.m.taobao.com
 127.0.0.1 aim.yoyi.com.cn
@@ -344,8 +342,6 @@
 127.0.0.1 allyesbjafa.allyes.com
 127.0.0.1 allyes.com
 127.0.0.1 allyesshafa.allyes.com
-127.0.0.1 alog.umengcloud.com
-127.0.0.1 alog.umeng.com
 127.0.0.1 alpha.brand.sogou.com
 127.0.0.1 als.baidu.com
 127.0.0.1 ama.adwo.com
@@ -360,7 +356,6 @@
 127.0.0.1 analytics.hz.netease.com
 127.0.0.1 analytics.live.com
 127.0.0.1 analytics.msn.com
-127.0.0.1 analytics.query.yahoo.com
 127.0.0.1 analytics.r.msn.com
 127.0.0.1 analytics.snssdk.com
 127.0.0.1 analytics.spotify.com
@@ -952,7 +947,6 @@
 127.0.0.1 dl.9xu.com
 127.0.0.1 dl.client.baidu.com
 127.0.0.1 dl.cm.ksmobile.com
-127.0.0.1 dl.jianshunrui.com
 127.0.0.1 dl.kjava.sina.cn
 127.0.0.1 dl.nx5.com
 127.0.0.1 dl.ops.baidu.com
@@ -1676,7 +1670,6 @@
 127.0.0.1 md.sh5e.com
 127.0.0.1 m.duobao999.com
 127.0.0.1 me-cdn.effectivemeasure.net
-127.0.0.1 medal.blog.csdn.net
 127.0.0.1 media.admob.com
 127.0.0.1 media.fastclick.net
 127.0.0.1 mediapro.pro.cn
@@ -2097,7 +2090,6 @@
 127.0.0.1 re.m.taobao.com
 127.0.0.1 renminbao.com
 127.0.0.1 report.adview.cn
-127.0.0.1 report.qcloud.com
 127.0.0.1 report.vip.qq.com
 127.0.0.1 res.adcome.cn
 127.0.0.1 res.aduu.cn
@@ -2499,7 +2491,6 @@
 127.0.0.1 s.nxrxt.com
 127.0.0.1 sobar.baidu.com
 127.0.0.1 sobartop.baidu.com
-127.0.0.1 soft.data.weather.360.cn
 127.0.0.1 soft.tbs.imtt.qq.com
 127.0.0.1 sohutv.cm.admaster.com.cn
 127.0.0.1 sohutv.m.cn.miaozhen.com
@@ -3591,8 +3582,6 @@
 127.0.0.1 agr.voiceads.cn
 127.0.0.1 a.hl.mi.com
 127.0.0.1 a.holagames.com
-127.0.0.1 aider-res.meizu.com
-127.0.0.1 aidps.atdmt.com
 127.0.0.1 a.img.static.youmi.net
 127.0.0.1 ai.m.taobao.com
 127.0.0.1 aim.yoyi.com.cn
@@ -3613,8 +3602,6 @@
 127.0.0.1 allyesbjafa.allyes.com
 127.0.0.1 allyes.com
 127.0.0.1 allyesshafa.allyes.com
-127.0.0.1 alog.umengcloud.com
-127.0.0.1 alog.umeng.co
 
 127.0.0.1 alpha.brand.sogou.com
 127.0.0.1 als.baidu.com
@@ -3630,7 +3617,6 @@
 127.0.0.1 analytics.hz.netease.com
 127.0.0.1 analytics.live.com
 127.0.0.1 analytics.msn.com
-127.0.0.1 analytics.query.yahoo.com
 127.0.0.1 analytics.r.msn.com
 127.0.0.1 analytics.snssdk.com
 127.0.0.1 analytics.spotify.com
@@ -4227,7 +4213,6 @@
 127.0.0.1 dl.9xu.com
 127.0.0.1 dl.client.baidu.com
 127.0.0.1 dl.cm.ksmobile.com
-127.0.0.1 dl.jianshunrui.com
 127.0.0.1 dl.kjava.sina.cn
 127.0.0.1 dl.nx5.com
 127.0.0.1 dl.ops.baidu.com
@@ -4951,7 +4936,6 @@
 127.0.0.1 md.sh5e.com
 127.0.0.1 m.duobao999.com
 127.0.0.1 me-cdn.effectivemeasure.net
-127.0.0.1 medal.blog.csdn.net
 127.0.0.1 media.admob.com
 127.0.0.1 media.fastclick.net
 127.0.0.1 mediapro.pro.cn
@@ -5373,7 +5357,6 @@
 127.0.0.1 re.m.taobao.com
 127.0.0.1 renminbao.com
 127.0.0.1 report.adview.cn
-127.0.0.1 report.qcloud.com
 127.0.0.1 report.vip.qq.com
 127.0.0.1 res.adcome.cn
 127.0.0.1 res.aduu.cn
@@ -5777,7 +5760,6 @@
 127.0.0.1 s.nxrxt.com
 127.0.0.1 sobar.baidu.com
 127.0.0.1 sobartop.baidu.com
-127.0.0.1 soft.data.weather.360.cn
 127.0.0.1 soft.tbs.imtt.qq.com
 127.0.0.1 sohutv.cm.admaster.com.cn
 127.0.0.1 sohutv.m.cn.miaozhen.com
@@ -6832,7 +6814,6 @@
 #（大圣规则补充）
 127.0.0.1 p2sdmkj6t.bkt.clouddn.com
 127.0.0.1 config.adview.cn
-127.0.0.1 alog.umengcloud.com
 127.0.0.1 log.umsns.com
 127.0.0.1 stats.umsns.com
 127.0.0.1 log.tbs.qq.com
@@ -7320,7 +7301,6 @@
 127.0.0.1 oc.umeng.com
 127.0.0.1 umeng.com
 127.0.0.1 www.umeng.com
-127.0.0.1 alog.umengcloud.com
 127.0.0.1 ex.umengcloud.com
 127.0.0.1 udash.umengcloud.com
 127.0.0.1 upoll.umengcloud.com
@@ -8163,8 +8143,6 @@
 127.0.0.1 dev.umeng.com
 127.0.0.1 oc.umeng.com
 127.0.0.1 umeng.com
-127.0.0.1 www.umeng.com
-127.0.0.1 alog.umengcloud.com
 127.0.0.1 ex.umengcloud.com
 127.0.0.1 udash.umengcloud.com
 127.0.0.1 upoll.umengcloud.com
@@ -9150,11 +9128,9 @@
 127.0.0.1 stat.cnmo.com
 127.0.0.1 ad.csdn.net
 127.0.0.1 ads.csdn.net
-127.0.0.1 counter.csdn.net
 127.0.0.1 dc.csdn.net
 127.0.0.1 dc2.csdn.net
 127.0.0.1 img.ads.csdn.net
-127.0.0.1 medal.blog.csdn.net
 127.0.0.1 cee1.iteye.com
 127.0.0.1 cee2.iteye.com
 127.0.0.1 mpb1.iteye.com
@@ -9298,7 +9274,6 @@
 127.0.0.1 infocenter.meizu.com
 127.0.0.1 tongji-res1.meizu.com
 127.0.0.1 tongji.meizu.com
-127.0.0.1 aider-res.meizu.com
 127.0.0.1 adfuture.cn
 127.0.0.1 bigdata.adfuture.cn
 127.0.0.1 folder.adfuture.cn
@@ -9854,8 +9829,6 @@
 127.0.0.1 newswifiapi.dfshurufa.com
 127.0.0.1 wpc.32df9.rhocdn.net
 127.0.0.1 ad.caiyunapp.com
-127.0.0.1 mbd.weathercn.com
-127.0.0.1 mbs.weathercn.com
 127.0.0.1 ad.api.moji.com
 127.0.0.1 adlaunch.moji.com
 127.0.0.1 fds.api.moji.com
@@ -10026,7 +9999,6 @@
 127.0.0.1 statics.3987.com
 127.0.0.1 dps.499.cn
 127.0.0.1 dps.shouji56.com
-127.0.0.1 tongji.tt.shouji56.com
 127.0.0.1 xz.tongji.shouji56.com
 127.0.0.1 s.abcache.com
 127.0.0.1 shili.wanyx.com
@@ -14303,7 +14275,6 @@
 127.0.0.1 www.appsflyer.com
 127.0.0.1 ad.atdmt.com
 127.0.0.1 adn.atdmt.com
-127.0.0.1 aidps.atdmt.com
 127.0.0.1 analytics.atdmt.com
 127.0.0.1 api.atdmt.com
 127.0.0.1 atdmt.com
@@ -14605,7 +14576,6 @@
 127.0.0.1 cl5.webterren.com
 127.0.0.1 ads.yahoo.com
 127.0.0.1 adserver.yahoo.com
-127.0.0.1 analytics.query.yahoo.com
 127.0.0.1 analytics.yahoo.com
 127.0.0.1 beap-bc.yahoo.com
 127.0.0.1 beap.adss.yahoo.com
@@ -15129,7 +15099,7 @@
 127.0.0.1 dcads.sina.com.cn
 
 127.0.0.1  localhost
-127.0.0.1  0koryu0.easter.ne.jp
+127.0.0.1 0koryu0.easter.ne.jp
 127.0.0.1  109-204-26-16.netconnexion.managedbroadband.co.uk
 127.0.0.1  1866809.securefastserver.com
 127.0.0.1  2amsports.com
@@ -15160,7 +15130,7 @@
 127.0.0.1  agsteier.com
 127.0.0.1  aintdoinshit.com
 127.0.0.1  aippnetworks.com
-127.0.0.1  aircraft.evote.cl
+127.0.0.1 aircraft.evote.cl
 127.0.0.1  ajewishgift.com
 127.0.0.1  akirkpatrick.com
 127.0.0.1  alegroup.info
@@ -15893,7 +15863,6 @@
 127.0.0.1  thcextractor.com
 127.0.0.1  thcvaporizer.com
 127.0.0.1  thefxarchive.com
-127.0.0.1  theweatherspace.com
 127.0.0.1  thewinesteward.com
 127.0.0.1  timothycopus.aimoo.com
 127.0.0.1  titon.info
@@ -17382,7 +17351,6 @@
 127.0.0.1 accurately-locate.com
 127.0.0.1 accuserveadsystem.com
 127.0.0.1 accutrk.com
-127.0.0.1 accuweather.us.intellitxt.com
 127.0.0.1 ace.adoftheyear.com
 127.0.0.1 ace.advertising.com
 127.0.0.1 acecounter.com
@@ -18556,7 +18524,6 @@
 127.0.0.1 addroid.com
 127.0.0.1 adds.misiamoiatdom.com
 127.0.0.1 adds.trafflow.com
-127.0.0.1 adds.weatherology.com
 127.0.0.1 adds1.trafflow.com
 127.0.0.1 addshoppers.t.domdex.com
 127.0.0.1 addspro.go2cloud.org
@@ -21812,7 +21779,6 @@
 127.0.0.1 ai.pricegrabber.com
 127.0.0.1 ai.taobao.com
 127.0.0.1 aid.video.qq.com
-127.0.0.1 aidps.atdmt.com
 127.0.0.1 ai-gb.marketgid.com
 127.0.0.1 aim1.adsoftware.com
 127.0.0.1 aim2.adsoftware.com
@@ -22115,7 +22081,6 @@
 127.0.0.1 analytics.pimproll.com
 127.0.0.1 analytics.poferries.com
 127.0.0.1 analytics.popsci.com
-127.0.0.1 analytics.query.yahoo.com
 127.0.0.1 analytics.r.msn.com
 127.0.0.1 analytics.r17.com
 127.0.0.1 analytics.radiatemedia.com
@@ -22528,7 +22493,6 @@
 127.0.0.1 apk.ninebox.cn
 127.0.0.1 apk.static.youmi.net
 127.0.0.1 apk.veegao.com
-127.0.0.1 apkquery.ksmobile.net
 127.0.0.1 apnonline.112.2o7.net
 127.0.0.1 apns.imofan.com
 127.0.0.1 apns.ios.ijinshan.com
@@ -26411,7 +26375,6 @@
 127.0.0.1 cm.uk.independent.overture.com
 127.0.0.1 cm.uk.overture.com
 127.0.0.1 cm.vh1.overture.com
-127.0.0.1 cm.weather.overture.com
 127.0.0.1 cm.webmd.overture.com
 127.0.0.1 cm.west.yahoo.overture.com
 127.0.0.1 cm.yigao.com
@@ -26876,7 +26839,6 @@
 127.0.0.1 corelcom.112.2o7.net
 127.0.0.1 coreluk.112.2o7.net
 127.0.0.1 coremetrics.com
-127.0.0.1 coriolis.accuweather.com
 127.0.0.1 corp.163.com
 127.0.0.1 corp.hunantv.com
 127.0.0.1 corp.meitu.com
@@ -30159,7 +30121,6 @@
 127.0.0.1 geo.mtvnn.com
 127.0.0.1 geo.offermatica.com
 127.0.0.1 geo.q5media.net
-127.0.0.1 geo.query.yahoo.com
 127.0.0.1 geo.safelinktracker.com
 127.0.0.1 geo.smaato.net
 127.0.0.1 geo.xxxblackbook.com
@@ -34070,7 +34031,6 @@
 127.0.0.1 metrica.yandex.com
 127.0.0.1 metrica.yandex.kz
 127.0.0.1 metrics.aarp.org
-127.0.0.1 metrics.accuweather.com
 127.0.0.1 metrics.acehardware.com
 127.0.0.1 metrics.active.com
 127.0.0.1 metrics.aetn.com
@@ -35114,7 +35074,6 @@
 127.0.0.1 netstorage.taboola.com
 127.0.0.1 nettno.nuggad.net
 127.0.0.1 nettown.com
-127.0.0.1 netweather.accuweather.com
 127.0.0.1 network.adbullion.com
 127.0.0.1 network.adjal.com
 127.0.0.1 network.adsmarket.com
@@ -37430,7 +37389,6 @@
 127.0.0.1 pub.sponsorselect.com
 127.0.0.1 pub.sv2.biz
 127.0.0.1 pub.telecharger.com
-127.0.0.1 pub.weatherbug.com
 127.0.0.1 pub1.bravenet.com
 127.0.0.1 pub10.bravenet.com
 127.0.0.1 pub11.bravenet.com
@@ -39997,7 +39955,6 @@
 127.0.0.1 sportsillustrated.tags.crwdcntrl.net
 127.0.0.1 spot.fitness.com
 127.0.0.1 spotexchange.com
-127.0.0.1 spotlight.accuweather.com
 127.0.0.1 spots.ah-me.com
 127.0.0.1 sprfetch.about.com
 127.0.0.1 springboardplatform.com
@@ -42554,7 +42511,6 @@
 127.0.0.1 travel.netster.com
 127.0.0.1 travel.travelocity.com
 127.0.0.1 traveladvertising.com
-127.0.0.1 travel-and-weather.msnbc.us.intellitxt.com
 127.0.0.1 travelmail.traveltek.net
 127.0.0.1 travelocity.bfast.com
 127.0.0.1 travelscream.com
@@ -42673,7 +42629,6 @@
 127.0.0.1 tryry.info
 127.0.0.1 ts.faz.net
 127.0.0.1 ts.istrack.com
-127.0.0.1 ts.richmedia.yahoo.com
 127.0.0.1 ts.smowtion.com
 127.0.0.1 ts.videosz.com
 127.0.0.1 ts.winads.cn
@@ -43636,7 +43591,6 @@
 127.0.0.1 wdig.vo.llnwd.net
 127.0.0.1 wdm.map24.com
 127.0.0.1 wdxcyber.us.intellitxt.com
-127.0.0.1 weatherbugbrowserbar.mywebsearch.com
 127.0.0.1 web.51.la
 127.0.0.1 web.6dad.com
 127.0.0.1 web.acumenpi.com
@@ -47026,7 +46980,6 @@
 127.0.0.1 x.myspace.edgesuite.net
 127.0.0.1 x.skimresources.com
 127.0.0.1 x.vindicosuite.com
-127.0.0.1 x.weather.com
 127.0.0.1 x.zedo.com
 127.0.0.1 x.zeroredirect.com
 127.0.0.1 x.zeroredirect1.com
@@ -47566,7 +47519,6 @@
 127.0.0.1 gtms01.alicdn.com
 127.0.0.1 tanxlog.istreamsche.com
 127.0.0.1 au.umeng.com
-127.0.0.1 alog.umeng.co
 52.84.7.141 getlantern.org
 127.0.0.1 njs.myhx120.com
 127.0.0.1 znsv.baidu.com
@@ -51031,7 +50983,6 @@
 127.0.0.1 quareclk.com
 127.0.0.1 web02.con.vmsn.de
 127.0.0.1 www.childernsplace.com
-127.0.0.1 alog.umengcloud.com
 127.0.0.1 amwqo.voluumtrk.com
 127.0.0.1 count358.51yes.com
 127.0.0.1 zs.ffshrine.org
@@ -52662,7 +52613,6 @@
 127.0.0.1 njs.hcm94alliance.com
 127.0.0.1 media.monliveshow.com
 127.0.0.1 online.com
-127.0.0.1 c.xingjuhe.com
 127.0.0.1 www.lesbianfanatics.com
 127.0.0.1 skan.de
 127.0.0.1 ladiesofjuarez.com
@@ -56585,7 +56535,7 @@
 127.0.0.1 kanimg.com
 127.0.0.1 dm.xiazaibao.xunlei.com
 127.0.0.1 api.comm.miui.com
-127.0.0.1 weatherapi.market.xiaomi.com
+127.0.0.1 alog.umengcloud.com
 
 #以下是我在上网时弹出的广告.js所在域名
 127.0.0.1 www.12l22.net
@@ -56645,4 +56595,3 @@
 127.0.0.1 starc.bigdata.koznak.tv
 127.0.0.1 starc.adv.koznak.tv
 127.0.0.1 stat.koznak.tv
-127.0.0.1 alog.umeng.com
