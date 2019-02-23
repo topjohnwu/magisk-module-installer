@@ -1842,7 +1842,6 @@
 127.0.0.1 ns1.cnzz.com
 127.0.0.1 ns2.cnzz.com
 127.0.0.1 ns8.adk2x.com
-127.0.0.1 nsclick.baidu.com
 127.0.0.1 nsclickvideo.baidu.com
 127.0.0.1 ntdtv.com
 127.0.0.1 ntdtv.org
@@ -2095,7 +2094,6 @@
 127.0.0.1 res.aduu.cn
 127.0.0.1 res.icast.cn
 127.0.0.1 res.ipingke.com
-127.0.0.1 res.mi.baidu.com
 127.0.0.1 res.mmstat.com
 127.0.0.1 resolver.gslb.mi-idc.com
 127.0.0.1 resolver.msg.xiaomi.net
@@ -5109,7 +5107,6 @@
 127.0.0.1 ns1.cnzz.com
 127.0.0.1 ns2.cnzz.com
 127.0.0.1 ns8.adk2x.com
-127.0.0.1 nsclick.baidu.com
 127.0.0.1 nsclickvideo.baidu.com
 127.0.0.1 ntdtv.com
 127.0.0.1 ntdtv.org
@@ -5363,7 +5360,6 @@
 127.0.0.1 rescn.u3.ucweb.com
 127.0.0.1 res.icast.cn
 127.0.0.1 res.ipingke.com
-127.0.0.1 res.mi.baidu.com
 127.0.0.1 res.mmstat.com
 127.0.0.1 resolver.gslb.mi-idc.com
 127.0.0.1 resolver.msg.xiaomi.net
@@ -6455,7 +6451,6 @@
 127.0.0.1 xgmc6lu8fs.me
 127.0.0.1 xiangchaokankan.m.cn.miaozhen.com
 127.0.0.1 xiaomiir.yaokantv.com
-127.0.0.1 xinhuanet.adsame.com
 127.0.0.1 xinsheng.net
 127.0.0.1 x.jd.com
 127.0.0.1 xji.qwxcs.com
@@ -7131,7 +7126,6 @@
 127.0.0.1 idm.bce.baidu.com
 127.0.0.1 mobads.baidu.com
 127.0.0.1 msite.baidu.com
-127.0.0.1 nsclick.baidu.com
 127.0.0.1 nsclickvideo.baidu.com
 127.0.0.1 pc.videoclick.baidu.com
 127.0.0.1 pos.baidu.com
@@ -8187,7 +8181,6 @@
 127.0.0.1 mobads-logs.baidu.com
 127.0.0.1 mobads.baidu.com
 127.0.0.1 msite.baidu.com
-127.0.0.1 nsclick.baidu.com
 127.0.0.1 nsclickvideo.baidu.com
 127.0.0.1 pc.videoclick.baidu.com
 127.0.0.1 pos.baidu.com
@@ -10779,7 +10772,6 @@
 127.0.0.1 c.v4dwkcv.com
 127.0.0.1 c.vip97.net
 127.0.0.1 c.wantxt.cc
-127.0.0.1 c.wechat.jx.cn
 127.0.0.1 c.xianguonongchang.org
 127.0.0.1 c.xilongfuwu.com
 127.0.0.1 c.xznykf.org
@@ -28247,7 +28239,6 @@
 127.0.0.1 download2.marketengines.com
 127.0.0.1 download32.us.intellitxt.com
 127.0.0.1 downloadandsave-a.akamaihd.net
-127.0.0.1 downloads.default-homepage-network.com
 127.0.0.1 downloads.kissmetrics.com
 127.0.0.1 downloads.superfish.com
 127.0.0.1 downloads.t3nlink.com
@@ -31702,7 +31693,6 @@
 127.0.0.1 imgpromo.easyrencontre.com
 127.0.0.1 imgpub.mop.com
 127.0.0.1 imgs.adverticum.net
-127.0.0.1 imgs.xinhuanet.com
 127.0.0.1 imgserv.adbutler.com
 127.0.0.1 img-sjc.wip.mediaplex.com
 127.0.0.1 imgstat.baidu.com
@@ -34670,7 +34660,6 @@
 127.0.0.1 msnclick.wrating.com
 127.0.0.1 msneshopbase.112.2o7.net
 127.0.0.1 msnhome.com
-127.0.0.1 msnhomepage.com
 127.0.0.1 msninvite.112.2o7.net
 127.0.0.1 msninviteprod.112.2o7.net
 127.0.0.1 msnlivefavorites.112.2o7.net
@@ -35355,7 +35344,6 @@
 127.0.0.1 nsa.conviva.com
 127.0.0.1 nsa.lphbs.com
 127.0.0.1 nsads.sv.publicus.com
-127.0.0.1 nsclick.baidu.com
 127.0.0.1 nsdldlese.112.2o7.net
 127.0.0.1 nsl.mapticket.net
 127.0.0.1 nsm.dell.com
@@ -43644,7 +43632,6 @@
 127.0.0.1 webcounter.com
 127.0.0.1 webcounter.together.net
 127.0.0.1 webd.francite.com
-127.0.0.1 webd.home.news.cn
 127.0.0.1 webdata.vidz.com
 127.0.0.1 webdiva3001.bravejournal.com
 127.0.0.1 webeffective.keynote.com
