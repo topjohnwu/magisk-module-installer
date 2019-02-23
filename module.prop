@@ -1,7 +1,7 @@
 id=AD-Hosts
 name=AD Hosts
-version=v3.9.6.1
-versionCode=3
+version=v3.9.7.7
+versionCode=4
 author=依然的爱
-description=屏蔽各类广告包括(各大视频网站,运营商劫持广告,大部分APP广告)，hosts规则均来自于网络搜索和github及酷友提供，使用时请关闭其它的hosts模块，并打开Systemless hosts选项18.0用户请取消勾选✅systemless hosts模块重启后刷入，如还有问题请卸载模块后重刷
+description=屏蔽各类广告包括(各大视频网站,运营商劫持广告,大部分APP广告)，hosts规则均来自于网络搜索和github及酷友提供，使用时请关闭其他hosts模块，18.0+请关闭systemless hosts模块(如果有)，18.0以下打开设置中的systemless hosts选项，如还有问题请卸载模块后重刷
 minMagisk=17000
