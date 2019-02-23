@@ -56519,6 +56519,7 @@
 127.0.0.1 dm.xiazaibao.xunlei.com
 127.0.0.1 api.comm.miui.com
 127.0.0.1 alog.umengcloud.com
+#127.0.0.1 nsclick.baidu.com
 
 #以下是我在上网时弹出的广告.js所在域名
 127.0.0.1 www.12l22.net
