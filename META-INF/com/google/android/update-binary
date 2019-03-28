@@ -1,0 +1,10 @@
+#!/sbin/sh
+# This is a dummy file that should be replaced with a proper installer script
+
+# If you are creating a module locally for personal usage or testing,
+# download the script in the following URL:
+# https://github.com/topjohnwu/Magisk/blob/master/scripts/module_installer.sh
+# And replace this script with the downloaded script
+
+# Error, this script should always be replaced
+exit 1
