@@ -1,7 +1,6 @@
 id=crokrammgmtfix
 name=RAM management fixes by crok
-version=v0.0.2
-versionCode=2
+version=v0.0.3
+versionCode=4
 author=crok
 description=RAM management fixes by crok
-minMagisk=1500
